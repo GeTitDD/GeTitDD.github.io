@@ -35,12 +35,25 @@
     return el.closest('section,header,footer,nav') || el.parentElement;
   }
   const previewMotion=new Map();
+  function portfolioScatterOffsetX(node, containerLeft, viewportWidth, offsetX, spread) {
+    const desired = spread > 0 ? offsetX * Math.min(0.42, viewportWidth * 0.28 / spread) : 0;
+    const width = node.offsetWidth;
+    const left = containerLeft + node.offsetLeft;
+    // Let the edge of a word peek outside while keeping most of it in view.
+    return Math.max(-width * 0.3 - left, Math.min(viewportWidth - width * 0.7 - left, desired));
+  }
   const wordOffsets=[[-950,130],[116,98],[654,710],[407,434],[252,-164],[-191,186],[899,-353],[338,-564],[8,687],[-422,-744],[-793,113],[-568,432],[520,169],[96,-441]];
   function updatePreviewMotion() {
     previewMotion.forEach((items,el)=>{
       if(!el.isConnected){previewMotion.delete(el);return;}
-      const progress=Math.max(0,Math.min(1,(innerHeight-el.getBoundingClientRect().top)/(innerHeight/2)));
-      items.forEach((item,index)=>{const offset=wordOffsets[index%wordOffsets.length];item.node.style.transform=`translate(${offset[0]*(1-progress)}px, ${offset[1]*(1-progress)}px)`;});
+      const rect=el.getBoundingClientRect();
+      const progress=Math.max(0,Math.min(1,(innerHeight-rect.top)/(innerHeight/2)));
+      const bounded=routeKey()==='/' && el.matches('h3') && el.closest('[data-framer-name="Scramble"]');
+      items.forEach((item,index)=>{
+        const offset=wordOffsets[index%wordOffsets.length];
+        const x=bounded?portfolioScatterOffsetX(item.node,rect.left,document.documentElement.clientWidth,offset[0],1000):offset[0];
+        item.node.style.transform=`translate(${x*(1-progress)}px, ${offset[1]*(1-progress)}px)`;
+      });
     });
   }
   function captureText(el, text) {
