@@ -9,10 +9,6 @@
     .framer-juKxq [data-framer-name="Mobile Menu"] :is(a[data-framer-name="Menu Item B"],a[data-framer-name="Menu Item C"]),
     .wr-header nav :is(a[href="/studio"],a[href="/feed"]),
     #wr-mobile-nav :is(a[href="/studio"],a[href="/feed"]) { display:none!important; }
-    [data-cms-semantic-word] { white-space:nowrap; }
-    @media(max-width:360px) {
-      [data-cms-semantic-word] { font-size:40px!important; }
-    }
     @media(min-width:810px) {
       nav.framer-cSZEg [data-framer-name="Desktop Menu"] { justify-content:flex-end!important; gap:64px!important; }
       .wr-header nav { justify-content:flex-end!important; gap:64px!important; }
