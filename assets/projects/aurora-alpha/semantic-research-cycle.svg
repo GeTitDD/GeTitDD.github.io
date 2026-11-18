@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="aa-cycle-title aa-cycle-desc">
+  <title id="aa-cycle-title">以反例推动语义修订</title>
+  <desc id="aa-cycle-desc">研究从来源材料和语义约束出发，依次构建候选、检查约束、反馈反例、修订复验，再回到候选。确认后的定义、实现与验证记录积累为模块版本。</desc>
+  <defs>
+    <marker id="aa-cycle-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#526d66" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1200" height="900" fill="#e1e6e4"/>
+  <g font-family="Inter Display,Inter,PingFang SC,Hiragino Sans GB,sans-serif" fill="#243a38">
+    <text x="70" y="66" font-size="16" letter-spacing="2">CEGIS-INSPIRED / SEMANTIC DEVELOPMENT</text>
+    <text x="70" y="124" font-size="44" font-weight="600">以反例推动语义修订</text>
+    <rect x="70" y="164" width="1060" height="90" rx="2" fill="#f2f4f2"/>
+    <text x="100" y="219" font-size="26">来源材料 · 确认含义 · 适用条件 · 时序关系</text>
+    <g fill="#f7f8f6" stroke="#91a39c" stroke-width="1.5">
+      <rect x="100" y="310" width="440" height="164" rx="2"/>
+      <rect x="660" y="310" width="440" height="164" rx="2"/>
+      <rect x="660" y="550" width="440" height="164" rx="2"/>
+      <rect x="100" y="550" width="440" height="164" rx="2"/>
+    </g>
+    <g fill="none" stroke="#526d66" stroke-width="2" marker-end="url(#aa-cycle-arrow)">
+      <path d="M548 392H645"/>
+      <path d="M880 483V535"/>
+      <path d="M652 632H555"/>
+      <path d="M320 541V489"/>
+    </g>
+    <g font-size="16" fill="#667e75" letter-spacing="1">
+      <text x="132" y="348">01 / CANDIDATE</text>
+      <text x="692" y="348">02 / VERIFY</text>
+      <text x="692" y="588">03 / COUNTEREXAMPLE</text>
+      <text x="132" y="588">04 / REFINE</text>
+    </g>
+    <g font-size="34" font-weight="600">
+      <text x="132" y="398">构建候选</text>
+      <text x="692" y="398">约束验证</text>
+      <text x="692" y="638">反例反馈</text>
+      <text x="132" y="638">修订复验</text>
+    </g>
+    <g font-size="25" fill="#526d66">
+      <text x="132" y="440">表达概念、关系与实现</text>
+      <text x="692" y="440">核对含义与候选行为</text>
+      <text x="692" y="680">定位偏差与触发条件</text>
+      <text x="132" y="680">调整定义或实现，再次检查</text>
+    </g>
+    <rect x="70" y="766" width="1060" height="86" rx="2" fill="#243a38"/>
+    <text x="100" y="818" font-size="26" fill="#f2f4f2">模块版本 / 关联确认后的定义、实现与验证记录</text>
+  </g>
+</svg>

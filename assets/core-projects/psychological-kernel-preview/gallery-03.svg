@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="0 0 1400 1400">
+<rect width="1400" height="1400" fill="#e8e5e9"/>
+<g font-family="Inter Display, Inter, PingFang SC, Hiragino Sans GB, sans-serif" fill="#3b3444">
+<text x="105.0" y="126.0" font-size="24" font-weight="600" letter-spacing="3">03 / 心理内核</text>
+<text x="105.0" y="224.0" font-size="75.6" font-weight="700">验证结论</text>
+<rect x="105.0" y="294.0" width="1190.0" height="784.0000000000001" fill="#fff" fill-opacity=".55"/>
+<svg x="105.0" y="294.0" width="1190.0" height="784.0000000000001" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet">
+<title id="title">心理内核接口与机制验证摘要</title>
+<desc id="desc">受约束确认输入220条均生成合法JSON，16条无约束格式诊断也通过；但自我效能曲线稳定性为37.5%，自主关切可见响应为0，工程迁移不通过。</desc>
+<rect fill="#f0eef1" height="900" width="1200"/>
+<g fill="#25242a" font-family="Inter, PingFang SC, sans-serif">
+<text fill="#686371" font-size="17" font-weight="700" letter-spacing="2.5" x="58" y="68">VALIDATION SUMMARY / EVIDENCE STATUS</text>
+<text font-size="40" font-weight="700" x="58" y="132">结构可靠，机制仍需补强</text>
+<text fill="#5d5964" font-size="20" x="58" y="177">格式检查与行为响应检查回答的是不同问题。</text>
+<rect fill="#e4ece5" height="160" rx="8" stroke="#557c68" stroke-width="2" width="1090" x="54" y="225"/>
+<rect fill="#557c68" height="160" rx="4" width="9" x="54" y="225"/>
+<text fill="#557c68" font-size="16" font-weight="700" letter-spacing="1.4" x="88" y="270">FORMAT CONTRACT / JSON STRUCTURE</text>
+<text font-size="28" font-weight="700" x="88" y="323">220 / 220</text>
+<text fill="#48534b" font-size="19" x="260" y="323">历史确认输入生成合法完整 JSON</text>
+<text fill="#526056" font-size="16" x="88" y="359">另有 16 / 16 无约束格式诊断通过；仅为格式证据，不证明语义有效。</text>
+<rect fill="#f1e8df" height="210" rx="8" stroke="#bd7950" stroke-width="2" width="530" x="54" y="408"/>
+<rect fill="#bd7950" height="210" rx="4" width="9" x="54" y="408"/>
+<text fill="#a56540" font-size="16" font-weight="700" letter-spacing="1.4" x="88" y="453">DOMAIN SELF-EFFICACY</text>
+<text font-size="24" font-weight="700" x="88" y="514">曲线稳定性</text>
+<text fill="#a56540" font-size="46" font-weight="700" x="88" y="573">37.5%</text>
+<text fill="#695246" font-size="16" x="258" y="571">有方向响应，稳定性不足</text>
+<rect fill="#e8e9ee" height="210" rx="8" stroke="#69728b" stroke-width="2" width="530" x="614" y="408"/>
+<rect fill="#69728b" height="210" rx="4" width="9" x="614" y="408"/>
+<text fill="#58627b" font-size="16" font-weight="700" letter-spacing="1.4" x="648" y="453">AUTONOMY PRIORITY</text>
+<text font-size="24" font-weight="700" x="648" y="514">可见响应与趋势</text>
+<text fill="#58627b" font-size="46" font-weight="700" x="648" y="573">0</text>
+<text fill="#555a68" font-size="16" x="704" y="571">输入变化未带来预期响应</text>
+<rect fill="#fff" height="142" rx="8" stroke="#77727f" stroke-width="2" width="1090" x="54" y="642"/>
+<text fill="#686371" font-size="16" font-weight="700" letter-spacing="1.4" x="88" y="688">MIGRATION GATE</text>
+<text font-size="28" font-weight="700" x="88" y="745">工程迁移 REJECT</text>
+<text fill="#5d5964" font-size="22" x="454" y="745">·</text>
+<text font-size="28" font-weight="700" x="492" y="745">心理有效性 INCONCLUSIVE</text>
+<text fill="#6a6670" font-size="15" x="58" y="838">单训练 seed 0 · 确认集曾被使用，并非新盲测 · 合成参考不是独立人类心理真值</text>
+</g>
+</svg>
+<text x="105.0" y="1232.0" font-size="49.00000000000001" font-weight="500">格式证据与心理响应证据分开呈现。</text>
+<text x="105.0" y="1330.0" font-size="19" font-weight="500" letter-spacing="2">PROJECT NOTES / HUANG</text>
+</g></svg>

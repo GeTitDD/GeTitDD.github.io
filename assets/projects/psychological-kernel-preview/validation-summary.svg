@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">心理内核接口与机制验证摘要</title>
+<desc id="desc">受约束确认输入220条均生成合法JSON，16条无约束格式诊断也通过；但自我效能曲线稳定性为37.5%，自主关切可见响应为0，工程迁移不通过。</desc>
+<rect width="1200" height="900" fill="#f0eef1"/>
+<g font-family="Inter, PingFang SC, sans-serif" fill="#25242a">
+  <text x="58" y="68" font-size="17" font-weight="700" letter-spacing="2.5" fill="#686371">VALIDATION SUMMARY / EVIDENCE STATUS</text>
+  <text x="58" y="132" font-size="40" font-weight="700">结构可靠，机制仍需补强</text>
+  <text x="58" y="177" font-size="20" fill="#5d5964">格式检查与行为响应检查回答的是不同问题。</text>
+
+  <rect x="54" y="225" width="1090" height="160" rx="8" fill="#e4ece5" stroke="#557c68" stroke-width="2"/>
+  <rect x="54" y="225" width="9" height="160" rx="4" fill="#557c68"/>
+  <text x="88" y="270" font-size="16" font-weight="700" letter-spacing="1.4" fill="#557c68">FORMAT CONTRACT / JSON STRUCTURE</text>
+  <text x="88" y="323" font-size="28" font-weight="700">220 / 220</text>
+  <text x="260" y="323" font-size="19" fill="#48534b">历史确认输入生成合法完整 JSON</text>
+  <text x="88" y="359" font-size="16" fill="#526056">另有 16 / 16 无约束格式诊断通过；仅为格式证据，不证明语义有效。</text>
+
+  <rect x="54" y="408" width="530" height="210" rx="8" fill="#f1e8df" stroke="#bd7950" stroke-width="2"/>
+  <rect x="54" y="408" width="9" height="210" rx="4" fill="#bd7950"/>
+  <text x="88" y="453" font-size="16" font-weight="700" letter-spacing="1.4" fill="#a56540">DOMAIN SELF-EFFICACY</text>
+  <text x="88" y="514" font-size="24" font-weight="700">曲线稳定性</text>
+  <text x="88" y="573" font-size="46" font-weight="700" fill="#a56540">37.5%</text>
+  <text x="258" y="571" font-size="16" fill="#695246">有方向响应，稳定性不足</text>
+
+  <rect x="614" y="408" width="530" height="210" rx="8" fill="#e8e9ee" stroke="#69728b" stroke-width="2"/>
+  <rect x="614" y="408" width="9" height="210" rx="4" fill="#69728b"/>
+  <text x="648" y="453" font-size="16" font-weight="700" letter-spacing="1.4" fill="#58627b">AUTONOMY PRIORITY</text>
+  <text x="648" y="514" font-size="24" font-weight="700">可见响应与趋势</text>
+  <text x="648" y="573" font-size="46" font-weight="700" fill="#58627b">0</text>
+  <text x="704" y="571" font-size="16" fill="#555a68">输入变化未带来预期响应</text>
+
+  <rect x="54" y="642" width="1090" height="142" rx="8" fill="#fff" stroke="#77727f" stroke-width="2"/>
+  <text x="88" y="688" font-size="16" font-weight="700" letter-spacing="1.4" fill="#686371">MIGRATION GATE</text>
+  <text x="88" y="745" font-size="28" font-weight="700">工程迁移 REJECT</text>
+  <text x="454" y="745" font-size="22" fill="#5d5964">·</text>
+  <text x="492" y="745" font-size="28" font-weight="700">心理有效性 INCONCLUSIVE</text>
+
+  <text x="58" y="838" font-size="15" fill="#6a6670">单训练 seed 0 · 确认集曾被使用，并非新盲测 · 合成参考不是独立人类心理真值</text>
+</g>
+</svg>

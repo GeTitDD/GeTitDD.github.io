@@ -1,0 +1,138 @@
+/* A separate page in the homepage flow; practice / stack keep their own view. */
+#about.home-about {
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "heading portrait" "copy portrait" "next portrait";
+  column-gap: 40px;
+  flex: none;
+  width: 100%;
+  padding: 200px 40px 0;
+  color: #111;
+  font-family: "Inter Display", Inter, "PingFang SC", sans-serif;
+  scroll-margin-top: 100px;
+}
+#about .home-about-heading {
+  grid-area: heading;
+  align-self: start;
+  margin: 0;
+  color: #000;
+  text-wrap: balance;
+}
+#about .home-about-copy {
+  grid-area: copy;
+  align-self: center;
+  min-width: 0;
+  max-width: 490px;
+  padding: 72px 32px 72px 0;
+}
+#about .home-about-eyebrow {
+  margin: 0 0 28px;
+  color: #888;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+#about .home-about-statement {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -.04em;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+#about .home-about-description {
+  max-width: 350px;
+  margin: 24px 0 0;
+  color: #888;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+#about .home-about-portrait {
+  grid-area: portrait;
+  min-width: 0;
+  margin: 0;
+}
+#about .home-about-photo {
+  position: relative;
+  width: 100%;
+  max-height: 680px;
+  aspect-ratio: 1 / 1.05;
+  overflow: hidden;
+  background: #efeeec;
+}
+#about .home-about-photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  text-align: center;
+}
+#about .home-about-photo-placeholder[hidden] { display: none; }
+#about .home-about-photo-label { color: #85817b; font-size: 18px; font-weight: 500; line-height: 1.4; }
+#about .home-about-photo-note { color: #aaa59f; font-size: 10px; font-weight: 500; line-height: 1.5; letter-spacing: .09em; }
+#about .home-about-photo-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+#about .home-about-caption { margin-top: 14px; color: #999; font-size: 12px; font-weight: 500; line-height: 1.6; }
+#about .home-about-caption-text { margin: 0; font: inherit; }
+#about .home-about-next {
+  grid-area: next;
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  align-self: end;
+  gap: 24px;
+  margin-bottom: 33px;
+  padding: 8px 0;
+  color: #111;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -.025em;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+#about .home-about-next svg { flex: none; width: 23px; height: 23px; transition: transform 240ms ease; }
+#about .home-about-next:hover { color: #777; }
+#about .home-about-next:hover svg { transform: translateY(4px); }
+#about .home-about-next:focus-visible { outline: 2px solid #777; outline-offset: 8px; }
+@media (min-width: 810px) and (max-width: 1199px) {
+  #about.home-about { column-gap: 30px; padding: 160px 30px 0; }
+  #about .home-about-copy { padding: 48px 0; }
+  #about .home-about-statement { font-size: 28px; }
+  #about .home-about-description { font-size: 14px; }
+  #about .home-about-next { gap: 16px; margin-bottom: 0; font-size: 17px; }
+  #about .home-about-photo { aspect-ratio: 4 / 5; }
+}
+@media (max-width: 809px) {
+  #about.home-about {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "heading" "portrait" "copy" "next";
+    gap: 0;
+    padding: 120px 20px 0;
+  }
+  #about .home-about-heading { margin-bottom: 48px; }
+  #about .home-about-photo { max-height: none; aspect-ratio: 4 / 5; }
+  #about .home-about-photo-label { font-size: 16px; }
+  #about .home-about-photo-note { font-size: 9px; }
+  #about .home-about-caption { margin-top: 12px; font-size: 11px; }
+  #about .home-about-copy { max-width: 100%; padding: 40px 0 32px; }
+  #about .home-about-eyebrow { margin-bottom: 20px; font-size: 12px; }
+  #about .home-about-statement { font-size: 28px; line-height: 1.5; }
+  #about .home-about-description { max-width: 26em; margin-top: 20px; font-size: 14px; }
+  #about .home-about-next { gap: 18px; margin-bottom: 0; font-size: 18px; }
+  #about .home-about-next svg { width: 21px; height: 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #about .home-about-next, #about .home-about-next svg { transition: none; }
+}

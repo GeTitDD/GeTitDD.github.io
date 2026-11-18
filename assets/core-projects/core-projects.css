@@ -1,0 +1,144 @@
+body[data-core-project-page] [data-topic-clock] {
+  display: none !important;
+}
+
+body[data-core-project-page]:not([data-core-project-ready]) #main {
+  visibility: hidden;
+}
+
+body[data-core-project-page] .framer-1rgbfz[data-framer-name="Sticky Section"] {
+  background-color: transparent !important;
+}
+
+body[data-core-project-page="overview"] footer [data-framer-name="Footer Links"] {
+  display: none !important;
+}
+
+/* Keep the four MIRRISM engineering labels within the original metric columns. */
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-w30ry8 h3 {
+  font-size: clamp(28px, 3vw, 46px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] a[href="/work/mirrism-aigc-platform-detail"],
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] a[href="/work/mirrism-aigc-platform-detail"] [data-framer-component-type="RichTextContainer"] {
+  min-width: max-content;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] a[href="/work/mirrism-aigc-platform-detail"] p {
+  white-space: nowrap;
+}
+
+body[data-core-project-page="overview"] [data-topic-video] img {
+  cursor: pointer;
+}
+
+body[data-core-project-page="overview"] .topic-video-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 12px;
+  cursor: pointer;
+}
+
+body[data-core-project-page="overview"] .topic-video-link::after {
+  content: attr(data-label);
+  padding: 8px 10px;
+  background: #24352ddd;
+  color: #fff;
+  font: 600 12px/1.4 "Inter Display", Inter, "PingFang SC", sans-serif;
+}
+
+body[data-core-project-page="overview"] .topic-video-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -6px;
+}
+
+/* Owner Pi overview: fit the longer engineering labels without changing columns. */
+body[data-core-project-page="overview"][data-core-project-id="owner-agent"] [data-framer-name="Quote Container"] h4 {
+  font-size: clamp(28px, 3.2vw, 46px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="owner-agent"] .framer-w30ry8 h3 {
+  font-size: clamp(26px, 2.6vw, 40px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="owner-agent"] a[href="/work/owner-agent-detail"],
+body[data-core-project-page="overview"][data-core-project-id="owner-agent"] a[href="/work/owner-agent-detail"] [data-framer-component-type="RichTextContainer"] {
+  min-width: max-content;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="owner-agent"] a[href="/work/owner-agent-detail"] p {
+  white-space: nowrap;
+}
+
+/* Small-model overview: retain the quote rhythm and fit six-character labels. */
+body[data-core-project-page="overview"][data-core-project-id="experience-study-preview"] [data-framer-name="Quote Container"] h4 {
+  font-size: clamp(28px, 3.2vw, 46px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="experience-study-preview"] .framer-w30ry8 h3 {
+  font-size: clamp(26px, 2.6vw, 40px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="experience-study-preview"] a[href="/work/experience-study-preview-detail"],
+body[data-core-project-page="overview"][data-core-project-id="experience-study-preview"] a[href="/work/experience-study-preview-detail"] [data-framer-component-type="RichTextContainer"] {
+  min-width: max-content;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="experience-study-preview"] a[href="/work/experience-study-preview-detail"] p {
+  white-space: nowrap;
+}
+
+/* Psychological-kernel overview: fit the quote and seven-character pillar labels. */
+body[data-core-project-page="overview"][data-core-project-id="psychological-kernel-preview"] [data-framer-name="Quote Container"] h4 {
+  font-size: clamp(29px, 3.2vw, 46px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="psychological-kernel-preview"] .framer-w30ry8 h3 {
+  font-size: clamp(22px, 2.2vw, 34px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="psychological-kernel-preview"] a[href="/work/psychological-kernel-preview-detail"],
+body[data-core-project-page="overview"][data-core-project-id="psychological-kernel-preview"] a[href="/work/psychological-kernel-preview-detail"] [data-framer-component-type="RichTextContainer"] {
+  min-width: max-content;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="psychological-kernel-preview"] a[href="/work/psychological-kernel-preview-detail"] p {
+  white-space: nowrap;
+}
+
+/* Aurora overview: fit the quote, engineering labels and complete-archive action. */
+body[data-core-project-page="overview"][data-core-project-id="aurora-alpha"] [data-framer-name="Quote Container"] h4 {
+  font-size: clamp(29px, 3.2vw, 46px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="aurora-alpha"] .framer-w30ry8 h3 {
+  font-size: clamp(22px, 2.2vw, 34px) !important;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="aurora-alpha"] a[href="/work/aurora-alpha-detail"],
+body[data-core-project-page="overview"][data-core-project-id="aurora-alpha"] a[href="/work/aurora-alpha-detail"] [data-framer-component-type="RichTextContainer"] {
+  min-width: max-content;
+}
+
+body[data-core-project-page="overview"][data-core-project-id="aurora-alpha"] a[href="/work/aurora-alpha-detail"] p {
+  white-space: nowrap;
+}
+
+/* The live product is a secondary hero action; the full archive stays separate. */
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .portfolio-project-website {
+  pointer-events: auto !important;
+  display: inline-flex;
+  max-width: 100%;
+  margin-top: 20px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+  color: #111;
+  font: 600 14px/1.5 "Inter Display", Inter, "PingFang SC", sans-serif;
+  text-decoration: none;
+}
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .portfolio-project-website:hover { opacity: .6; }
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .portfolio-project-website:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }

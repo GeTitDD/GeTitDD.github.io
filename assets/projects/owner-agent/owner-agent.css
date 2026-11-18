@@ -1,0 +1,173 @@
+/* Owner Agent uses the shared Soma Work system; these rules size its own evidence. */
+/* The original responsive spacer visibility is part of the native shell. */
+@media(min-width:1200px) { .owner-agent-case .hidden-1dsdem7 { display:none!important; } }
+@media(min-width:810px) and (max-width:1199.98px) { .owner-agent-case .hidden-1qputln { display:none!important; } }
+@media(max-width:809.98px) { .owner-agent-case .hidden-gyde87 { display:none!important; } }
+body.soma-work.work-research.owner-agent-case .framer-YXHYY .wr-hero { height:max(100svh,1080px); }
+body.soma-work.work-research.owner-agent-case .wr-hero h1.framer-text { font-size:clamp(56px,5vw,84px); line-height:1.04; overflow-wrap:normal; word-break:normal; }
+.owner-agent-case .ow-title-description { display:block; margin-top:24px; font-size:clamp(26px,2.2vw,36px); font-weight:700; line-height:1.35; letter-spacing:-.04em; }
+.owner-agent-case .ow-breadcrumb { color:#999; font-size:11px; line-height:1.7; letter-spacing:.02em; }
+.owner-agent-case .ow-meta p + p { margin-top:12px; }
+.owner-agent-case .ow-intro { max-width:760px; }
+.owner-agent-case .ow-cover { display:block; padding:0; background:#1e1e1e url('/assets/projects/owner-agent/desktop-portrait.webp') center/contain no-repeat !important; color:#eee; }
+.owner-agent-case .ow-cover-open { position:absolute; inset:0; width:100%; height:100%; border:0; padding:24px; background:none; color:#fff; cursor:zoom-in; display:flex; align-items:end; justify-content:end; text-align:left; }
+.owner-agent-case .ow-cover-open > span { padding:8px 12px; background:#000c; color:#eee; font-size:12px; line-height:1.7; }
+.owner-agent-case .ow-frame { width:min(var(--soma-content-width),calc(100% - var(--soma-gutter) * 2)); margin:56px auto 0; }
+.owner-agent-case .ow-tags { display:flex; flex-wrap:wrap; gap:12px 28px; margin:32px 0 0; padding:0; list-style:none; color:#999; }
+.owner-agent-case .ow-tags li { font-size:14px; }
+.owner-agent-case .ow-overview-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; margin-top:56px; }
+.owner-agent-case .ow-overview-grid article { border-top:1px solid #ddd; padding-top:24px; }
+.owner-agent-case .ow-overview-grid h3 { font-size:24px; line-height:1.35; margin:0 0 20px; }
+.owner-agent-case .ow-overview-grid p { margin:0; color:#555; line-height:1.7; }
+.owner-agent-case .ow-caption { display:block; color:#999; font-size:14px; line-height:1.7; margin:24px 0 0; }
+.owner-agent-case .ow-shot { min-width:0; margin:0; }
+.owner-agent-case .ow-screens-sequence { display:grid; grid-template-columns:minmax(0,1fr); gap:56px; }
+.owner-agent-case .ow-photo-open { display:block; position:relative; width:100%; margin:0; border:0; padding:0; background:#f2f1ee; text-align:left; cursor:zoom-in; }
+.owner-agent-case .ow-photo-open img { display:block; width:100%; height:auto; }
+.owner-agent-case .ow-photo-open > span { position:absolute; right:20px; bottom:16px; padding:8px 12px; background:#000c; color:#eee; font-size:12px; line-height:1.4; }
+.owner-agent-case .ow-shot .ow-caption strong { display:block; color:#000; font-weight:500; margin-bottom:8px; }
+.owner-agent-case .ow-shot .ow-caption > span { display:block; }
+.owner-agent-case :is(.ow-cover-open,.ow-photo-open):focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+.owner-agent-case .ow-impact-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:72px 64px; }
+.owner-agent-case .ow-metric { min-width:0; padding-top:28px; border-top:1px solid #111; }
+.owner-agent-case .ow-metric-label { display:flex; gap:16px; color:#999; font-size:12px; line-height:1.7; margin:0 0 28px; }
+.owner-agent-case .ow-metric h3 { font-size:24px; line-height:1.35; margin:0 0 28px; }
+.owner-agent-case .ow-metric-main { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px; margin:0; }
+.owner-agent-case .ow-metric-main strong { font-size:clamp(40px,4.5vw,64px); font-weight:700; line-height:1.12; letter-spacing:-.045em; white-space:nowrap; }
+.owner-agent-case .ow-metric-main small { font-size:24px; line-height:1.3; letter-spacing:-.03em; }
+.owner-agent-case .ow-metric-description { margin:16px 0 0; font-size:14px; line-height:1.7; color:#999; }
+.owner-agent-case .ow-metric-secondary { margin-top:32px; }
+.owner-agent-case .ow-metric-secondary strong { display:block; font-size:clamp(21px,2.2vw,30px); font-weight:500; line-height:1.3; letter-spacing:-.03em; }
+.owner-agent-case .ow-metric-secondary p { margin:12px 0 0; font-size:14px; line-height:1.7; color:#999; }
+.owner-agent-case .ow-metric-reason { margin:28px 0 0; color:#555; font-size:16px; line-height:1.7; }
+.owner-agent-case .ow-metric-footnote { margin:24px 0 0; color:#888; font-size:14px; line-height:1.7; }
+.owner-agent-case .ow-tablist { display:flex; flex-wrap:wrap; gap:12px 32px; border-bottom:1px solid #eee; margin-bottom:40px; }
+.owner-agent-case .ow-tablist button { padding:16px 0; border:0; border-bottom:1px solid transparent; background:none; color:#999; font:inherit; font-size:14px; line-height:1.7; text-align:left; cursor:pointer; }
+.owner-agent-case .ow-tablist button[aria-selected=true] { color:#000; border-bottom-color:#000; }
+.owner-agent-case .ow-tablist button:hover { color:#000; }
+.owner-agent-case .ow-atlas-figure { margin:0; }
+.owner-agent-case .ow-atlas-open { display:block; position:relative; width:100%; margin:0; padding:0; border:0; background:#111; color:#fff; cursor:zoom-in; text-align:left; }
+.owner-agent-case .ow-atlas-open img { display:block; width:100%; height:auto; aspect-ratio:3/2; }
+.owner-agent-case .ow-atlas-open > span { position:absolute; right:20px; bottom:16px; padding:8px 12px; background:#000c; color:#eee; font-size:12px; line-height:1.4; }
+.owner-agent-case .ow-atlas-caption { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 24px; margin-top:24px; color:#999; font-size:12px; line-height:1.7; }
+.owner-agent-case .ow-atlas-caption strong { font-weight:500; }
+.owner-agent-case .ow-atlas-notes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px; margin-top:48px; }
+.owner-agent-case .ow-atlas-notes h3 { font-size:24px; line-height:1.35; margin:0 0 20px; }
+.owner-agent-case .ow-atlas-notes p { margin:0; color:#555; line-height:1.7; }
+.owner-agent-case .ow-atlas-boundary { border-top:1px solid #eee; padding-top:24px; margin:32px 0 0; color:#999; font-size:14px; line-height:1.7; }
+.owner-agent-case .ow-detail-entry { display:grid; grid-template-columns:48px minmax(0,760px); gap:40px; width:min(920px,100%); margin:48px auto 0; border-top:1px solid #eee; padding-top:32px; }
+.owner-agent-case .ow-detail-number { color:#ccc; font-size:32px; line-height:1.2; letter-spacing:-.04em; }
+.owner-agent-case .ow-detail-entry h3 { color:#000; font-size:24px; font-weight:700; line-height:1.35; margin:0 0 24px; letter-spacing:-.03em; }
+.owner-agent-case .ow-detail-entry p { color:#555; margin:0; font-size:16px; line-height:1.7; }
+.owner-agent-case :is(.ow-detail-entry,.ow-atlas-notes,.ow-metric,.ow-stack-grid) code { font-size:.85em; overflow-wrap:anywhere; }
+.owner-agent-case .ow-stack-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:48px; }
+.owner-agent-case .ow-stack-grid h3 { font-size:24px; line-height:1.35; margin:0 0 24px; }
+.owner-agent-case .ow-stack-grid ul { list-style:none; padding:0; margin:0; }
+.owner-agent-case .ow-stack-grid li { padding:16px 0; border-top:1px solid #eee; font-size:14px; line-height:1.7; color:#555; overflow-wrap:anywhere; }
+.owner-agent-case .ow-document-note { color:#999; border-top:1px solid #eee; padding-top:24px; font-size:14px; line-height:1.7; margin:56px 0 0; }
+body.soma-work.work-research .soma-next-art.ow-next-art { display:flex; justify-content:center; align-items:center; color:#fff; background:#151515; font-size:120px; font-weight:800; letter-spacing:-.09em; }
+.owner-agent-case .ow-atlas-dialog { position:fixed; inset:0; width:100vw; height:100svh; max-width:none; max-height:none; padding:0; margin:0; border:0; background:#111; color:#eee; z-index:2147483000; }
+.owner-agent-case .ow-atlas-dialog::backdrop { background:#111; }
+.owner-agent-case .ow-atlas-dialog[open] { display:grid; grid-template-rows:auto minmax(0,1fr) auto; }
+.owner-agent-case .ow-viewer-header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 32px; padding:24px 32px; border-bottom:1px solid #333; }
+.owner-agent-case .ow-viewer-title { margin:0; color:#eee; font-size:14px; line-height:1.7; font-weight:500; }
+.owner-agent-case .ow-viewer-controls { display:flex; align-items:center; flex-wrap:wrap; gap:12px; user-select:none; }
+.owner-agent-case .ow-atlas-dialog button { display:inline-flex; align-items:center; justify-content:center; min-width:40px; min-height:40px; border:1px solid #555; background:none; padding:8px 12px; color:#eee; font:inherit; font-size:14px; line-height:1.4; cursor:pointer; }
+.owner-agent-case .ow-atlas-dialog button:hover { border-color:#eee; }
+.owner-agent-case .ow-atlas-dialog button:disabled { color:#666; cursor:default; border-color:#333; }
+.owner-agent-case .ow-atlas-dialog :focus-visible { outline:2px solid #eee; outline-offset:3px; }
+.owner-agent-case .ow-zoom-level { min-width:48px; text-align:center; font-size:12px; font-variant-numeric:tabular-nums; }
+.owner-agent-case .ow-viewer-body { overflow:auto; min-width:0; min-height:0; cursor:grab; touch-action:none; overscroll-behavior:contain; }
+.owner-agent-case .ow-viewer-body.ow-dragging { cursor:grabbing; }
+.owner-agent-case .ow-zoom-surface { display:grid; place-items:center; }
+.owner-agent-case .ow-zoom-image { display:block; max-width:none; flex:none; user-select:none; -webkit-user-drag:none; }
+.owner-agent-case .ow-viewer-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; padding:16px 32px; border-top:1px solid #333; color:#999; font-size:12px; line-height:1.7; }
+@media(min-width:810px) and (max-width:1199.98px) {
+  body.soma-work.work-research.owner-agent-case .framer-YXHYY .wr-hero { height:auto; }
+  .owner-agent-case .ow-cover { min-height:760px; }
+  .owner-agent-case .ow-overview-grid { grid-template-columns:1fr; gap:32px; }
+  .owner-agent-case .ow-overview-grid p { max-width:760px; }
+  .owner-agent-case .ow-impact-grid { gap:56px 40px; }
+  .owner-agent-case .ow-stack-grid { gap:32px; }
+}
+@media(max-width:809.98px) {
+  body.soma-work.work-research.owner-agent-case .framer-YXHYY .wr-hero { height:auto; }
+  body.soma-work.work-research.owner-agent-case .wr-hero h1.framer-text { font-size:clamp(44px,12vw,72px); }
+  .owner-agent-case .ow-title-description { font-size:clamp(23px,6vw,32px); margin-top:20px; }
+  body.soma-work.work-research.owner-agent-case .wr-visual.soma-art.ow-cover { min-height:560px; aspect-ratio:auto !important; padding:0; }
+  .owner-agent-case .ow-cover-open { padding:16px; }
+  .owner-agent-case .ow-frame { margin-top:40px; }
+  .owner-agent-case .ow-overview-grid,.owner-agent-case .ow-impact-grid,.owner-agent-case .ow-atlas-notes,.owner-agent-case .ow-stack-grid,.owner-agent-case .ow-screens-sequence { grid-template-columns:minmax(0,1fr); gap:40px; }
+  .owner-agent-case .ow-overview-grid { margin-top:40px; }
+  .owner-agent-case .ow-impact-grid { gap:56px; }
+  .owner-agent-case .ow-metric-main small { font-size:20px; }
+  .owner-agent-case .ow-metric-secondary { margin-top:24px; }
+  .owner-agent-case .ow-tablist { display:flex; flex-direction:column; gap:0; margin-bottom:32px; }
+  .owner-agent-case .ow-tablist button { width:100%; padding:16px 0; }
+  .owner-agent-case :is(.ow-atlas-open,.ow-photo-open) > span { bottom:8px; right:8px; padding:6px 8px; font-size:11px; }
+  .owner-agent-case .ow-atlas-notes { margin-top:32px; }
+  .owner-agent-case .ow-detail-entry { display:block; margin-top:40px; padding-top:24px; }
+  .owner-agent-case .ow-detail-number { display:block; font-size:24px; margin-bottom:20px; }
+  .owner-agent-case .ow-viewer-header { padding:16px; gap:12px; }
+  .owner-agent-case .ow-viewer-controls { gap:8px; }
+  .owner-agent-case .ow-atlas-dialog button { padding:8px 10px; }
+  .owner-agent-case .ow-viewer-footer { padding:12px 16px; }
+}
+
+/* Owner's content stays in broad, inset reading groups. */
+.owner-agent-case .ow-cover-label { position:absolute; top:28px; left:28px; right:28px; color:#a8a8a8; font-size:10px; letter-spacing:.09em; line-height:1.8; }
+.owner-agent-case .ow-title-description { font-size:clamp(26px,2.3vw,36px); }
+.owner-agent-case .ow-needs { display:grid; gap:48px; margin-top:56px; }
+.owner-agent-case .ow-need { border-top:1px solid #ddd; padding-top:28px; }
+.owner-agent-case .ow-need header { display:flex; align-items:baseline; gap:24px; margin-bottom:32px; }
+.owner-agent-case .ow-need header > span { flex:none; color:#aaa; font-size:14px; }
+.owner-agent-case .ow-need h3 { font-size:28px; line-height:1.4; font-weight:500; margin:0; letter-spacing:-.035em; }
+.owner-agent-case .ow-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:64px; }
+.owner-agent-case .ow-pair p { color:#555; margin:12px 0 0; line-height:1.8; }
+.owner-agent-case .ow-kicker { display:block; color:#999; font-size:12px; line-height:1.8; margin:0; }
+.owner-agent-case .ow-feature { display:grid; grid-template-columns:160px minmax(0,760px); gap:40px; padding-top:32px; margin:48px 0 0; border-top:1px solid #eee; }
+.owner-agent-case .ow-feature-label { color:#999; font-size:11px; line-height:1.8; }
+.owner-agent-case .ow-feature h3 { font-size:28px; font-weight:500; line-height:1.4; letter-spacing:-.035em; margin:0 0 28px; }
+.owner-agent-case .ow-feature p { color:#555; line-height:1.8; margin:0 0 24px; }
+.owner-agent-case .ow-feature p:last-child { margin-bottom:0; }
+.owner-agent-case :is(.ow-feature,.ow-boundary,.ow-deep) code { font-size:.85em; overflow-wrap:anywhere; }
+.owner-agent-case .ow-boundary { max-width:960px; border-top:1px solid #111; margin-top:48px; padding-top:28px; }
+.owner-agent-case .ow-boundary p { max-width:760px; color:#555; line-height:1.8; margin:16px 0 0; }
+.owner-agent-case .ow-shot-0 { width:min(100%,760px); margin-inline:auto; }
+.owner-agent-case .ow-photo-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; }
+.owner-agent-case .ow-caption { max-width:760px; }
+.owner-agent-case .ow-measurement-note { max-width:760px; color:#888; font-size:14px; line-height:1.8; margin:0 0 48px; }
+.owner-agent-case .ow-metric-main { margin-bottom:28px; }
+.owner-agent-case .ow-metric-main strong { font-size:clamp(40px,4.2vw,62px); }
+.owner-agent-case .ow-metric h3 { font-size:24px; font-weight:500; margin:0; }
+.owner-agent-case .ow-metric-footnote { padding-top:24px; border-top:1px solid #eee; }
+.owner-agent-case .ow-atlas-open img { aspect-ratio:8/5; object-fit:contain; background:#090b0d; }
+.owner-agent-case .ow-atlas-boundary { overflow-wrap:anywhere; }
+.owner-agent-case .ow-deep { max-width:760px; margin:0 auto; }
+.owner-agent-case .ow-deep h3 { font-size:36px; font-weight:500; line-height:1.35; letter-spacing:-.04em; margin:24px 0 40px; }
+.owner-agent-case .ow-deep-prose > p { color:#555; line-height:1.8; margin:12px 0 32px; }
+.owner-agent-case .ow-deep-prose > .ow-principle { border-top:1px solid #eee; padding-top:28px; color:#888; font-size:14px; margin-top:40px; }
+.owner-agent-case .ow-stack-grid h3 { font-size:22px; font-weight:500; }
+.owner-agent-case .ow-tablist button { min-height:48px; }
+@media(min-width:810px) and (max-width:1199.98px) {
+ .owner-agent-case .ow-pair { gap:40px; }
+ .owner-agent-case .ow-feature { grid-template-columns:120px minmax(0,1fr); gap:32px; }
+ .owner-agent-case .ow-photo-pair { gap:30px; }
+ .owner-agent-case .ow-stack-grid { grid-template-columns:1fr; gap:40px; }
+}
+@media(max-width:809.98px) {
+ .owner-agent-case .ow-cover-label { left:20px; top:24px; right:20px; font-size:9px; }
+ .owner-agent-case .ow-needs { gap:40px; margin-top:40px; }
+ .owner-agent-case .ow-need header { gap:16px; margin-bottom:28px; }
+ .owner-agent-case .ow-need h3 { font-size:24px; }
+ .owner-agent-case .ow-pair { grid-template-columns:minmax(0,1fr); gap:28px; }
+ .owner-agent-case .ow-feature { display:block; margin-top:40px; padding-top:24px; }
+ .owner-agent-case .ow-feature-label { display:block; margin-bottom:24px; }
+ .owner-agent-case .ow-feature h3 { font-size:26px; }
+ .owner-agent-case .ow-boundary { margin-top:40px; }
+ .owner-agent-case .ow-photo-pair { grid-template-columns:minmax(0,1fr); gap:40px; }
+ .owner-agent-case .ow-metric-main strong { font-size:clamp(36px,11.5vw,48px); }
+ .owner-agent-case .ow-deep h3 { font-size:28px; margin-bottom:32px; }
+ .owner-agent-case .ow-deep h3 br { display:none; }
+ .owner-agent-case .ow-atlas-open img { aspect-ratio:1; }
+}

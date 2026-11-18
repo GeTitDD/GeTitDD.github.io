@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">小模型经验研究的结论范围</title>
+<desc id="desc">区分有直接评估支持的上下文经验收益、单世界单种子探索结果，以及尚未获得证据的持续权重能力增长。</desc>
+<rect width="1200" height="900" fill="#f2f2ec"/>
+<g font-family="Inter, PingFang SC, sans-serif" fill="#222923">
+  <text x="58" y="67" font-size="17" font-weight="700" letter-spacing="2.5" fill="#66746a">CONCLUSION SCOPE / EVIDENCE BOUNDARIES</text>
+  <text x="58" y="130" font-size="40" font-weight="700">哪些结论成立，哪些仍待验证</text>
+  <text x="58" y="176" font-size="20" fill="#586159">把观察结果与证据强度放在一起阅读。</text>
+
+  <rect x="52" y="228" width="1096" height="170" rx="8" fill="#e4ece5" stroke="#557c68" stroke-width="2"/>
+  <rect x="52" y="228" width="10" height="170" rx="5" fill="#557c68"/>
+  <text x="88" y="276" font-size="17" font-weight="700" letter-spacing="1.6" fill="#557c68">SUPPORTED IN THE TESTED SETTING</text>
+  <text x="88" y="325" font-size="28" font-weight="700">受控任务中，相关上下文经验与更高任务胜率相关</text>
+  <text x="88" y="365" font-size="17" fill="#465149">结论范围：经验作为推理上下文输入；按 Test / OOD 及各自固定分母报告。</text>
+
+  <rect x="52" y="421" width="1096" height="170" rx="8" fill="#f1e8df" stroke="#bd7950" stroke-width="2"/>
+  <rect x="52" y="421" width="10" height="170" rx="5" fill="#bd7950"/>
+  <text x="88" y="469" font-size="17" font-weight="700" letter-spacing="1.6" fill="#a56540">EXPLORATORY OBSERVATION</text>
+  <text x="88" y="518" font-size="28" font-weight="700">游戏中的负经验纠错，观察到局部行为变化</text>
+  <text x="88" y="558" font-size="17" fill="#5c4d43">结论范围：单一探索世界与单个优化种子；不是强化学习或通用游戏能力证明。</text>
+
+  <rect x="52" y="614" width="1096" height="170" rx="8" fill="#e8e9ee" stroke="#69728b" stroke-width="2"/>
+  <rect x="52" y="614" width="10" height="170" rx="5" fill="#69728b"/>
+  <text x="88" y="662" font-size="17" font-weight="700" letter-spacing="1.6" fill="#58627b">NOT ESTABLISHED</text>
+  <text x="88" y="711" font-size="28" font-weight="700">长期权重能力增长与可靠的训练特定经验利用</text>
+  <text x="88" y="751" font-size="17" fill="#4d5362">当前对照未支持该结论；保留负结果，避免把上下文收益写成模型学会了经验。</text>
+
+  <text x="58" y="838" font-size="15" fill="#707872">结果分别对应各自分支、预算、数据来源与评估条件，不跨分支合并解释。</text>
+</g>
+</svg>

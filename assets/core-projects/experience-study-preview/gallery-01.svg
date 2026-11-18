@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+<rect width="1200" height="1600" fill="#e5e8df"/>
+<g font-family="Inter Display, Inter, PingFang SC, Hiragino Sans GB, sans-serif" fill="#34433a">
+<text x="90.0" y="144.0" font-size="24" font-weight="600" letter-spacing="3">01 / 小模型 AGENT 能力优化研究</text>
+<text x="90.0" y="256.0" font-size="64.8" font-weight="700">任务对照</text>
+<rect x="90.0" y="336.0" width="1020.0" height="911.9999999999999" fill="#fff" fill-opacity=".55"/>
+<svg x="90.0" y="336.0" width="1020.0" height="911.9999999999999" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet">
+<title id="title">外部经验输入条件下的小模型任务胜率对照</title>
+<desc id="desc">相同冻结基座的无记忆条件与提供相关经验的条件：Test 分别 39/120 与 99/120，OOD 分别 15/48 与 43/48。结果描述上下文经验输入，不代表权重训练收益。</desc>
+<rect fill="#f2f2ec" height="900" width="1200"/>
+<g fill="#222923" font-family="Inter, PingFang SC, sans-serif">
+<text fill="#66746a" font-size="17" font-weight="700" letter-spacing="2.5" x="58" y="67">CONTROLLED TASKS / CONTEXT EXPERIENCE</text>
+<text font-size="39" font-weight="700" x="58" y="130">相关经验输入与无记忆条件</text>
+<text fill="#586159" font-size="20" x="58" y="176">同一冻结基座 · 胜利回合 / 固定评估总回合</text>
+<rect fill="#fff" height="250" rx="8" stroke="#d3d8d1" width="1096" x="52" y="220"/>
+<text fill="#66746a" font-size="18" font-weight="700" letter-spacing="1.5" x="86" y="270">TEST / 120 回合</text>
+<text font-size="21" x="86" y="333">无记忆</text>
+<rect fill="#e5e8e2" height="32" rx="4" width="620" x="330" y="307"/>
+<rect fill="#727c74" height="32" rx="4" width="201.5" x="330" y="307"/>
+<text font-size="23" font-weight="700" x="975" y="333">39 / 120</text>
+<text font-size="21" x="86" y="400">相关经验</text>
+<rect fill="#e5e8e2" height="32" rx="4" width="620" x="330" y="374"/>
+<rect fill="#56836d" height="32" rx="4" width="511.5" x="330" y="374"/>
+<text font-size="23" font-weight="700" x="975" y="400">99 / 120</text>
+<text fill="#6b746d" font-size="15" x="330" y="441">32.5%</text>
+<text fill="#496e59" font-size="15" x="804" y="441">82.5%</text>
+<rect fill="#fff" height="250" rx="8" stroke="#d3d8d1" width="1096" x="52" y="496"/>
+<text fill="#66746a" font-size="18" font-weight="700" letter-spacing="1.5" x="86" y="546">OOD / 48 回合</text>
+<text font-size="21" x="86" y="609">无记忆</text>
+<rect fill="#e5e8e2" height="32" rx="4" width="620" x="330" y="583"/>
+<rect fill="#727c74" height="32" rx="4" width="193.8" x="330" y="583"/>
+<text font-size="23" font-weight="700" x="975" y="609">15 / 48</text>
+<text font-size="21" x="86" y="676">相关经验</text>
+<rect fill="#e5e8e2" height="32" rx="4" width="620" x="330" y="650"/>
+<rect fill="#56836d" height="32" rx="4" width="555.5" x="330" y="650"/>
+<text font-size="23" font-weight="700" x="975" y="676">43 / 48</text>
+<text fill="#6b746d" font-size="15" x="330" y="717">31.3%</text>
+<text fill="#496e59" font-size="15" x="848" y="717">89.6%</text>
+<text fill="#4f5951" font-size="16" x="58" y="793">固定分母包含不可达案例；对照说明该评估中的上下文经验收益，不证明权重训练或长期能力增长。</text>
+<text fill="#7a817b" font-size="14" x="58" y="832">来源：Case A 冻结证据集 · 各实验分支不混作单变量比较</text>
+</g>
+</svg>
+<text x="90.0" y="1408.0" font-size="42.00000000000001" font-weight="500">同一冻结基座下，对照相关经验与无记忆条件。</text>
+<text x="90.0" y="1520.0" font-size="19" font-weight="500" letter-spacing="2">PROJECT NOTES / HUANG</text>
+</g></svg>

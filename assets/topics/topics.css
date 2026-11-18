@@ -1,0 +1,61 @@
+/* Topic typography, grids, image frames and motion come from Golden Hour. */
+body[data-topic-page] img[src^="/assets/topics/"] {
+  background-color: #f0efeb;
+}
+
+body[data-topic-page] [data-topic-clock] {
+  display: none !important;
+}
+
+body[data-topic-page] .framer-1rgbfz[data-framer-name="Sticky Section"] {
+  background-color: transparent !important;
+}
+
+body[data-topic-page] [data-topic-video] img {
+  cursor: pointer;
+}
+
+body[data-topic-page] .topic-video-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
+}
+
+body[data-topic-page] .topic-video-link:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: -5px;
+}
+
+/* Transformer essay: retain the quote rhythm and fit four-character lenses. */
+body[data-topic-page="transformer-and-llms"] [data-framer-name="Quote Container"] h4 {
+  font-size: clamp(29px, 3.2vw, 46px) !important;
+}
+body[data-topic-page="transformer-and-llms"] .framer-w30ry8 h3 {
+  font-size: clamp(28px, 3.2vw, 46px) !important;
+}
+
+/* Context essay: keep the quote rhythm and six-character principle labels. */
+body[data-topic-page="context-engineering"] [data-framer-name="Quote Container"] h4 {
+  font-size: clamp(29px, 3.2vw, 46px) !important;
+}
+body[data-topic-page="context-engineering"] .framer-w30ry8 h3 {
+  font-size: clamp(26px, 2.6vw, 40px) !important;
+}
+
+/* Agentic Coding essay: retain quote rhythm and fit delivery checkpoints. */
+body[data-topic-page="agentic-coding"] [data-framer-name="Quote Container"] h4 {
+  font-size: clamp(29px, 3.2vw, 46px) !important;
+}
+body[data-topic-page="agentic-coding"] .framer-w30ry8 h3 {
+  font-size: clamp(26px, 2.6vw, 40px) !important;
+}
+
+/* Multi-Agent essay: retain quote rhythm and fit collaboration principles. */
+body[data-topic-page="multi-agent-collaboration"] [data-framer-name="Quote Container"] h4 {
+  font-size: clamp(29px, 3.2vw, 46px) !important;
+}
+body[data-topic-page="multi-agent-collaboration"] .framer-w30ry8 h3 {
+  font-size: clamp(26px, 2.6vw, 40px) !important;
+}

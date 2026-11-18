@@ -1,0 +1,115 @@
+/* MIRRISM uses the shared Soma Work system; these rules size its own evidence. */
+/* The original responsive spacer visibility is part of the native shell. */
+@media(min-width:1200px) { .mirrism-case .hidden-1dsdem7 { display:none!important; } }
+@media(min-width:810px) and (max-width:1199.98px) { .mirrism-case .hidden-1qputln { display:none!important; } }
+@media(max-width:809.98px) { .mirrism-case .hidden-gyde87 { display:none!important; } }
+body.soma-work.work-research.mirrism-case .framer-YXHYY .wr-hero { height:max(100svh,1080px); }
+body.soma-work.work-research.mirrism-case .wr-hero h1.framer-text { font-size:clamp(56px,5vw,84px); line-height:1.04; overflow-wrap:normal; word-break:normal; }
+.mirrism-case .mi-title-description { display:block; margin-top:24px; font-size:clamp(26px,2.2vw,36px); font-weight:700; line-height:1.35; letter-spacing:-.04em; }
+.mirrism-case .mi-breadcrumb { color:#999; font-size:11px; line-height:1.7; letter-spacing:.02em; }
+.mirrism-case .mi-meta p + p { margin-top:12px; }
+.mirrism-case .mi-intro { max-width:760px; }
+.mirrism-case .mi-cover { display:block; padding:0; background:#151515 url('/assets/projects/mirrism/project-cover.webp') 25% center/cover no-repeat !important; color:#eee; }
+.mirrism-case .mi-cover-open { position:absolute; inset:0; width:100%; height:100%; border:0; padding:24px; background:none; color:#fff; cursor:zoom-in; display:flex; align-items:end; justify-content:end; text-align:left; }
+.mirrism-case .mi-cover-open > span { padding:8px 12px; background:#000c; color:#eee; font-size:12px; line-height:1.7; }
+.mirrism-case .mi-frame { width:min(var(--soma-content-width),calc(100% - var(--soma-gutter) * 2)); margin:56px auto 0; }
+.mirrism-case .mi-tags { display:flex; flex-wrap:wrap; gap:12px 28px; margin:32px 0 0; padding:0; list-style:none; color:#999; }
+.mirrism-case .mi-tags li { font-size:14px; }
+.mirrism-case .mi-overview-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; margin-top:56px; }
+.mirrism-case .mi-overview-grid article { border-top:1px solid #ddd; padding-top:24px; }
+.mirrism-case .mi-overview-grid h3 { font-size:24px; line-height:1.35; margin:0 0 20px; }
+.mirrism-case .mi-overview-grid p { margin:0; color:#555; line-height:1.7; }
+.mirrism-case .mi-caption { display:block; color:#999; font-size:14px; line-height:1.7; margin:24px 0 0; }
+.mirrism-case .mi-shot { min-width:0; margin:0; }
+.mirrism-case .mi-screens-sequence { display:grid; grid-template-columns:minmax(0,1fr); gap:56px; }
+.mirrism-case .mi-photo-open { display:block; position:relative; width:100%; margin:0; border:0; padding:0; background:#f2f1ee; text-align:left; cursor:zoom-in; }
+.mirrism-case .mi-photo-open img { display:block; width:100%; height:auto; }
+.mirrism-case .mi-photo-open > span { position:absolute; right:20px; bottom:16px; padding:8px 12px; background:#000c; color:#eee; font-size:12px; line-height:1.4; }
+.mirrism-case .mi-shot .mi-caption strong { display:block; color:#000; font-weight:500; margin-bottom:8px; }
+.mirrism-case .mi-shot .mi-caption > span { display:block; }
+.mirrism-case :is(.mi-cover-open,.mi-photo-open):focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+.mirrism-case .mi-impact-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:72px 64px; }
+.mirrism-case .mi-metric { min-width:0; padding-top:28px; border-top:1px solid #111; }
+.mirrism-case .mi-metric-label { display:flex; gap:16px; color:#999; font-size:12px; line-height:1.7; margin:0 0 28px; }
+.mirrism-case .mi-metric h3 { font-size:24px; line-height:1.35; margin:0 0 28px; }
+.mirrism-case .mi-metric-main { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px; margin:0; }
+.mirrism-case .mi-metric-main strong { font-size:clamp(40px,4.5vw,64px); font-weight:700; line-height:1.12; letter-spacing:-.045em; white-space:nowrap; }
+.mirrism-case .mi-metric-main small { font-size:24px; line-height:1.3; letter-spacing:-.03em; }
+.mirrism-case .mi-metric-description { margin:16px 0 0; font-size:14px; line-height:1.7; color:#999; }
+.mirrism-case .mi-metric-secondary { margin-top:32px; }
+.mirrism-case .mi-metric-secondary strong { display:block; font-size:clamp(21px,2.2vw,30px); font-weight:500; line-height:1.3; letter-spacing:-.03em; }
+.mirrism-case .mi-metric-secondary p { margin:12px 0 0; font-size:14px; line-height:1.7; color:#999; }
+.mirrism-case .mi-metric-reason { margin:28px 0 0; color:#555; font-size:16px; line-height:1.7; }
+.mirrism-case .mi-metric-footnote { margin:24px 0 0; color:#888; font-size:14px; line-height:1.7; }
+.mirrism-case .mi-tablist { display:flex; flex-wrap:wrap; gap:12px 32px; border-bottom:1px solid #eee; margin-bottom:40px; }
+.mirrism-case .mi-tablist button { padding:16px 0; border:0; border-bottom:1px solid transparent; background:none; color:#999; font:inherit; font-size:14px; line-height:1.7; text-align:left; cursor:pointer; }
+.mirrism-case .mi-tablist button[aria-selected=true] { color:#000; border-bottom-color:#000; }
+.mirrism-case .mi-tablist button:hover { color:#000; }
+.mirrism-case .mi-atlas-figure { margin:0; }
+.mirrism-case .mi-atlas-open { display:block; position:relative; width:100%; margin:0; padding:0; border:0; background:#111; color:#fff; cursor:zoom-in; text-align:left; }
+.mirrism-case .mi-atlas-open img { display:block; width:100%; height:auto; aspect-ratio:3/2; }
+.mirrism-case .mi-atlas-open > span { position:absolute; right:20px; bottom:16px; padding:8px 12px; background:#000c; color:#eee; font-size:12px; line-height:1.4; }
+.mirrism-case .mi-atlas-caption { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 24px; margin-top:24px; color:#999; font-size:12px; line-height:1.7; }
+.mirrism-case .mi-atlas-caption strong { font-weight:500; }
+.mirrism-case .mi-atlas-notes { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px; margin-top:48px; }
+.mirrism-case .mi-atlas-notes h3 { font-size:24px; line-height:1.35; margin:0 0 20px; }
+.mirrism-case .mi-atlas-notes p { margin:0; color:#555; line-height:1.7; }
+.mirrism-case .mi-atlas-boundary { border-top:1px solid #eee; padding-top:24px; margin:32px 0 0; color:#999; font-size:14px; line-height:1.7; }
+.mirrism-case .mi-detail-entry { display:grid; grid-template-columns:48px minmax(0,760px); gap:40px; width:min(920px,100%); margin:48px auto 0; border-top:1px solid #eee; padding-top:32px; }
+.mirrism-case .mi-detail-number { color:#ccc; font-size:32px; line-height:1.2; letter-spacing:-.04em; }
+.mirrism-case .mi-detail-entry h3 { color:#000; font-size:24px; font-weight:700; line-height:1.35; margin:0 0 24px; letter-spacing:-.03em; }
+.mirrism-case .mi-detail-entry p { color:#555; margin:0; font-size:16px; line-height:1.7; }
+.mirrism-case :is(.mi-detail-entry,.mi-atlas-notes,.mi-metric,.mi-stack-grid) code { font-size:.85em; overflow-wrap:anywhere; }
+.mirrism-case .mi-stack-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:48px; }
+.mirrism-case .mi-stack-grid h3 { font-size:24px; line-height:1.35; margin:0 0 24px; }
+.mirrism-case .mi-stack-grid ul { list-style:none; padding:0; margin:0; }
+.mirrism-case .mi-stack-grid li { padding:16px 0; border-top:1px solid #eee; font-size:14px; line-height:1.7; color:#555; overflow-wrap:anywhere; }
+.mirrism-case .mi-document-note { color:#999; border-top:1px solid #eee; padding-top:24px; font-size:14px; line-height:1.7; margin:56px 0 0; }
+body.soma-work.work-research .soma-next-art.mi-next-art { display:flex; justify-content:center; align-items:center; color:#fff; background:#151515; font-size:120px; font-weight:800; letter-spacing:-.09em; }
+.mirrism-case .mi-atlas-dialog { position:fixed; inset:0; width:100vw; height:100svh; max-width:none; max-height:none; padding:0; margin:0; border:0; background:#111; color:#eee; z-index:2147483000; }
+.mirrism-case .mi-atlas-dialog::backdrop { background:#111; }
+.mirrism-case .mi-atlas-dialog[open] { display:grid; grid-template-rows:auto minmax(0,1fr) auto; }
+.mirrism-case .mi-viewer-header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 32px; padding:24px 32px; border-bottom:1px solid #333; }
+.mirrism-case .mi-viewer-title { margin:0; color:#eee; font-size:14px; line-height:1.7; font-weight:500; }
+.mirrism-case .mi-viewer-controls { display:flex; align-items:center; flex-wrap:wrap; gap:12px; user-select:none; }
+.mirrism-case .mi-atlas-dialog button { display:inline-flex; align-items:center; justify-content:center; min-width:40px; min-height:40px; border:1px solid #555; background:none; padding:8px 12px; color:#eee; font:inherit; font-size:14px; line-height:1.4; cursor:pointer; }
+.mirrism-case .mi-atlas-dialog button:hover { border-color:#eee; }
+.mirrism-case .mi-atlas-dialog button:disabled { color:#666; cursor:default; border-color:#333; }
+.mirrism-case .mi-atlas-dialog :focus-visible { outline:2px solid #eee; outline-offset:3px; }
+.mirrism-case .mi-zoom-level { min-width:48px; text-align:center; font-size:12px; font-variant-numeric:tabular-nums; }
+.mirrism-case .mi-viewer-body { overflow:auto; min-width:0; min-height:0; cursor:grab; touch-action:none; overscroll-behavior:contain; }
+.mirrism-case .mi-viewer-body.mi-dragging { cursor:grabbing; }
+.mirrism-case .mi-zoom-surface { display:grid; place-items:center; }
+.mirrism-case .mi-zoom-image { display:block; max-width:none; flex:none; user-select:none; -webkit-user-drag:none; }
+.mirrism-case .mi-viewer-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; padding:16px 32px; border-top:1px solid #333; color:#999; font-size:12px; line-height:1.7; }
+@media(min-width:810px) and (max-width:1199.98px) {
+  body.soma-work.work-research.mirrism-case .framer-YXHYY .wr-hero { height:auto; }
+  .mirrism-case .mi-cover { min-height:760px; }
+  .mirrism-case .mi-overview-grid { grid-template-columns:1fr; gap:32px; }
+  .mirrism-case .mi-overview-grid p { max-width:760px; }
+  .mirrism-case .mi-impact-grid { gap:56px 40px; }
+  .mirrism-case .mi-stack-grid { gap:32px; }
+}
+@media(max-width:809.98px) {
+  body.soma-work.work-research.mirrism-case .framer-YXHYY .wr-hero { height:auto; }
+  body.soma-work.work-research.mirrism-case .wr-hero h1.framer-text { font-size:clamp(44px,12vw,72px); }
+  .mirrism-case .mi-title-description { font-size:clamp(23px,6vw,32px); margin-top:20px; }
+  body.soma-work.work-research.mirrism-case .wr-visual.soma-art.mi-cover { min-height:560px; aspect-ratio:auto !important; padding:0; }
+  .mirrism-case .mi-cover-open { padding:16px; }
+  .mirrism-case .mi-frame { margin-top:40px; }
+  .mirrism-case .mi-overview-grid,.mirrism-case .mi-impact-grid,.mirrism-case .mi-atlas-notes,.mirrism-case .mi-stack-grid,.mirrism-case .mi-screens-sequence { grid-template-columns:minmax(0,1fr); gap:40px; }
+  .mirrism-case .mi-overview-grid { margin-top:40px; }
+  .mirrism-case .mi-impact-grid { gap:56px; }
+  .mirrism-case .mi-metric-main small { font-size:20px; }
+  .mirrism-case .mi-metric-secondary { margin-top:24px; }
+  .mirrism-case .mi-tablist { display:flex; flex-direction:column; gap:0; margin-bottom:32px; }
+  .mirrism-case .mi-tablist button { width:100%; padding:16px 0; }
+  .mirrism-case :is(.mi-atlas-open,.mi-photo-open) > span { bottom:8px; right:8px; padding:6px 8px; font-size:11px; }
+  .mirrism-case .mi-atlas-notes { margin-top:32px; }
+  .mirrism-case .mi-detail-entry { display:block; margin-top:40px; padding-top:24px; }
+  .mirrism-case .mi-detail-number { display:block; font-size:24px; margin-bottom:20px; }
+  .mirrism-case .mi-viewer-header { padding:16px; gap:12px; }
+  .mirrism-case .mi-viewer-controls { gap:8px; }
+  .mirrism-case .mi-atlas-dialog button { padding:8px 10px; }
+  .mirrism-case .mi-viewer-footer { padding:12px 16px; }
+}

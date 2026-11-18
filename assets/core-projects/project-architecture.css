@@ -1,0 +1,45 @@
+/* Generated scoped component styles. Edit the source stylesheet. */
+/* Public architecture overviews follow the existing inset Soma Work system. */
+body.core-detail-page .core-project-content .project-architecture{margin:64px 0 0;scroll-margin-top:112px;color:#111}
+body.core-detail-page .core-project-content .project-architecture.pa-standalone{width:min(var(--soma-content-width),calc(100% - var(--soma-gutter)*2));margin:64px auto 0}
+body.core-detail-page .core-project-content .project-architecture .pa-key{display:block;margin:0;color:#999;font-size:11px;font-weight:500;line-height:1.7;letter-spacing:.02em}
+body.core-detail-page .core-project-content .project-architecture .pa-caption{margin:0 0 32px}
+body.core-detail-page .core-project-content .project-architecture .pa-caption h3{margin:16px 0;color:#111;font-size:24px;line-height:1.35;letter-spacing:-.03em}
+body.core-detail-page .core-project-content .project-architecture .pa-caption p{margin:0;color:#555;font-size:16px;line-height:1.7}
+body.core-detail-page .core-project-content .project-architecture .pa-main{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1.8fr) 40px minmax(0,1fr);align-items:center}
+body.core-detail-page .core-project-content .project-architecture .pa-node{min-width:0;padding:24px;border:1px solid #ddd}
+body.core-detail-page .core-project-content .project-architecture .pa-node h4{margin:12px 0 10px;color:#111;font-size:24px;font-weight:700;line-height:1.35;letter-spacing:-.03em}
+body.core-detail-page .core-project-content .project-architecture .pa-node p{margin:0;color:#777;font-size:14px;line-height:1.7}
+body.core-detail-page .core-project-content .project-architecture svg{display:block;fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+body.core-detail-page .core-project-content .project-architecture .pa-link{width:40px;height:24px;color:#999}
+body.core-detail-page .core-project-content .project-architecture .pa-core{border-color:#111}
+body.core-detail-page .core-project-content .project-architecture .pa-core h4{margin-bottom:0}
+body.core-detail-page .core-project-content .project-architecture .pa-sequence{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);align-items:center;gap:12px;margin-top:24px;color:#111;font-size:16px;line-height:1.7;text-align:center}
+body.core-detail-page .core-project-content .project-architecture .pa-sequence-arrow{width:24px;height:24px;color:#777}
+body.core-detail-page .core-project-content .project-architecture .pa-capabilities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px;font-size:16px;line-height:1.7;text-align:center}
+body.core-detail-page .core-project-content .project-architecture .pa-core .pa-core-note{margin-top:16px;font-size:12px;line-height:1.7;text-align:center}
+body.core-detail-page .core-project-content .project-architecture .pa-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px;text-align:center}
+body.core-detail-page .core-project-content .project-architecture .pa-branches>div{border-top:1px solid #ddd;padding-top:14px}
+body.core-detail-page .core-project-content .project-architecture .pa-branches strong{display:block;color:#111;font-size:16px;font-weight:500;line-height:1.7}
+body.core-detail-page .core-project-content .project-architecture .pa-branches span{display:block;margin-top:8px;color:#777;font-size:12px;line-height:1.7}
+body.core-detail-page .core-project-content .project-architecture .pa-support{position:relative;display:grid;grid-template-columns:1.2fr repeat(3,minmax(0,1fr));align-items:center;gap:24px;margin-top:40px;padding-top:24px;border-top:1px solid #ddd}
+body.core-detail-page .core-project-content .project-architecture .pa-support::before{position:absolute;top:-41px;left:50%;width:1px;height:40px;background:#bbb;content:""}
+body.core-detail-page .core-project-content .project-architecture .pa-support-label{position:absolute;top:-30px;left:calc(50% + 12px);color:#999;font-size:11px;line-height:1.7}
+body.core-detail-page .core-project-content .project-architecture .pa-foundation h4{margin:6px 0 0;color:#111;font-size:20px;font-weight:700;line-height:1.35;letter-spacing:-.03em}
+body.core-detail-page .core-project-content .project-architecture .pa-tool{color:#555;font-size:16px;line-height:1.7}
+@media(max-width:809.98px){
+ body.core-detail-page .core-project-content .project-architecture{margin-top:40px}
+ body.core-detail-page .core-project-content .project-architecture.pa-standalone{margin-top:40px}
+ body.core-detail-page .core-project-content .project-architecture .pa-caption p{font-size:14px}
+ body.core-detail-page .core-project-content .project-architecture .pa-main{grid-template-columns:minmax(0,1fr);justify-items:stretch}
+ body.core-detail-page .core-project-content .project-architecture .pa-node{padding:20px}
+ body.core-detail-page .core-project-content .project-architecture :is(.pa-source,.pa-output){display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px 16px}
+ body.core-detail-page .core-project-content .project-architecture :is(.pa-source,.pa-output)>.pa-key{grid-column:1/-1}
+ body.core-detail-page .core-project-content .project-architecture :is(.pa-source,.pa-output)>h4{margin:0;font-size:22px}
+ body.core-detail-page .core-project-content .project-architecture :is(.pa-source,.pa-output)>p{text-align:right}
+ body.core-detail-page .core-project-content .project-architecture .pa-link{justify-self:center;margin:12px 0;transform:rotate(90deg)}
+ body.core-detail-page .core-project-content .project-architecture .pa-support{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 12px;margin-top:32px}
+ body.core-detail-page .core-project-content .project-architecture .pa-support::before,body.core-detail-page .core-project-content .project-architecture .pa-support-label{display:none}
+ body.core-detail-page .core-project-content .project-architecture .pa-foundation{grid-column:1/-1}
+ body.core-detail-page .core-project-content .project-architecture .pa-tool{font-size:14px}
+}

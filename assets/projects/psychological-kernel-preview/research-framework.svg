@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">心理内核的输入、状态接口与响应检验框架</title>
+<desc id="desc">事件情境和角色特征输入轻量模型，生成九轴零到一状态，再经过结构、机制响应与游戏迁移验收。</desc>
+<rect width="1200" height="900" fill="#f0eef1"/>
+<g font-family="Inter, PingFang SC, sans-serif" fill="#25242a">
+  <text x="58" y="68" font-size="17" font-weight="700" letter-spacing="2.5" fill="#686371">PSYCHOLOGICAL KERNEL / SYSTEM MAP</text>
+  <text x="58" y="132" font-size="40" font-weight="700">情境输入，生成可检验的角色状态</text>
+  <text x="58" y="177" font-size="20" fill="#5d5964">接口结构与心理响应分层验收，输出可读不代表机制有效。</text>
+
+  <rect x="54" y="232" width="310" height="292" rx="8" fill="#e7e9ed" stroke="#858d9a" stroke-width="2"/>
+  <text x="82" y="278" font-size="16" font-weight="700" letter-spacing="1.4" fill="#646e7b">01 / INPUT</text>
+  <text x="82" y="330" font-size="27" font-weight="700">结构化输入</text>
+  <text x="82" y="378" font-size="19" fill="#4e5159">四项情境事实</text>
+  <text x="82" y="411" font-size="19" fill="#4e5159">十二项角色特征</text>
+  <text x="82" y="474" font-size="15" fill="#707784">未提供的特征保留 null</text>
+
+  <path d="M376 378h56m-12-10 12 10-12 10" fill="none" stroke="#88838f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="444" y="232" width="310" height="292" rx="8" fill="#e8e2ec" stroke="#81738d" stroke-width="2"/>
+  <text x="472" y="278" font-size="16" font-weight="700" letter-spacing="1.4" fill="#6c5d79">02 / MODEL</text>
+  <text x="472" y="330" font-size="27" font-weight="700">轻量状态模型</text>
+  <text x="472" y="378" font-size="19" fill="#4e4855">生成固定 JSON 契约</text>
+  <text x="472" y="411" font-size="19" fill="#4e4855">九个状态轴 · 0–1</text>
+  <text x="472" y="474" font-size="15" fill="#756a7e">字段定义固定，数值随输入</text>
+
+  <path d="M766 378h56m-12-10 12 10-12 10" fill="none" stroke="#88838f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="834" y="232" width="310" height="292" rx="8" fill="#e9e8de" stroke="#89876d" stroke-width="2"/>
+  <text x="862" y="278" font-size="16" font-weight="700" letter-spacing="1.4" fill="#706f58">03 / EVALUATION</text>
+  <text x="862" y="330" font-size="27" font-weight="700">分层验收</text>
+  <text x="862" y="378" font-size="19" fill="#505047">格式 · 方向 · 稳定性</text>
+  <text x="862" y="411" font-size="19" fill="#505047">选择性 · 下游适配</text>
+  <text x="862" y="474" font-size="15" fill="#73715e">通过验证后再讨论迁移</text>
+
+  <path d="M599 525v54m-10-12 10 12 10-12" fill="none" stroke="#88838f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="175" y="594" width="850" height="158" rx="8" fill="#fff" stroke="#aaa7ae" stroke-width="2"/>
+  <text x="600" y="642" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="1.5" fill="#686371">CURRENT RESEARCH DECISION</text>
+  <text x="600" y="689" text-anchor="middle" font-size="28" font-weight="700">JSON 结构通过 ≠ 心理机制通过</text>
+  <text x="600" y="724" text-anchor="middle" font-size="16" fill="#5d5964">本轮工程迁移 REJECT · 心理有效性 INCONCLUSIVE</text>
+  <text x="58" y="824" font-size="15" fill="#6a6670">研究中间件接口与响应机制；没有声称已经证明 NPC 行为或游戏成绩。</text>
+</g>
+</svg>

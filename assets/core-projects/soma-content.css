@@ -1,0 +1,386 @@
+/* Generated scoped component styles. Edit the source stylesheet. */
+/* Content adapters scoped after the exact Soma native layout. */
+/* Each editorial group owns its columns; native spacer columns never nest. */
+body.core-detail-page .core-project-content .soma-prose-sequence > .soma-row{
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+body.core-detail-page .core-project-content .soma-prose-sequence > .soma-row > .framer-1gvvlps{
+  display: block;
+  width: 100%;
+  min-width: 0;
+  flex: none;
+  padding: 0;
+  overflow: visible;
+}
+body.core-detail-page .core-project-content .soma-prose-sequence > .soma-row > :is(.soma-row-side, section, .soma-row-index):empty{
+  display: none;
+}
+body.core-detail-page .core-project-content .soma-prose-sequence{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  width: min(var(--soma-content-width), calc(100% - var(--soma-gutter) * 2));
+  margin: 64px auto 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  list-style: none;
+}
+body.core-detail-page .core-project-content :is(.vr-takeaways, .wr-overview-grid, .wr-method-grid).soma-prose-sequence{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+body.core-detail-page .core-project-content .soma-exhibit .soma-prose-sequence{
+  width: 100%;
+  margin-top: 48px;
+}
+body.core-detail-page .core-project-content .soma-prose{
+  display: block;
+  gap: 0;
+  padding: 0;
+  overflow: visible;
+  min-width: 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+body.core-detail-page .core-project-content .soma-prose > :is(article, div, li){
+  display: block;
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #555;
+  list-style: none;
+}
+body.core-detail-page .core-project-content .soma-prose :is(h3, h4){
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.03em;
+  margin: 0 0 20px;
+}
+body.core-detail-page .core-project-content .soma-prose :is(p, li){
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: #555;
+}
+body.core-detail-page .core-project-content .soma-prose p{
+  max-width: none;
+  margin: 0 0 24px;
+}
+body.core-detail-page .core-project-content .soma-prose p:last-child{
+  margin-bottom: 0;
+}
+body.core-detail-page .core-project-content .soma-prose p + :is(h3, h4){
+  margin-top: 40px;
+}
+body.core-detail-page .core-project-content .soma-prose > :is(article, div, li) > span:first-child{
+  display: block;
+  margin: 0 0 24px;
+  color: #999;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+body.core-detail-page .core-project-content .soma-prose :is(ol, ul){
+  margin: 0;
+  padding-left: 20px;
+}
+body.core-detail-page .core-project-content .soma-prose li + li{
+  margin-top: 24px;
+}
+body.core-detail-page .core-project-content .soma-prose .oa-authority{
+  background: none;
+  color: #000;
+}
+body.core-detail-page .core-project-content .soma-prose .oa-authority p{
+  color: #555;
+}
+body.core-detail-page .core-project-content .pk-axes .soma-prose p{
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin: 0 0 32px !important;
+}
+body.core-detail-page .core-project-content .pk-axes .soma-prose p:last-child{
+  margin-bottom: 0 !important;
+}
+body.core-detail-page .core-project-content .soma-prose :is(code, .pk-hash){
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+body.core-detail-page .core-project-content .soma-prose :is(.wr-note, .oa-caption){
+  color: #999;
+  font-size: 14px;
+  line-height: 1.7;
+}
+body.core-detail-page .core-project-content .soma-prose .oa-transition{
+  display: flex;
+  gap: 16px;
+  padding: 24px 0 32px;
+  margin: 0;
+  border: 0;
+}
+body.core-detail-page .core-project-content .soma-prose .oa-transition strong{
+  color: #000;
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: -.03em;
+}
+body.core-detail-page .core-project-content .soma-prose .oa-transition > span{
+  font-size: 24px;
+  color: #999;
+}
+body.core-detail-page .core-project-content .soma-prose :is(.wr-evidence-links, .oa-evidence-grid article > a){
+  margin-top: 32px;
+}
+body.core-detail-page .core-project-content .soma-prose .wr-evidence-links a{
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  border-top-color: #eee;
+}
+body.core-detail-page .core-project-content .soma-prose .wr-evidence-links a span{
+  flex-shrink: 0;
+  color: #999;
+  font-size: 12px;
+}
+body.core-detail-page .core-project-content .soma-source-reference{
+  display: block;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.7;
+}
+body.core-detail-page .core-project-content .wr-evidence-links > .soma-source-reference{
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+body.core-detail-page .core-project-content .soma-prose article > .soma-source-reference{
+  margin-top: 32px;
+}
+body.core-detail-page .core-project-content .soma-prose :is(details, .wr-version){
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 1.7;
+}
+body.core-detail-page .core-project-content :is(.soma-prose, .soma-exhibit) summary{
+  min-height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.7;
+}
+body.core-detail-page .core-project-content .soma-exhibit{
+  min-width: 0;
+}
+body.core-detail-page .core-project-content .soma-exhibit > *{
+  min-width: 0;
+  max-width: 100%;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(.wr-result-panel, .pk-training-figure, .wr-lineage, .wr-behavior, .wr-interface, .pk-raw){
+  border-color: #eee;
+  background: transparent;
+}
+body.core-detail-page .core-project-content .soma-exhibit .wr-result-panel{
+  border-top: 0;
+  padding-top: 32px;
+}
+body.core-detail-page .core-project-content .soma-exhibit .wr-panel-label{
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(.wr-controls, .pk-training-controls, .pk-comparison-controls, .pk-example-controls){
+  gap: 24px 40px;
+  margin-block: 32px;
+}
+body.core-detail-page .core-project-content .soma-exhibit .wr-tabs{
+  flex-wrap: wrap;
+  gap: 12px 32px;
+}
+body.core-detail-page .core-project-content .soma-exhibit .wr-tabs button{
+  min-height: 44px;
+  padding-block: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(label, select){
+  font-size: 14px;
+  line-height: 1.7;
+}
+body.core-detail-page .core-project-content .soma-exhibit select{
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+}
+body.core-detail-page .core-project-content .soma-exhibit .wr-table-scroll{
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(.wr-game-table, .wr-result-panel table, .pk-table){
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.7;
+  font-variant-numeric: tabular-nums;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(.wr-game-table, .wr-result-panel table, .pk-table) :is(th, td){
+  padding: 20px 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  border-color: #eee;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(.wr-game-table, .wr-result-panel table, .pk-table) :is(th, td):first-child{
+  padding-left: 0;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(.wr-game-table, .wr-result-panel table, .pk-table) :is(th, td):last-child{
+  padding-right: 0;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(.wr-game-caption, .pk-example-meta, .wr-panel-label > span){
+  color: #999;
+  font-size: 12px;
+  line-height: 1.7;
+}
+body.core-detail-page .core-project-content .soma-exhibit :is(.wr-browser-details dd, .pk-context dd, .wr-browser-receipt, .pk-hash){
+  overflow-wrap: anywhere;
+}
+body.core-detail-page .core-project-content .soma-exhibit .wr-trace-slot{
+  padding: 32px 0;
+  border: 0;
+  border-block: 1px solid #eee;
+  background: transparent;
+}
+body.core-detail-page .core-project-content .soma-exhibit .pk-raw pre{
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+body.core-detail-page .core-project-content .soma-exhibit .pk-axes{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 64px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+body.core-detail-page .core-project-content .soma-exhibit .pk-axes article{
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+}
+body.core-detail-page .core-project-content .soma-exhibit .pk-axes article + article{
+  margin-top: 0;
+}
+body.core-detail-page .core-project-content .soma-exhibit .pk-axes h3{
+  margin: 0 0 24px;
+  color: #000;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -.03em;
+}
+body.core-detail-page .core-project-content .soma-exhibit .pk-axes code{
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #999;
+}
+body.core-detail-page .core-project-content .soma-exhibit .pk-axes p{
+  margin: 0 !important;
+  color: #555;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+body.core-detail-page .core-project-content [hidden]{
+  display: none !important;
+}
+@media (max-width: 1099px) {
+  body.core-detail-page .core-project-content :is(.vr-takeaways, .wr-overview-grid, .wr-method-grid).soma-prose-sequence{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media  (max-width: 809.98px) {
+  body.core-detail-page .core-project-content .soma-prose-sequence,
+  body.core-detail-page .core-project-content :is(.vr-takeaways, .wr-overview-grid, .wr-method-grid).soma-prose-sequence,
+  body.core-detail-page .core-project-content .soma-exhibit .pk-axes{
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  body.core-detail-page .core-project-content .soma-prose-sequence{
+    margin-top: 40px;
+  }
+  body.core-detail-page .core-project-content .soma-prose h3{
+    font-size: 24px;
+  }
+body.core-detail-page .core-project-content .soma-prose .oa-transition strong{
+    font-size: 40px;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .wr-panel-label{
+    display: block;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .wr-panel-label > span{
+    display: block;
+    margin-top: 16px;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .wr-bar-row{
+    grid-template-columns: minmax(0, 1fr) 64px;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .wr-bar-row > span:first-child{
+    grid-column: 1 / -1;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .wr-axis{
+    margin: 16px 76px 32px 0;
+    font-size: 12px;
+  }
+body.core-detail-page .core-project-content .soma-exhibit :is(.pk-inspector-grid, .pk-metric-bars, .wr-browser-details){
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .wr-browser-details > div{
+    display: block;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .wr-browser-details dt{
+    margin-bottom: 8px;
+  }
+body.core-detail-page .core-project-content .soma-exhibit :is(.pk-training-controls, .pk-example-controls) label{
+    display: flex;
+    width: 100%;
+    gap: 12px;
+  }
+body.core-detail-page .core-project-content .soma-exhibit :is(.pk-training-controls, .pk-example-controls) select{
+    flex: 1;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .wr-lineage-children{
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .pk-copy-row{
+    flex-wrap: wrap;
+  }
+body.core-detail-page .core-project-content .soma-exhibit .pk-axes article{
+    width: 100%;
+  }}

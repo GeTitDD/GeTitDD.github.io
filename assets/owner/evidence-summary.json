@@ -1,0 +1,57 @@
+{
+  "repository": "GeTitDD/owner-agent-mvp",
+  "ref": "5d5356af2f1e17fb5e36f87737fbe683a5dd494b",
+  "updated": "2026-11-11",
+  "source_type": "curated report summary; not raw execution trace",
+  "repair": {
+    "report": "docs/ACCEPTANCE_REPORT_V1.1.md",
+    "date": "2026-11-07",
+    "level": 3,
+    "real_pi": true,
+    "real_docker": true,
+    "before_exit": 1,
+    "after_exit": 0,
+    "test_hash_equal": true,
+    "rounds": 1
+  },
+  "knowledge": {
+    "report": "docs/KNOWLEDGE_LOOP_EVAL_V1.md",
+    "date": "2026-11-08",
+    "ab_chain_samples": 1,
+    "scope": "B failed before transfer; explicit L3 validation preceded normal L2 reuse",
+    "general_tasks": [
+      {
+        "condition": "baseline",
+        "success": 3,
+        "runs": 3,
+        "estimated_knowledge_tokens": 0
+      },
+      {
+        "condition": "knowledge",
+        "success": 2,
+        "runs": 2,
+        "estimated_knowledge_tokens": 569
+      },
+      {
+        "condition": "forced_misleading",
+        "success": 1,
+        "runs": 1,
+        "estimated_knowledge_tokens": 29,
+        "forced_irrelevant_injection": 1
+      }
+    ]
+  },
+  "test_snapshot": {
+    "source": "docs/KNOWLEDGE_LOOP_V1_DELIVERY.md",
+    "total": 206,
+    "pass": 203,
+    "skip": 3,
+    "fail": 0,
+    "rerun_this_turn": false
+  },
+  "integration": {
+    "openclaw": "PoC code present; not just roadmap",
+    "pi": "isolated session adapter",
+    "pstack": "inspired thin adaptation; not native pstack_todo execution"
+  }
+}

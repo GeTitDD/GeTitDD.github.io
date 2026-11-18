@@ -1,0 +1,16 @@
+/* Approved concept art uses the existing case cover frames and image viewer. */
+body.soma-work.work-research .wr-visual.soma-art.project-concept-cover {
+  background: #f2f1ee !important;
+  padding: 0;
+  overflow: hidden;
+}
+
+body.soma-work.work-research .project-concept-cover > .vr-hero-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

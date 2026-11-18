@@ -1,0 +1,2659 @@
+{
+  "study": "Psychological Kernel / 0.8B light migration",
+  "display_version": "case-b-2026-11-10-r1",
+  "frozen_science_commit": "9644c93724f6b73ae4b070e5e027bfd90ed02d0a",
+  "adapter_sha256": "b81adb4f276d8587a9a02439b0f628e84ef6f1afae35a5e4c912f4a9de69e744",
+  "base": {
+    "repo": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "precision": "bfloat16",
+    "attention": "sdpa",
+    "thinking": false,
+    "text_inputs_only": true,
+    "vision_frozen": true
+  },
+  "contract": {
+    "version": "pk-fixed-prefix-0.10.0",
+    "numeric_range": [
+      0,
+      1
+    ],
+    "features": {
+      "domain_self_efficacy": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+      "uncertainty_tolerance": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+      "material_security_fulfillment": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+      "social_respect_fulfillment": "The long-term degree of feeling recognized, valued and respected by others.",
+      "safety_priority": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+      "autonomy_priority": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+      "achievement_priority": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+      "concern_for_others": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+      "pre_event_pleasantness": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+      "pre_event_activation": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+      "pre_event_available_energy": "The degree of usable energy reserves available for further activity immediately before the event.",
+      "pre_event_mental_occupation": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention."
+    },
+    "outputs": {
+      "goal_relevance": "How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.",
+      "perceived_gain": "The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.",
+      "perceived_cost": "The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.",
+      "expectancy_violation": "The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.",
+      "claim_acceptance": "The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.",
+      "coping_potential": "The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.",
+      "engagement_readiness": "The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.",
+      "withdrawal_readiness": "The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.",
+      "resistance_readiness": "The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing."
+    },
+    "axis_labels_zh": {
+      "goal_relevance": "目标相关性",
+      "perceived_gain": "主观收益",
+      "perceived_cost": "主观成本",
+      "expectancy_violation": "预期违背",
+      "claim_acceptance": "主张接受",
+      "coping_potential": "应对潜力",
+      "engagement_readiness": "投入准备度",
+      "withdrawal_readiness": "退出准备度",
+      "resistance_readiness": "抵抗准备度"
+    }
+  },
+  "configuration": {
+    "seed": 0,
+    "epochs": 3,
+    "actual_rows": 640,
+    "families": 64,
+    "optimizer_steps_per_epoch": 40,
+    "planned_optimizer_steps": 120,
+    "effective_batch_size": 16,
+    "microbatch": 1,
+    "gradient_accumulation": 16,
+    "lr": 0.0001,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "all_non_lora_parameters_frozen": true
+  },
+  "target_modules": 114,
+  "trainable_tensors": 228,
+  "training_rows": [
+    {
+      "epoch": 1,
+      "step": 1,
+      "loss": 0.14302063453942537,
+      "fixed_prefix_token_loss": 0.04309887971196856,
+      "value_token_loss": 1.1421645845685686
+    },
+    {
+      "epoch": 1,
+      "step": 2,
+      "loss": 0.13940371572971344,
+      "fixed_prefix_token_loss": 0.03917396630559649,
+      "value_token_loss": 1.1380909821316865
+    },
+    {
+      "epoch": 1,
+      "step": 3,
+      "loss": 0.12300853477790952,
+      "fixed_prefix_token_loss": 0.028530181220599582,
+      "value_token_loss": 1.0678184577396939
+    },
+    {
+      "epoch": 1,
+      "step": 4,
+      "loss": 0.10435220273211598,
+      "fixed_prefix_token_loss": 0.015532394136701311,
+      "value_token_loss": 1.0037459188947626
+    },
+    {
+      "epoch": 1,
+      "step": 5,
+      "loss": 0.09975728718563914,
+      "fixed_prefix_token_loss": 0.010528081996100289,
+      "value_token_loss": 0.9951817092075143
+    },
+    {
+      "epoch": 1,
+      "step": 6,
+      "loss": 0.09823659807443619,
+      "fixed_prefix_token_loss": 0.00905839242041111,
+      "value_token_loss": 0.9899807691574096
+    },
+    {
+      "epoch": 1,
+      "step": 7,
+      "loss": 0.09657582081854343,
+      "fixed_prefix_token_loss": 0.007843761529241289,
+      "value_token_loss": 0.9808301518396126
+    },
+    {
+      "epoch": 1,
+      "step": 8,
+      "loss": 0.09360317792743444,
+      "fixed_prefix_token_loss": 0.008449372936572348,
+      "value_token_loss": 0.9482198940810337
+    },
+    {
+      "epoch": 1,
+      "step": 9,
+      "loss": 0.08840991603210568,
+      "fixed_prefix_token_loss": 0.008091695399156638,
+      "value_token_loss": 0.9002394831137537
+    },
+    {
+      "epoch": 1,
+      "step": 10,
+      "loss": 0.08964370656758547,
+      "fixed_prefix_token_loss": 0.009600188646997724,
+      "value_token_loss": 0.9045503928444603
+    },
+    {
+      "epoch": 1,
+      "step": 11,
+      "loss": 0.08985247882083058,
+      "fixed_prefix_token_loss": 0.007560407082949366,
+      "value_token_loss": 0.91565919007879
+    },
+    {
+      "epoch": 1,
+      "step": 12,
+      "loss": 0.09045866038650274,
+      "fixed_prefix_token_loss": 0.008568273472732731,
+      "value_token_loss": 0.9183622835345217
+    },
+    {
+      "epoch": 1,
+      "step": 13,
+      "loss": 0.09045621054247022,
+      "fixed_prefix_token_loss": 0.00630752311354237,
+      "value_token_loss": 0.9350246272206734
+    },
+    {
+      "epoch": 1,
+      "step": 14,
+      "loss": 0.08685039356350899,
+      "fixed_prefix_token_loss": 0.005328877844315554,
+      "value_token_loss": 0.9006223321598481
+    },
+    {
+      "epoch": 1,
+      "step": 15,
+      "loss": 0.08786896197125316,
+      "fixed_prefix_token_loss": 0.007759595459460148,
+      "value_token_loss": 0.8990620825217387
+    },
+    {
+      "epoch": 1,
+      "step": 16,
+      "loss": 0.08618894824758172,
+      "fixed_prefix_token_loss": 0.007496596184293074,
+      "value_token_loss": 0.8816764948600466
+    },
+    {
+      "epoch": 1,
+      "step": 17,
+      "loss": 0.08480807999148965,
+      "fixed_prefix_token_loss": 0.007458580540759223,
+      "value_token_loss": 0.8709931313017968
+    },
+    {
+      "epoch": 1,
+      "step": 18,
+      "loss": 0.08380333008244634,
+      "fixed_prefix_token_loss": 0.005582604072655418,
+      "value_token_loss": 0.8674072170086965
+    },
+    {
+      "epoch": 1,
+      "step": 19,
+      "loss": 0.08003244502469897,
+      "fixed_prefix_token_loss": 0.006222063831519336,
+      "value_token_loss": 0.8275434000798203
+    },
+    {
+      "epoch": 1,
+      "step": 20,
+      "loss": 0.08229212881997228,
+      "fixed_prefix_token_loss": 0.007199499879498035,
+      "value_token_loss": 0.8428565813447425
+    },
+    {
+      "epoch": 1,
+      "step": 21,
+      "loss": 0.0863628564402461,
+      "fixed_prefix_token_loss": 0.004587947737891227,
+      "value_token_loss": 0.9027757865647369
+    },
+    {
+      "epoch": 1,
+      "step": 22,
+      "loss": 0.08464143611490726,
+      "fixed_prefix_token_loss": 0.006892873292921909,
+      "value_token_loss": 0.8705883680267885
+    },
+    {
+      "epoch": 1,
+      "step": 23,
+      "loss": 0.08417434524744749,
+      "fixed_prefix_token_loss": 0.00584258258475789,
+      "value_token_loss": 0.8675419807434082
+    },
+    {
+      "epoch": 1,
+      "step": 24,
+      "loss": 0.08772057201713324,
+      "fixed_prefix_token_loss": 0.00715679740233879,
+      "value_token_loss": 0.903705100254383
+    },
+    {
+      "epoch": 1,
+      "step": 25,
+      "loss": 0.07957193767651916,
+      "fixed_prefix_token_loss": 0.006125255393396531,
+      "value_token_loss": 0.8192863841708615
+    },
+    {
+      "epoch": 1,
+      "step": 26,
+      "loss": 0.08635857468470931,
+      "fixed_prefix_token_loss": 0.003803660437198622,
+      "value_token_loss": 0.9059851355586491
+    },
+    {
+      "epoch": 1,
+      "step": 27,
+      "loss": 0.08106847992166877,
+      "fixed_prefix_token_loss": 0.006768218478952934,
+      "value_token_loss": 0.8334648725568278
+    },
+    {
+      "epoch": 1,
+      "step": 28,
+      "loss": 0.08540876675397158,
+      "fixed_prefix_token_loss": 0.00746692476145524,
+      "value_token_loss": 0.8718503522443342
+    },
+    {
+      "epoch": 1,
+      "step": 29,
+      "loss": 0.08398219430819154,
+      "fixed_prefix_token_loss": 0.008113420904015324,
+      "value_token_loss": 0.8565064031427557
+    },
+    {
+      "epoch": 1,
+      "step": 30,
+      "loss": 0.08247831068001688,
+      "fixed_prefix_token_loss": 0.007777762334694021,
+      "value_token_loss": 0.8388991847391801
+    },
+    {
+      "epoch": 1,
+      "step": 31,
+      "loss": 0.08144317287951708,
+      "fixed_prefix_token_loss": 0.008933998959671174,
+      "value_token_loss": 0.8210933456003991
+    },
+    {
+      "epoch": 1,
+      "step": 32,
+      "loss": 0.08091978821903467,
+      "fixed_prefix_token_loss": 0.005614583505084738,
+      "value_token_loss": 0.837983451583013
+    },
+    {
+      "epoch": 1,
+      "step": 33,
+      "loss": 0.08135931799188256,
+      "fixed_prefix_token_loss": 0.008077092522123297,
+      "value_token_loss": 0.8303785254485416
+    },
+    {
+      "epoch": 1,
+      "step": 34,
+      "loss": 0.08074134564958513,
+      "fixed_prefix_token_loss": 0.004789839803207932,
+      "value_token_loss": 0.8389163909748913
+    },
+    {
+      "epoch": 1,
+      "step": 35,
+      "loss": 0.08289746008813381,
+      "fixed_prefix_token_loss": 0.002508537458821333,
+      "value_token_loss": 0.8796739190025668
+    },
+    {
+      "epoch": 1,
+      "step": 36,
+      "loss": 0.08212305046617985,
+      "fixed_prefix_token_loss": 0.006687990468926728,
+      "value_token_loss": 0.848862113191082
+    },
+    {
+      "epoch": 1,
+      "step": 37,
+      "loss": 0.07854944188147783,
+      "fixed_prefix_token_loss": 0.004898932620084712,
+      "value_token_loss": 0.8177965772621948
+    },
+    {
+      "epoch": 1,
+      "step": 38,
+      "loss": 0.08322843350470066,
+      "fixed_prefix_token_loss": 0.004271415674593299,
+      "value_token_loss": 0.8713878182803884
+    },
+    {
+      "epoch": 1,
+      "step": 39,
+      "loss": 0.07783910352736712,
+      "fixed_prefix_token_loss": 0.007672416642807158,
+      "value_token_loss": 0.7923841615156694
+    },
+    {
+      "epoch": 1,
+      "step": 40,
+      "loss": 0.07577176671475172,
+      "fixed_prefix_token_loss": 0.004897260029268052,
+      "value_token_loss": 0.7832340505671374
+    },
+    {
+      "epoch": 2,
+      "step": 41,
+      "loss": 0.08064159192144871,
+      "fixed_prefix_token_loss": 0.004904895427171141,
+      "value_token_loss": 0.8380321059908186
+    },
+    {
+      "epoch": 2,
+      "step": 42,
+      "loss": 0.07706331787630916,
+      "fixed_prefix_token_loss": 0.006973396599226232,
+      "value_token_loss": 0.7830449179779712
+    },
+    {
+      "epoch": 2,
+      "step": 43,
+      "loss": 0.07804348273202777,
+      "fixed_prefix_token_loss": 0.007569246033007013,
+      "value_token_loss": 0.7929265671882076
+    },
+    {
+      "epoch": 2,
+      "step": 44,
+      "loss": 0.08051347034052014,
+      "fixed_prefix_token_loss": 0.004720740290691278,
+      "value_token_loss": 0.8371431313309015
+    },
+    {
+      "epoch": 2,
+      "step": 45,
+      "loss": 0.07734294445253909,
+      "fixed_prefix_token_loss": 0.004549514273281342,
+      "value_token_loss": 0.8013376503600532
+    },
+    {
+      "epoch": 2,
+      "step": 46,
+      "loss": 0.0772750205360353,
+      "fixed_prefix_token_loss": 0.007968390771753289,
+      "value_token_loss": 0.7802161099254221
+    },
+    {
+      "epoch": 2,
+      "step": 47,
+      "loss": 0.07591579668223858,
+      "fixed_prefix_token_loss": 0.00657046737132727,
+      "value_token_loss": 0.7755552858919711
+    },
+    {
+      "epoch": 2,
+      "step": 48,
+      "loss": 0.07595493039116263,
+      "fixed_prefix_token_loss": 0.003549200026651046,
+      "value_token_loss": 0.7949235692937323
+    },
+    {
+      "epoch": 2,
+      "step": 49,
+      "loss": 0.07599649531766772,
+      "fixed_prefix_token_loss": 0.0037266398148079003,
+      "value_token_loss": 0.7922537204438607
+    },
+    {
+      "epoch": 2,
+      "step": 50,
+      "loss": 0.07405342580750585,
+      "fixed_prefix_token_loss": 0.004069896784078862,
+      "value_token_loss": 0.7689258054638586
+    },
+    {
+      "epoch": 2,
+      "step": 51,
+      "loss": 0.07805657829158008,
+      "fixed_prefix_token_loss": 0.008029872916106667,
+      "value_token_loss": 0.7911118351329457
+    },
+    {
+      "epoch": 2,
+      "step": 52,
+      "loss": 0.0761430379934609,
+      "fixed_prefix_token_loss": 0.007018970148471583,
+      "value_token_loss": 0.7723687912920396
+    },
+    {
+      "epoch": 2,
+      "step": 53,
+      "loss": 0.08016956364735961,
+      "fixed_prefix_token_loss": 0.007586604842051332,
+      "value_token_loss": 0.8166067323822906
+    },
+    {
+      "epoch": 2,
+      "step": 54,
+      "loss": 0.07797893742099404,
+      "fixed_prefix_token_loss": 0.005291884679214231,
+      "value_token_loss": 0.8113681208979976
+    },
+    {
+      "epoch": 2,
+      "step": 55,
+      "loss": 0.07732312707230449,
+      "fixed_prefix_token_loss": 0.003692703670489469,
+      "value_token_loss": 0.8109377592908106
+    },
+    {
+      "epoch": 2,
+      "step": 56,
+      "loss": 0.07650310499593616,
+      "fixed_prefix_token_loss": 0.006123734206526673,
+      "value_token_loss": 0.7840878608196813
+    },
+    {
+      "epoch": 2,
+      "step": 57,
+      "loss": 0.0797954280860722,
+      "fixed_prefix_token_loss": 0.007263018237260569,
+      "value_token_loss": 0.8155923753544905
+    },
+    {
+      "epoch": 2,
+      "step": 58,
+      "loss": 0.07479064329527318,
+      "fixed_prefix_token_loss": 0.005408224052017821,
+      "value_token_loss": 0.7736809991246505
+    },
+    {
+      "epoch": 2,
+      "step": 59,
+      "loss": 0.0744942247401923,
+      "fixed_prefix_token_loss": 0.00597960857358495,
+      "value_token_loss": 0.7658941457937429
+    },
+    {
+      "epoch": 2,
+      "step": 60,
+      "loss": 0.07516937935724854,
+      "fixed_prefix_token_loss": 0.006686088355324631,
+      "value_token_loss": 0.7686979973294635
+    },
+    {
+      "epoch": 2,
+      "step": 61,
+      "loss": 0.07405645400285721,
+      "fixed_prefix_token_loss": 0.007915927001408168,
+      "value_token_loss": 0.7487201100055855
+    },
+    {
+      "epoch": 2,
+      "step": 62,
+      "loss": 0.07808342389762402,
+      "fixed_prefix_token_loss": 0.00459868950503213,
+      "value_token_loss": 0.8143395712209303
+    },
+    {
+      "epoch": 2,
+      "step": 63,
+      "loss": 0.07371560297906399,
+      "fixed_prefix_token_loss": 0.006808727894510542,
+      "value_token_loss": 0.7576862530116617
+    },
+    {
+      "epoch": 2,
+      "step": 64,
+      "loss": 0.07448105700314045,
+      "fixed_prefix_token_loss": 0.0062464995043618335,
+      "value_token_loss": 0.7617089250962511
+    },
+    {
+      "epoch": 2,
+      "step": 65,
+      "loss": 0.07269030064344406,
+      "fixed_prefix_token_loss": 0.005204964736476541,
+      "value_token_loss": 0.7539115562095299
+    },
+    {
+      "epoch": 2,
+      "step": 66,
+      "loss": 0.07440668903291225,
+      "fixed_prefix_token_loss": 0.004715873301029206,
+      "value_token_loss": 0.7764735050338636
+    },
+    {
+      "epoch": 2,
+      "step": 67,
+      "loss": 0.06947916001081467,
+      "fixed_prefix_token_loss": 0.00639570951461792,
+      "value_token_loss": 0.7142304608421605
+    },
+    {
+      "epoch": 2,
+      "step": 68,
+      "loss": 0.07500929571688175,
+      "fixed_prefix_token_loss": 0.006482596354825156,
+      "value_token_loss": 0.7691134682184533
+    },
+    {
+      "epoch": 2,
+      "step": 69,
+      "loss": 0.07254139333963394,
+      "fixed_prefix_token_loss": 0.0048829294528279985,
+      "value_token_loss": 0.7527578275122377
+    },
+    {
+      "epoch": 2,
+      "step": 70,
+      "loss": 0.07329060509800911,
+      "fixed_prefix_token_loss": 0.005017012889896121,
+      "value_token_loss": 0.7634366032018558
+    },
+    {
+      "epoch": 2,
+      "step": 71,
+      "loss": 0.07568666338920593,
+      "fixed_prefix_token_loss": 0.006180405957358224,
+      "value_token_loss": 0.780946123427239
+    },
+    {
+      "epoch": 2,
+      "step": 72,
+      "loss": 0.07979978248476982,
+      "fixed_prefix_token_loss": 0.00422003733260291,
+      "value_token_loss": 0.8369500939875895
+    },
+    {
+      "epoch": 2,
+      "step": 73,
+      "loss": 0.07715689949691296,
+      "fixed_prefix_token_loss": 0.005667808396475656,
+      "value_token_loss": 0.7972468643737354
+    },
+    {
+      "epoch": 2,
+      "step": 74,
+      "loss": 0.07668361812829971,
+      "fixed_prefix_token_loss": 0.004885838457516262,
+      "value_token_loss": 0.7960053036166005
+    },
+    {
+      "epoch": 2,
+      "step": 75,
+      "loss": 0.07000610046088696,
+      "fixed_prefix_token_loss": 0.006872082608086722,
+      "value_token_loss": 0.7093177643650048
+    },
+    {
+      "epoch": 2,
+      "step": 76,
+      "loss": 0.07449722848832607,
+      "fixed_prefix_token_loss": 0.004957114117486137,
+      "value_token_loss": 0.7723943375344772
+    },
+    {
+      "epoch": 2,
+      "step": 77,
+      "loss": 0.06969456002116203,
+      "fixed_prefix_token_loss": 0.0045413804054260255,
+      "value_token_loss": 0.721271310533796
+    },
+    {
+      "epoch": 2,
+      "step": 78,
+      "loss": 0.0726892314851284,
+      "fixed_prefix_token_loss": 0.004966137536934444,
+      "value_token_loss": 0.7499758992876325
+    },
+    {
+      "epoch": 2,
+      "step": 79,
+      "loss": 0.07224609702825546,
+      "fixed_prefix_token_loss": 0.0054499090995107375,
+      "value_token_loss": 0.7426150742397514
+    },
+    {
+      "epoch": 2,
+      "step": 80,
+      "loss": 0.07720119692385197,
+      "fixed_prefix_token_loss": 0.004828614251954215,
+      "value_token_loss": 0.7996955096402908
+    },
+    {
+      "epoch": 3,
+      "step": 81,
+      "loss": 0.07389914244413376,
+      "fixed_prefix_token_loss": 0.004278519877365657,
+      "value_token_loss": 0.7688576601405832
+    },
+    {
+      "epoch": 3,
+      "step": 82,
+      "loss": 0.07143291272222996,
+      "fixed_prefix_token_loss": 0.006028580665588379,
+      "value_token_loss": 0.729034793655149
+    },
+    {
+      "epoch": 3,
+      "step": 83,
+      "loss": 0.07205809839069843,
+      "fixed_prefix_token_loss": 0.005921888521739415,
+      "value_token_loss": 0.7395645416534699
+    },
+    {
+      "epoch": 3,
+      "step": 84,
+      "loss": 0.06580526381731033,
+      "fixed_prefix_token_loss": 0.00555975233537278,
+      "value_token_loss": 0.6714034020579696
+    },
+    {
+      "epoch": 3,
+      "step": 85,
+      "loss": 0.0708729662001133,
+      "fixed_prefix_token_loss": 0.007304104736873082,
+      "value_token_loss": 0.7111046743049896
+    },
+    {
+      "epoch": 3,
+      "step": 86,
+      "loss": 0.06731106527149677,
+      "fixed_prefix_token_loss": 0.005931119663374764,
+      "value_token_loss": 0.6832335277270245
+    },
+    {
+      "epoch": 3,
+      "step": 87,
+      "loss": 0.07014776393771172,
+      "fixed_prefix_token_loss": 0.005852882266044617,
+      "value_token_loss": 0.7154444896192106
+    },
+    {
+      "epoch": 3,
+      "step": 88,
+      "loss": 0.06877589225769043,
+      "fixed_prefix_token_loss": 0.0048851662874221805,
+      "value_token_loss": 0.7054844920745523
+    },
+    {
+      "epoch": 3,
+      "step": 89,
+      "loss": 0.06753426976501942,
+      "fixed_prefix_token_loss": 0.007632199014936175,
+      "value_token_loss": 0.6784887678636228
+    },
+    {
+      "epoch": 3,
+      "step": 90,
+      "loss": 0.06458232644945383,
+      "fixed_prefix_token_loss": 0.004582381972244808,
+      "value_token_loss": 0.6688414511920737
+    },
+    {
+      "epoch": 3,
+      "step": 91,
+      "loss": 0.06937284767627716,
+      "fixed_prefix_token_loss": 0.0071783261213983806,
+      "value_token_loss": 0.7003608095473137
+    },
+    {
+      "epoch": 3,
+      "step": 92,
+      "loss": 0.06728670559823513,
+      "fixed_prefix_token_loss": 0.0034374179584639414,
+      "value_token_loss": 0.7056976318359375
+    },
+    {
+      "epoch": 3,
+      "step": 93,
+      "loss": 0.07105383463203907,
+      "fixed_prefix_token_loss": 0.004054549038410187,
+      "value_token_loss": 0.741003281729562
+    },
+    {
+      "epoch": 3,
+      "step": 94,
+      "loss": 0.06839778460562229,
+      "fixed_prefix_token_loss": 0.00551042377948761,
+      "value_token_loss": 0.6994815129105763
+    },
+    {
+      "epoch": 3,
+      "step": 95,
+      "loss": 0.0696574691683054,
+      "fixed_prefix_token_loss": 0.004750612803867885,
+      "value_token_loss": 0.7221260687179154
+    },
+    {
+      "epoch": 3,
+      "step": 96,
+      "loss": 0.06595797464251518,
+      "fixed_prefix_token_loss": 0.00618233220917838,
+      "value_token_loss": 0.6724750270014224
+    },
+    {
+      "epoch": 3,
+      "step": 97,
+      "loss": 0.06745955720543861,
+      "fixed_prefix_token_loss": 0.0070590382814407346,
+      "value_token_loss": 0.6802434506623641
+    },
+    {
+      "epoch": 3,
+      "step": 98,
+      "loss": 0.06811179220676422,
+      "fixed_prefix_token_loss": 0.004440331033297947,
+      "value_token_loss": 0.7094370890006745
+    },
+    {
+      "epoch": 3,
+      "step": 99,
+      "loss": 0.06788490526378155,
+      "fixed_prefix_token_loss": 0.005069376826286316,
+      "value_token_loss": 0.699454165446694
+    },
+    {
+      "epoch": 3,
+      "step": 100,
+      "loss": 0.06630756612867117,
+      "fixed_prefix_token_loss": 0.004793920516967773,
+      "value_token_loss": 0.6916858929255048
+    },
+    {
+      "epoch": 3,
+      "step": 101,
+      "loss": 0.06489696726202965,
+      "fixed_prefix_token_loss": 0.005375294004167829,
+      "value_token_loss": 0.6632363886122644
+    },
+    {
+      "epoch": 3,
+      "step": 102,
+      "loss": 0.07103923335671425,
+      "fixed_prefix_token_loss": 0.0058281079360416954,
+      "value_token_loss": 0.7301692342930322
+    },
+    {
+      "epoch": 3,
+      "step": 103,
+      "loss": 0.06278683338314295,
+      "fixed_prefix_token_loss": 0.0044262677431106566,
+      "value_token_loss": 0.650660604024105
+    },
+    {
+      "epoch": 3,
+      "step": 104,
+      "loss": 0.069590387865901,
+      "fixed_prefix_token_loss": 0.004981187752314977,
+      "value_token_loss": 0.7180409311820957
+    },
+    {
+      "epoch": 3,
+      "step": 105,
+      "loss": 0.06471220310777426,
+      "fixed_prefix_token_loss": 0.004888613309179034,
+      "value_token_loss": 0.6705428359737017
+    },
+    {
+      "epoch": 3,
+      "step": 106,
+      "loss": 0.06177099607884884,
+      "fixed_prefix_token_loss": 0.006117486357688904,
+      "value_token_loss": 0.6252370216962873
+    },
+    {
+      "epoch": 3,
+      "step": 107,
+      "loss": 0.06900918204337358,
+      "fixed_prefix_token_loss": 0.004249056045498167,
+      "value_token_loss": 0.7189905857099854
+    },
+    {
+      "epoch": 3,
+      "step": 108,
+      "loss": 0.07017111964523792,
+      "fixed_prefix_token_loss": 0.005719993455069405,
+      "value_token_loss": 0.7216890520997856
+    },
+    {
+      "epoch": 3,
+      "step": 109,
+      "loss": 0.06814060546457767,
+      "fixed_prefix_token_loss": 0.005021988323756626,
+      "value_token_loss": 0.7027014247818952
+    },
+    {
+      "epoch": 3,
+      "step": 110,
+      "loss": 0.06601052824407816,
+      "fixed_prefix_token_loss": 0.004068611008780343,
+      "value_token_loss": 0.6852836336408342
+    },
+    {
+      "epoch": 3,
+      "step": 111,
+      "loss": 0.0651830518618226,
+      "fixed_prefix_token_loss": 0.0038840146575655258,
+      "value_token_loss": 0.6748809949966349
+    },
+    {
+      "epoch": 3,
+      "step": 112,
+      "loss": 0.06284002680331469,
+      "fixed_prefix_token_loss": 0.007074386903217861,
+      "value_token_loss": 0.6327171464906122
+    },
+    {
+      "epoch": 3,
+      "step": 113,
+      "loss": 0.06547100655734539,
+      "fixed_prefix_token_loss": 0.004447808244398662,
+      "value_token_loss": 0.6789809660166769
+    },
+    {
+      "epoch": 3,
+      "step": 114,
+      "loss": 0.07208935543894768,
+      "fixed_prefix_token_loss": 0.004417762415749686,
+      "value_token_loss": 0.7464647259152233
+    },
+    {
+      "epoch": 3,
+      "step": 115,
+      "loss": 0.06880714371800423,
+      "fixed_prefix_token_loss": 0.005458926047597613,
+      "value_token_loss": 0.7069345378189635
+    },
+    {
+      "epoch": 3,
+      "step": 116,
+      "loss": 0.06553296092897654,
+      "fixed_prefix_token_loss": 0.0025570022421223778,
+      "value_token_loss": 0.6896774021925124
+    },
+    {
+      "epoch": 3,
+      "step": 117,
+      "loss": 0.06628244277089834,
+      "fixed_prefix_token_loss": 0.004225408392293113,
+      "value_token_loss": 0.6903196571117244
+    },
+    {
+      "epoch": 3,
+      "step": 118,
+      "loss": 0.0667159603908658,
+      "fixed_prefix_token_loss": 0.007670180031231472,
+      "value_token_loss": 0.6702506629219891
+    },
+    {
+      "epoch": 3,
+      "step": 119,
+      "loss": 0.0671133603900671,
+      "fixed_prefix_token_loss": 0.004781475067138672,
+      "value_token_loss": 0.6927566665047813
+    },
+    {
+      "epoch": 3,
+      "step": 120,
+      "loss": 0.06426000222563744,
+      "fixed_prefix_token_loss": 0.005489685790879386,
+      "value_token_loss": 0.6595342818910347
+    }
+  ],
+  "validation": [
+    {
+      "epoch": 1,
+      "score": 0.4625
+    },
+    {
+      "epoch": 2,
+      "score": 0.6421875
+    },
+    {
+      "epoch": 3,
+      "score": 0.5796875
+    }
+  ],
+  "confirmation": {
+    "rows": 220,
+    "valid_rows": 220,
+    "unconstrained_rows": 16,
+    "unconstrained_valid": 16,
+    "historically_used": true
+  },
+  "comparisons": {
+    "overall": {
+      "label": "总体指标",
+      "rows": [
+        {
+          "metric": "visible_response",
+          "label": "可见响应",
+          "new": 0.44642857142857145,
+          "old": 0.4642857142857143,
+          "delta": -0.01785714285714285
+        },
+        {
+          "metric": "trend",
+          "label": "趋势一致",
+          "new": 0.6071428571428571,
+          "old": 0.6071428571428571,
+          "delta": 0.0
+        },
+        {
+          "metric": "stability",
+          "label": "曲线稳定",
+          "new": 0.8611111111111112,
+          "old": 0.9583333333333334,
+          "delta": -0.09722222222222221
+        },
+        {
+          "metric": "moderation",
+          "label": "情境调节",
+          "new": 0.16666666666666666,
+          "old": 0.3333333333333333,
+          "delta": -0.16666666666666666
+        },
+        {
+          "metric": "invariance",
+          "label": "不变性",
+          "new": 0.7,
+          "old": 0.65,
+          "delta": 0.04999999999999993
+        },
+        {
+          "metric": "selectivity",
+          "label": "选择性",
+          "new": 0.918939393939394,
+          "old": 0.7666666666666666,
+          "delta": 0.15227272727272734
+        }
+      ]
+    },
+    "domain_self_efficacy": {
+      "label": "自我效能",
+      "rows": [
+        {
+          "metric": "visible_response",
+          "label": "可见响应",
+          "new": 1,
+          "old": 1,
+          "delta": 0
+        },
+        {
+          "metric": "trend",
+          "label": "趋势一致",
+          "new": 1,
+          "old": 1,
+          "delta": 0
+        },
+        {
+          "metric": "stability",
+          "label": "曲线稳定",
+          "new": 0.375,
+          "old": 1,
+          "delta": -0.625
+        },
+        {
+          "metric": "moderation",
+          "label": "情境调节",
+          "new": 0,
+          "old": 0,
+          "delta": 0
+        },
+        {
+          "metric": "invariance",
+          "label": "不变性",
+          "new": 0,
+          "old": 0,
+          "delta": 0
+        },
+        {
+          "metric": "selectivity",
+          "label": "选择性",
+          "new": 0.9666666666666667,
+          "old": 0.6833333333333333,
+          "delta": 0.2833333333333333
+        }
+      ]
+    },
+    "pre_event_available_energy": {
+      "label": "可用精力",
+      "rows": [
+        {
+          "metric": "visible_response",
+          "label": "可见响应",
+          "new": 0.8125,
+          "old": 0.875,
+          "delta": -0.0625
+        },
+        {
+          "metric": "trend",
+          "label": "趋势一致",
+          "new": 1,
+          "old": 0.875,
+          "delta": 0.125
+        },
+        {
+          "metric": "stability",
+          "label": "曲线稳定",
+          "new": 1,
+          "old": 1,
+          "delta": 0
+        },
+        {
+          "metric": "moderation",
+          "label": "情境调节",
+          "new": 1,
+          "old": 1,
+          "delta": 0
+        },
+        {
+          "metric": "invariance",
+          "label": "不变性",
+          "new": 0.5,
+          "old": 0.25,
+          "delta": 0.25
+        },
+        {
+          "metric": "selectivity",
+          "label": "选择性",
+          "new": 0.8541666666666666,
+          "old": 0.8333333333333334,
+          "delta": 0.02083333333333326
+        }
+      ]
+    },
+    "autonomy_priority": {
+      "label": "自主关切",
+      "rows": [
+        {
+          "metric": "visible_response",
+          "label": "可见响应",
+          "new": 0,
+          "old": 0,
+          "delta": 0
+        },
+        {
+          "metric": "trend",
+          "label": "趋势一致",
+          "new": 0,
+          "old": 0.3333333333333333,
+          "delta": -0.3333333333333333
+        },
+        {
+          "metric": "stability",
+          "label": "曲线稳定",
+          "new": 1,
+          "old": 1,
+          "delta": 0
+        },
+        {
+          "metric": "moderation",
+          "label": "情境调节",
+          "new": 0,
+          "old": 0.3333333333333333,
+          "delta": -0.3333333333333333
+        },
+        {
+          "metric": "invariance",
+          "label": "不变性",
+          "new": 1,
+          "old": 1,
+          "delta": 0
+        },
+        {
+          "metric": "selectivity",
+          "label": "选择性",
+          "new": 0.9216666666666666,
+          "old": 0.6766666666666666,
+          "delta": 0.245
+        }
+      ]
+    },
+    "pre_event_mental_occupation": {
+      "label": "注意占用",
+      "rows": [
+        {
+          "metric": "visible_response",
+          "label": "可见响应",
+          "new": 0,
+          "old": 0,
+          "delta": 0
+        },
+        {
+          "metric": "trend",
+          "label": "趋势一致",
+          "new": 0.375,
+          "old": 0.25,
+          "delta": 0.125
+        },
+        {
+          "metric": "stability",
+          "label": "曲线稳定",
+          "new": 1,
+          "old": 0.85,
+          "delta": 0.15000000000000002
+        },
+        {
+          "metric": "moderation",
+          "label": "情境调节",
+          "new": 0,
+          "old": 0,
+          "delta": 0
+        },
+        {
+          "metric": "invariance",
+          "label": "不变性",
+          "new": null,
+          "old": null,
+          "delta": null
+        },
+        {
+          "metric": "selectivity",
+          "label": "选择性",
+          "new": 0.9416666666666667,
+          "old": 0.8444444444444444,
+          "delta": 0.09722222222222221
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "key": "response",
+      "label": "有响应的案例",
+      "description_zh": "档案馆设备传动带损坏，在说明书、零件与技术员支持保持不变时，调整角色自我效能，检查应对潜力。",
+      "feature": "domain_self_efficacy",
+      "axis": "coping_potential",
+      "group": "dense_c_m0_s2_a0_c0",
+      "tests": {
+        "reference_delta": 0.35,
+        "reference_range": 0.35,
+        "prediction_delta": 0.5,
+        "prediction_complete": true,
+        "prediction_range": 0.5,
+        "direction": 1,
+        "directional_eligible": true,
+        "invariant_eligible": false,
+        "stability": 1,
+        "visible_response": 1,
+        "trend": 1,
+        "expected_endpoint_sign": 1
+      },
+      "records": [
+        {
+          "id": "dense_c_m0_s2_a0_c0_p0",
+          "position": 0.1,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara maintains a hand-cranked film viewer used by visitors at the local archive. The viewer is on a padded workbench, and the archive's equipment log and service instructions are available. A replacement drive belt is in the parts drawer."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During a scheduled inspection, Mara finds that the drive belt has split. The archive's retired equipment technician is visiting today and is available at the workbench to advise on the replacement."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "Mara's goal is to replace the split belt and return the hand-cranked viewer to service. The archive has asked that the viewer be ready for a public screening tomorrow."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "Before finding the split belt, Mara planned to complete the inspection without replacing any parts and return the viewer to the reading room today."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": 0.1
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": null
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.18,
+            "perceived_cost": 0.72,
+            "expectancy_violation": 0.9,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.18,
+            "engagement_readiness": 0.68,
+            "withdrawal_readiness": 0.18,
+            "resistance_readiness": 0.12
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.18}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.72}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.9}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.18}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.68}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.18}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.12}}",
+          "raw_output_sha256": "7a5f48f0878bd4f6c87a49ca32b2d8cdffd383de6d4b69df849d28560c33d994",
+          "source_evidence_sha256": "21a5f0e3f8406b36551e5171bb0cc893458d015df4a8f491949604697edafc1a",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0.2,
+              0.78
+            ],
+            "evidence": "Domain efficacy varies; instructions, a replacement belt and technician advice are available.",
+            "object_ambiguity": "none",
+            "rationale": "Domain confidence and immediate support can raise current perceived ability.",
+            "blind_A": 0.49,
+            "blind_B": 0.52,
+            "absolute_disagreement": 0.030000000000000027,
+            "review": {
+              "estimate": 0.51,
+              "kind": "directional",
+              "direction": 1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Domain confidence plausibly strengthens perceived ability alongside available advice."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        },
+        {
+          "id": "dense_c_m0_s2_a0_c0_p1",
+          "position": 0.3,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara maintains a hand-cranked film viewer used by visitors at the local archive. The viewer is on a padded workbench, and the archive's equipment log and service instructions are available. A replacement drive belt is in the parts drawer."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During a scheduled inspection, Mara finds that the drive belt has split. The archive's retired equipment technician is visiting today and is available at the workbench to advise on the replacement."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "Mara's goal is to replace the split belt and return the hand-cranked viewer to service. The archive has asked that the viewer be ready for a public screening tomorrow."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "Before finding the split belt, Mara planned to complete the inspection without replacing any parts and return the viewer to the reading room today."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": 0.3
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": null
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.18,
+            "perceived_cost": 0.72,
+            "expectancy_violation": 0.9,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.28,
+            "engagement_readiness": 0.58,
+            "withdrawal_readiness": 0.28,
+            "resistance_readiness": 0.12
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.18}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.72}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.9}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.28}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.58}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.28}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.12}}",
+          "raw_output_sha256": "1aeb2ef815436696abfa6d47829c844bf5e6278843faf12051392c8809007947",
+          "source_evidence_sha256": "a0d755a3a454943ee867d9e1215c154cd89fc19283ef64d4e851d0d7b5cfe4c4",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0.3,
+              0.84
+            ],
+            "evidence": "Domain efficacy varies; instructions, a replacement belt and technician advice are available.",
+            "object_ambiguity": "none",
+            "rationale": "Domain confidence and immediate support can raise current perceived ability.",
+            "blind_A": 0.59,
+            "blind_B": 0.62,
+            "absolute_disagreement": 0.030000000000000027,
+            "review": {
+              "estimate": 0.51,
+              "kind": "directional",
+              "direction": 1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Domain confidence plausibly strengthens perceived ability alongside available advice."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        },
+        {
+          "id": "dense_c_m0_s2_a0_c0_p2",
+          "position": 0.5,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara maintains a hand-cranked film viewer used by visitors at the local archive. The viewer is on a padded workbench, and the archive's equipment log and service instructions are available. A replacement drive belt is in the parts drawer."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During a scheduled inspection, Mara finds that the drive belt has split. The archive's retired equipment technician is visiting today and is available at the workbench to advise on the replacement."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "Mara's goal is to replace the split belt and return the hand-cranked viewer to service. The archive has asked that the viewer be ready for a public screening tomorrow."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "Before finding the split belt, Mara planned to complete the inspection without replacing any parts and return the viewer to the reading room today."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": 0.5
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": null
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.18,
+            "perceived_cost": 0.72,
+            "expectancy_violation": 0.9,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.48,
+            "engagement_readiness": 0.62,
+            "withdrawal_readiness": 0.24,
+            "resistance_readiness": 0.12
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.18}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.72}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.9}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.48}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.62}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.24}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.12}}",
+          "raw_output_sha256": "78f5890f7773cdb6b8d7097923cbfd7f78af5d2577122bce1a3d2cf558124ac1",
+          "source_evidence_sha256": "6b46553ff56ca3991c3bf66cce0237423f4475d035d00992334117e73b53d2b2",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0.4,
+              0.9
+            ],
+            "evidence": "Domain efficacy varies; instructions, a replacement belt and technician advice are available.",
+            "object_ambiguity": "none",
+            "rationale": "Domain confidence and immediate support can raise current perceived ability.",
+            "blind_A": 0.69,
+            "blind_B": 0.72,
+            "absolute_disagreement": 0.030000000000000027,
+            "review": {
+              "estimate": 0.51,
+              "kind": "directional",
+              "direction": 1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Domain confidence plausibly strengthens perceived ability alongside available advice."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        },
+        {
+          "id": "dense_c_m0_s2_a0_c0_p3",
+          "position": 0.7,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara maintains a hand-cranked film viewer used by visitors at the local archive. The viewer is on a padded workbench, and the archive's equipment log and service instructions are available. A replacement drive belt is in the parts drawer."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During a scheduled inspection, Mara finds that the drive belt has split. The archive's retired equipment technician is visiting today and is available at the workbench to advise on the replacement."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "Mara's goal is to replace the split belt and return the hand-cranked viewer to service. The archive has asked that the viewer be ready for a public screening tomorrow."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "Before finding the split belt, Mara planned to complete the inspection without replacing any parts and return the viewer to the reading room today."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": 0.7
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": null
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.18,
+            "perceived_cost": 0.72,
+            "expectancy_violation": 0.9,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.58,
+            "engagement_readiness": 0.68,
+            "withdrawal_readiness": 0.22,
+            "resistance_readiness": 0.12
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.18}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.72}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.9}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.58}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.68}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.22}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.12}}",
+          "raw_output_sha256": "081b41999101d1079207dae82434d7f7138fc957fbdf982449094cc75ef95110",
+          "source_evidence_sha256": "89eb4f9281f27173a8e31fed7f5b012ca167caf2950c6e7ce66151773f57a673",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0.5,
+              0.95
+            ],
+            "evidence": "Domain efficacy varies; instructions, a replacement belt and technician advice are available.",
+            "object_ambiguity": "none",
+            "rationale": "Domain confidence and immediate support can raise current perceived ability.",
+            "blind_A": 0.78,
+            "blind_B": 0.81,
+            "absolute_disagreement": 0.030000000000000027,
+            "review": {
+              "estimate": 0.51,
+              "kind": "directional",
+              "direction": 1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Domain confidence plausibly strengthens perceived ability alongside available advice."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        },
+        {
+          "id": "dense_c_m0_s2_a0_c0_p4",
+          "position": 0.9,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara maintains a hand-cranked film viewer used by visitors at the local archive. The viewer is on a padded workbench, and the archive's equipment log and service instructions are available. A replacement drive belt is in the parts drawer."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During a scheduled inspection, Mara finds that the drive belt has split. The archive's retired equipment technician is visiting today and is available at the workbench to advise on the replacement."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "Mara's goal is to replace the split belt and return the hand-cranked viewer to service. The archive has asked that the viewer be ready for a public screening tomorrow."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "Before finding the split belt, Mara planned to complete the inspection without replacing any parts and return the viewer to the reading room today."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": 0.9
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": null
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.18,
+            "perceived_cost": 0.72,
+            "expectancy_violation": 0.9,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.68,
+            "engagement_readiness": 0.72,
+            "withdrawal_readiness": 0.18,
+            "resistance_readiness": 0.12
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.18}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.72}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.9}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.68}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.72}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.18}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.12}}",
+          "raw_output_sha256": "4849d509fd9d70ec46b2e6e22be03e06515de20301945b4f38c21f40858d3271",
+          "source_evidence_sha256": "a9674d34e86cc3dc55bd6ea86912f33df32ebbf5a129a829e000889ab8ff58f2",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0.6,
+              0.98
+            ],
+            "evidence": "Domain efficacy varies; instructions, a replacement belt and technician advice are available.",
+            "object_ambiguity": "none",
+            "rationale": "Domain confidence and immediate support can raise current perceived ability.",
+            "blind_A": 0.85,
+            "blind_B": 0.89,
+            "absolute_disagreement": 0.040000000000000036,
+            "review": {
+              "estimate": 0.51,
+              "kind": "directional",
+              "direction": 1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Domain confidence plausibly strengthens perceived ability alongside available advice."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        }
+      ]
+    },
+    {
+      "key": "failure_or_limitation",
+      "label": "响应不足的案例",
+      "description_zh": "已安装的展示屏标签一角翘起；调整事件前可用精力，检查退出准备度。方向一致，但未通过报告的可见响应检验。",
+      "feature": "pre_event_available_energy",
+      "axis": "withdrawal_readiness",
+      "group": "dense_c_m1_s4_a0_c0",
+      "tests": {
+        "reference_delta": -0.15,
+        "reference_range": 0.15,
+        "prediction_delta": -0.06,
+        "prediction_complete": true,
+        "prediction_range": 0.06,
+        "direction": -1,
+        "directional_eligible": true,
+        "invariant_eligible": false,
+        "stability": 1,
+        "visible_response": 0,
+        "trend": 1,
+        "expected_endpoint_sign": 1
+      },
+      "records": [
+        {
+          "id": "dense_c_m1_s4_a0_c0_p0",
+          "position": 0.1,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara is preparing a small wind-tunnel exhibit for a makers fair. The exhibit uses a removable mesh screen at the inlet. A matching spare screen is stored with the exhibit supplies."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During the final inventory, Mara finds that one corner of the installed screen's paper label has peeled away from its frame. The mesh and frame are intact."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "The goal is to prepare the wind-tunnel exhibit for the makers fair. The action under consideration is securing the loose corner of the screen's label. No external demand or disputed proposition has been introduced."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "The prior plan was to bring the exhibit with the screen installed and its label attached."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": null
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": 0.1
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.02,
+            "perceived_cost": 0.08,
+            "expectancy_violation": 0.12,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.68,
+            "engagement_readiness": 0.68,
+            "withdrawal_readiness": 0.18,
+            "resistance_readiness": 0.08
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.02}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.08}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.12}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.68}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.68}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.18}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.08}}",
+          "raw_output_sha256": "2fdd0551737a993a60ba50d06de6c3bf78ec34ba78732f5d6f2d01e112e587f5",
+          "source_evidence_sha256": "f852d2412d89eec9c5839cc2cec9f011ba175e7b41912f80bd7596da95ff451a",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0.03,
+              0.75
+            ],
+            "evidence": "The repair is small, but energy may be limited.",
+            "object_ambiguity": "Postponement versus abandonment is unspecified.",
+            "rationale": "Low energy may favor stopping without requiring it.",
+            "blind_A": 0.27,
+            "blind_B": 0.31,
+            "absolute_disagreement": 0.03999999999999998,
+            "review": {
+              "kind": "directional",
+              "direction": -1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Greater energy plausibly reduces readiness to stop the task."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        },
+        {
+          "id": "dense_c_m1_s4_a0_c0_p1",
+          "position": 0.3,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara is preparing a small wind-tunnel exhibit for a makers fair. The exhibit uses a removable mesh screen at the inlet. A matching spare screen is stored with the exhibit supplies."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During the final inventory, Mara finds that one corner of the installed screen's paper label has peeled away from its frame. The mesh and frame are intact."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "The goal is to prepare the wind-tunnel exhibit for the makers fair. The action under consideration is securing the loose corner of the screen's label. No external demand or disputed proposition has been introduced."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "The prior plan was to bring the exhibit with the screen installed and its label attached."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": null
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": 0.3
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.02,
+            "perceived_cost": 0.08,
+            "expectancy_violation": 0.12,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.68,
+            "engagement_readiness": 0.68,
+            "withdrawal_readiness": 0.14,
+            "resistance_readiness": 0.08
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.02}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.08}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.12}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.68}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.68}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.14}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.08}}",
+          "raw_output_sha256": "249e48c1d96a4acdfdb20af980e495c185f24973acfafee7e997649c997189f2",
+          "source_evidence_sha256": "b7219cb029d45758ca7c45b47378d9c16ad47f15181d80cde762a04362ed08c3",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0.02,
+              0.65
+            ],
+            "evidence": "The repair is small, but energy may be limited.",
+            "object_ambiguity": "Postponement versus abandonment is unspecified.",
+            "rationale": "Low energy may favor stopping without requiring it.",
+            "blind_A": 0.21,
+            "blind_B": 0.25,
+            "absolute_disagreement": 0.04000000000000001,
+            "review": {
+              "kind": "directional",
+              "direction": -1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Greater energy plausibly reduces readiness to stop the task."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        },
+        {
+          "id": "dense_c_m1_s4_a0_c0_p2",
+          "position": 0.5,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara is preparing a small wind-tunnel exhibit for a makers fair. The exhibit uses a removable mesh screen at the inlet. A matching spare screen is stored with the exhibit supplies."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During the final inventory, Mara finds that one corner of the installed screen's paper label has peeled away from its frame. The mesh and frame are intact."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "The goal is to prepare the wind-tunnel exhibit for the makers fair. The action under consideration is securing the loose corner of the screen's label. No external demand or disputed proposition has been introduced."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "The prior plan was to bring the exhibit with the screen installed and its label attached."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": null
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": 0.5
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.02,
+            "perceived_cost": 0.08,
+            "expectancy_violation": 0.12,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.72,
+            "engagement_readiness": 0.74,
+            "withdrawal_readiness": 0.14,
+            "resistance_readiness": 0.08
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.02}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.08}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.12}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.72}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.74}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.14}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.08}}",
+          "raw_output_sha256": "04e27b4741c8f881c670be0745436a163b3fb89fb132a685075a172066515f4e",
+          "source_evidence_sha256": "fe65e14765aafcee9195870e4d0f7f5c62639a888644222ad78862425a911e55",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0.01,
+              0.6
+            ],
+            "evidence": "The repair is small, but energy may be limited.",
+            "object_ambiguity": "Postponement versus abandonment is unspecified.",
+            "rationale": "Low energy may favor stopping without requiring it.",
+            "blind_A": 0.16,
+            "blind_B": 0.2,
+            "absolute_disagreement": 0.04000000000000001,
+            "review": {
+              "kind": "directional",
+              "direction": -1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Greater energy plausibly reduces readiness to stop the task."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        },
+        {
+          "id": "dense_c_m1_s4_a0_c0_p3",
+          "position": 0.7,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara is preparing a small wind-tunnel exhibit for a makers fair. The exhibit uses a removable mesh screen at the inlet. A matching spare screen is stored with the exhibit supplies."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During the final inventory, Mara finds that one corner of the installed screen's paper label has peeled away from its frame. The mesh and frame are intact."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "The goal is to prepare the wind-tunnel exhibit for the makers fair. The action under consideration is securing the loose corner of the screen's label. No external demand or disputed proposition has been introduced."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "The prior plan was to bring the exhibit with the screen installed and its label attached."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": null
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": 0.7
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.08,
+            "perceived_cost": 0.08,
+            "expectancy_violation": 0.12,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.78,
+            "engagement_readiness": 0.78,
+            "withdrawal_readiness": 0.12,
+            "resistance_readiness": 0.08
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.08}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.08}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.12}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.78}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.78}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.12}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.08}}",
+          "raw_output_sha256": "96dc7c4a47be225a9106ef21580bea20e9520f9d6ee97d8639af70c3038dbbe4",
+          "source_evidence_sha256": "00600fab2716fbdee5a370cdbd112b64968963776977a4b4c50f717f866d50e2",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0,
+              0.55
+            ],
+            "evidence": "The repair is small, but energy may be limited.",
+            "object_ambiguity": "Postponement versus abandonment is unspecified.",
+            "rationale": "Low energy may favor stopping without requiring it.",
+            "blind_A": 0.12,
+            "blind_B": 0.16,
+            "absolute_disagreement": 0.04000000000000001,
+            "review": {
+              "kind": "directional",
+              "direction": -1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Greater energy plausibly reduces readiness to stop the task."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        },
+        {
+          "id": "dense_c_m1_s4_a0_c0_p4",
+          "position": 0.9,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara is preparing a small wind-tunnel exhibit for a makers fair. The exhibit uses a removable mesh screen at the inlet. A matching spare screen is stored with the exhibit supplies."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "During the final inventory, Mara finds that one corner of the installed screen's paper label has peeled away from its frame. The mesh and frame are intact."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "The goal is to prepare the wind-tunnel exhibit for the makers fair. The action under consideration is securing the loose corner of the screen's label. No external demand or disputed proposition has been introduced."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "The prior plan was to bring the exhibit with the screen installed and its label attached."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": null
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": null
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": null
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": null
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": null
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": null
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": null
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": null
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": 0.9
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": null
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.94,
+            "perceived_gain": 0.02,
+            "perceived_cost": 0.08,
+            "expectancy_violation": 0.12,
+            "claim_acceptance": 0.48,
+            "coping_potential": 0.78,
+            "engagement_readiness": 0.78,
+            "withdrawal_readiness": 0.12,
+            "resistance_readiness": 0.08
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.94}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.02}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.08}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.12}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.48}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.78}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.78}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.12}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.08}}",
+          "raw_output_sha256": "808cf483f5df179f5d7bff0f9435583a8669153d9a207a3958d297daf37b6123",
+          "source_evidence_sha256": "636b1112a03a501772050ae48029c5618100dceb30aba9e89d1bd2995cbebe22",
+          "reference_sidecar": {
+            "basis": "indirect",
+            "range": [
+              0,
+              0.5
+            ],
+            "evidence": "The repair is small, but energy may be limited.",
+            "object_ambiguity": "Postponement versus abandonment is unspecified.",
+            "rationale": "Low energy may favor stopping without requiring it.",
+            "blind_A": 0.1,
+            "blind_B": 0.14,
+            "absolute_disagreement": 0.04000000000000001,
+            "review": {
+              "kind": "directional",
+              "direction": -1,
+              "supported": true,
+              "basis": "indirect",
+              "rationale": "Greater energy plausibly reduces readiness to stop the task."
+            },
+            "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+          }
+        }
+      ]
+    },
+    {
+      "key": "weak_evidence",
+      "label": "参考证据不足的案例",
+      "description_zh": "技术员确认喷绘设备已调试就绪。部分轴只有先验式合成参考，不能把参考估计当作独立人类心理真值。",
+      "feature": null,
+      "axis": null,
+      "group": null,
+      "tests": null,
+      "records": [
+        {
+          "id": "dense_c_m0_s3_a0_c0_p0",
+          "position": null,
+          "input": {
+            "schema_version": "pk-fixed-prefix-0.10.0",
+            "context": {
+              "pre_event_background": {
+                "description": "Facts, experiences and constraints already present before the current event. Do not include the subsequent reaction.",
+                "value": "Mara is preparing a model-making lesson in which participants will use a low-pressure airbrush. Her plan is to have the equipment ready before they arrive. A technician is assigned to assemble and test the airbrush, regulate the compressor, and resolve any equipment problems; Mara is not expected to perform or supervise those tasks."
+              },
+              "current_event": {
+                "description": "The newly occurring or newly learned facts. Do not assign an event category or prescribe a psychological response.",
+                "value": "The technician confirms that the airbrush is assembled, tested, and set to the pressure specified for the lesson. The extraction booth is also ready."
+              },
+              "evaluation_target": {
+                "description": "The goal, action, proposition and external demand being evaluated. Keep their identities explicit across output dimensions.",
+                "value": "Whether the airbrush setup has advanced Mara's goal of having the equipment ready for the lesson. No proposition or demand requires Mara to assess her own ability to assemble or operate the equipment."
+              },
+              "comparison_baseline": {
+                "description": "The prior state, plan or expectation used when judging additional progress, obstruction or expectancy violation.",
+                "value": "Before the confirmation, the setup was assigned to the technician but had not been reported complete."
+              }
+            },
+            "features": {
+              "domain_self_efficacy": {
+                "description": "Long-term confidence in being able to perform tasks in the relevant domain. This is distinct from confidence about the current task.",
+                "value": 0.1
+              },
+              "uncertainty_tolerance": {
+                "description": "The usual degree of willingness to continue judging or acting when relevant information is incomplete.",
+                "value": 0.5
+              },
+              "material_security_fulfillment": {
+                "description": "Long-term subjective satisfaction with sufficient and stable access to basic material necessities.",
+                "value": null
+              },
+              "social_respect_fulfillment": {
+                "description": "The long-term degree of feeling recognized, valued and respected by others.",
+                "value": null
+              },
+              "safety_priority": {
+                "description": "The degree to which avoiding harm or loss and protecting existing achievements is prioritized in tradeoffs.",
+                "value": 0.5
+              },
+              "autonomy_priority": {
+                "description": "The degree to which making one's own decisions and retaining freedom of choice is prioritized. This does not indicate whether the current situation is coercive.",
+                "value": 0.5
+              },
+              "achievement_priority": {
+                "description": "The degree to which reaching goals, performing well and demonstrating competence is prioritized.",
+                "value": 0.5
+              },
+              "concern_for_others": {
+                "description": "The degree to which others' interests, feelings and dignity are prioritized in tradeoffs.",
+                "value": 0.5
+              },
+              "pre_event_pleasantness": {
+                "description": "The degree of pleasant feeling immediately before the event. Lower values indicate unpleasantness and higher values indicate pleasantness.",
+                "value": 0.5
+              },
+              "pre_event_activation": {
+                "description": "The degree of wakefulness, arousal and vigilance immediately before the event. This is distinct from sustainable energy reserves.",
+                "value": 0.5
+              },
+              "pre_event_available_energy": {
+                "description": "The degree of usable energy reserves available for further activity immediately before the event.",
+                "value": 0.5
+              },
+              "pre_event_mental_occupation": {
+                "description": "The degree to which attention is already occupied by other tasks or thoughts immediately before the event. Higher values mean less freely available attention.",
+                "value": 0.5
+              }
+            }
+          },
+          "values": {
+            "goal_relevance": 0.88,
+            "perceived_gain": 0.25,
+            "perceived_cost": 0.04,
+            "expectancy_violation": 0.1,
+            "claim_acceptance": 0.5,
+            "coping_potential": 0.28,
+            "engagement_readiness": 0.72,
+            "withdrawal_readiness": 0.12,
+            "resistance_readiness": 0.08
+          },
+          "raw_output": "{\"goal_relevance\": {\"description\": \"How much the current event matters for the specified goal. This is distinct from how much the individual generally values that goal.\", \"value\": 0.88}, \"perceived_gain\": {\"description\": \"The degree of subjective additional progress toward the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.25}, \"perceived_cost\": {\"description\": \"The degree of subjective additional obstruction or loss to the specified goal due to the current event or evaluated action, relative to the stated comparison baseline.\", \"value\": 0.04}, \"expectancy_violation\": {\"description\": \"The degree to which the current event differs from the individual's stated prior expectation. This is distinct from the event's objective rarity.\", \"value\": 0.1}, \"claim_acceptance\": {\"description\": \"The degree of endorsement of the specified proposition. This is distinct from liking its source or complying with the associated demand.\", \"value\": 0.5}, \"coping_potential\": {\"description\": \"The individual's current subjective judgment of being able to handle the specified task. This does not establish objective feasibility.\", \"value\": 0.28}, \"engagement_readiness\": {\"description\": \"The individual's current readiness to engage in the specified action. This does not imply that the action has already occurred.\", \"value\": 0.72}, \"withdrawal_readiness\": {\"description\": \"The individual's current readiness to stop or withdraw from the specified action. This is not required to complement engagement readiness.\", \"value\": 0.12}, \"resistance_readiness\": {\"description\": \"The individual's current readiness to oppose or resist the specified external demand or arrangement. This is distinct from merely withdrawing.\", \"value\": 0.08}}",
+          "raw_output_sha256": "c6920878e8e498b8fbb062c9f2682667312ab62a30c5d951c378c9d2811150c2",
+          "source_evidence_sha256": "c8f7f829c2254d38da77ee2316a73afb182f1f35f0258d19a6b402ca1fa4ea05",
+          "reference_sidecar": {
+            "goal_relevance": {
+              "basis": "strong",
+              "range": [
+                0.88,
+                1
+              ],
+              "evidence": "Confirmation directly concerns readiness for the lesson.",
+              "object_ambiguity": "none",
+              "rationale": "The event directly addresses the goal.",
+              "blind_A": 0.97,
+              "blind_B": 0.97,
+              "absolute_disagreement": 0.0,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": true,
+                "basis": "strong",
+                "rationale": "The confirmation directly addresses the readiness goal regardless of Mara's equipment self-efficacy."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            },
+            "perceived_gain": {
+              "basis": "strong",
+              "range": [
+                0.65,
+                0.98
+              ],
+              "evidence": "The airbrush is tested and set; the booth is ready.",
+              "object_ambiguity": "Actual completion before confirmation is unspecified.",
+              "rationale": "Confirmation establishes substantial readiness relative to the unconfirmed baseline, though physical progress since then is unclear.",
+              "blind_A": 0.91,
+              "blind_B": 0.91,
+              "absolute_disagreement": 0.0,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": true,
+                "basis": "strong",
+                "rationale": "The technician's confirmed completion advances the stated goal without requiring Mara's equipment skills."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            },
+            "perceived_cost": {
+              "basis": "strong",
+              "range": [
+                0,
+                0.12
+              ],
+              "evidence": "No new setup obstacle is reported.",
+              "object_ambiguity": "none",
+              "rationale": "The event identifies little additional obstruction.",
+              "blind_A": 0.02,
+              "blind_B": 0.02,
+              "absolute_disagreement": 0.0,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": true,
+                "basis": "strong",
+                "rationale": "No new obstruction is reported, and the setup is delegated."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            },
+            "expectancy_violation": {
+              "basis": "prior_based",
+              "range": [
+                0.05,
+                0.85
+              ],
+              "evidence": "Setup was assigned and readiness was planned.",
+              "object_ambiguity": "Prior expectation is unstated.",
+              "rationale": "Completion is plausible under the plan, but the plan does not establish an expectation.",
+              "blind_A": 0.32,
+              "blind_B": 0.34,
+              "absolute_disagreement": 0.020000000000000018,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": false,
+                "basis": "prior_based",
+                "rationale": "The reference is flat, but Mara's prior expectation is unspecified."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            },
+            "claim_acceptance": {
+              "basis": "prior_based",
+              "range": [
+                0.05,
+                0.95
+              ],
+              "evidence": "No proposition is specified for endorsement.",
+              "object_ambiguity": "Proposition is unspecified.",
+              "rationale": "Endorsement depends on the missing proposition; the report is not assumed to be it.",
+              "blind_A": 0.55,
+              "blind_B": 0.53,
+              "absolute_disagreement": 0.020000000000000018,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": false,
+                "basis": "prior_based",
+                "rationale": "The proposition is unspecified, so flat endorsement cannot be qualified as invariant."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            },
+            "coping_potential": {
+              "basis": "prior_based",
+              "range": [
+                0.15,
+                0.95
+              ],
+              "evidence": "The technician handles equipment work and the setup is ready.",
+              "object_ambiguity": "Task to handle is unspecified.",
+              "rationale": "Readiness may ease preparation, but the relevant coping task and judgment are unknown.",
+              "blind_A": 0.72,
+              "blind_B": 0.61,
+              "absolute_disagreement": 0.10999999999999999,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": false,
+                "basis": "prior_based",
+                "rationale": "Delegation limits the relevance of equipment skills, but the task being handled is unspecified."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            },
+            "engagement_readiness": {
+              "basis": "prior_based",
+              "range": [
+                0.1,
+                0.95
+              ],
+              "evidence": "Mara is preparing a lesson and the setup is ready.",
+              "object_ambiguity": "Action to engage in is unspecified.",
+              "rationale": "The favorable report supports continued preparation without identifying an action.",
+              "blind_A": 0.74,
+              "blind_B": 0.57,
+              "absolute_disagreement": 0.17000000000000004,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": false,
+                "basis": "prior_based",
+                "rationale": "The action is unspecified, so its relationship to domain self-efficacy is unclear."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            },
+            "withdrawal_readiness": {
+              "basis": "prior_based",
+              "range": [
+                0,
+                0.75
+              ],
+              "evidence": "The report presents no stated obstacle.",
+              "object_ambiguity": "Action to withdraw from is unspecified.",
+              "rationale": "There is little event-specific reason to stop, but the action is unknown.",
+              "blind_A": 0.12,
+              "blind_B": 0.17,
+              "absolute_disagreement": 0.05000000000000002,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": false,
+                "basis": "prior_based",
+                "rationale": "The action is unspecified; the flat reference is a conditional prior."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            },
+            "resistance_readiness": {
+              "basis": "prior_based",
+              "range": [
+                0,
+                0.75
+              ],
+              "evidence": "No external demand or contested arrangement is described.",
+              "object_ambiguity": "Demand or arrangement to resist is unspecified.",
+              "rationale": "No specific trigger for opposition is identified.",
+              "blind_A": 0.1,
+              "blind_B": 0.12,
+              "absolute_disagreement": 0.01999999999999999,
+              "review": {
+                "kind": "invariant",
+                "direction": 0,
+                "supported": false,
+                "basis": "prior_based",
+                "rationale": "No demand or arrangement to oppose is specified."
+              },
+              "review_rubric_version": "dense-semantic-review-v3-resolution-aware"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "selection_rule": "Lexical first successful eligible visible-response group/axis; row with most prior-based axes then ID; lexical first failed eligible visible-response group/axis. No resampling.",
+  "verdict": {
+    "engineering": "REJECT",
+    "psychological": "INCONCLUSIVE"
+  },
+  "sources": [
+    {
+      "path": "runs/20261109_qwen35_08b_light_01/reports/FINAL_REPORT.json",
+      "sha256": "d5358b95b94bf65abbd6f8a5c9195ab1996e41f731578a43101ff6f348979f6c",
+      "url": "https://github.com/GeTitDD/psychological-kernel/blob/9644c93724f6b73ae4b070e5e027bfd90ed02d0a/runs/20261109_qwen35_08b_light_01/reports/FINAL_REPORT.json"
+    },
+    {
+      "path": "runs/20261109_qwen35_08b_light_01/reports/REAL_EXAMPLES.json",
+      "sha256": "65f0e43903c16546881b03810b952dc7e6d881b0179f66f96e7705592a950c14",
+      "url": "https://github.com/GeTitDD/psychological-kernel/blob/9644c93724f6b73ae4b070e5e027bfd90ed02d0a/runs/20261109_qwen35_08b_light_01/reports/REAL_EXAMPLES.json"
+    },
+    {
+      "path": "runs/20261109_qwen35_08b_light_01/contract/field_contract.json",
+      "sha256": "8da3e750ac7651fb0825f51154810409c586157d16182fba1fae5bb4ec1b04ab",
+      "url": "https://github.com/GeTitDD/psychological-kernel/blob/9644c93724f6b73ae4b070e5e027bfd90ed02d0a/runs/20261109_qwen35_08b_light_01/contract/field_contract.json"
+    },
+    {
+      "path": "runs/20261109_qwen35_08b_light_01/models/light_s0/training.jsonl",
+      "sha256": "9b414710beaabbb675910ff15a4b2f4925929187eb3dc797b00cf981d820e328",
+      "url": "https://github.com/GeTitDD/psychological-kernel/blob/9644c93724f6b73ae4b070e5e027bfd90ed02d0a/runs/20261109_qwen35_08b_light_01/models/light_s0/training.jsonl"
+    }
+  ],
+  "scope_notes": [
+    "Same-provider agent-synthetic references and review are not independent human psychological ground truth.",
+    "Single seed, bounded engineering migration diagnostic; not a completed full 100/300/600 learning-curve or random-seed acceptance.",
+    "JSON validity is format evidence only; constrained generation does not establish semantic effectiveness.",
+    "Reference support remains insufficient; no scientific PASS can be issued.",
+    "Confirmation inputs were used in historical experiments and are not a new blind test.",
+    "Architecture, pretrained starting point, training-row count and runtime differ from old 1.7B; differences cannot be attributed to parameter count alone.",
+    "Continuation at step 60 restored optimizer and example order, but the historical partial lacked dropout RNG; this is not a bitwise uninterrupted training reproduction.",
+    "Performance uses 24 fixed serial requests and is a small-sample quick check, not production-grade P95."
+  ]
+}

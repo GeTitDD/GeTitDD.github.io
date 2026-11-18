@@ -1,0 +1,73 @@
+/* Contact only: remove agency-template material while keeping native layout. */
+body[data-contact-page] :is(
+  .framer-1t7zmzs,
+  .framer-wk5859-container,
+  .framer-1ke0xhx,
+  footer .framer-1wm2fh7,
+  footer .framer-94pgke,
+  footer form[data-framer-name="Newsletter Form"]
+) {
+  display: none !important;
+}
+
+/* Preserve the greeting/name and message; omit company, budget and timing. */
+body[data-contact-page] form.framer-XWLdX .framer-sofqkq > .framer-ody7gd ~ *,
+body[data-contact-page] form.framer-XWLdX .framer-1rzudbw > .framer-odli41 ~ * {
+  display: none !important;
+}
+
+/* Keep the original desktop form gutter after retiring the recruitment aside. */
+body[data-contact-page] .framer-dw2si9,
+body[data-contact-page] .framer-dw2si9 * {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* The remaining footer links point into the portfolio, not social accounts. */
+body[data-contact-page] footer [data-framer-name="Social Container"] [data-framer-name="Links Container"] > [data-framer-component-type="RichTextContainer"]:first-child {
+  display: none !important;
+}
+
+/* Chinese labels reuse the first native text slot in each form group. */
+body[data-contact-page] form.framer-XWLdX :is(.framer-sofqkq,.framer-1rzudbw,.framer-1jgx366) > [data-framer-component-type="RichTextContainer"]:not(:first-child) {
+  display: none !important;
+}
+body[data-contact-page] .framer-xtdzzo {
+  gap: 32px !important;
+}
+body[data-contact-page] .contact-direct {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  margin: 0;
+  font: 400 20px/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  letter-spacing: normal;
+}
+body[data-contact-page] .contact-direct > div {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 16px;
+}
+body[data-contact-page] .contact-direct dt {
+  color: #777;
+  font-size: 14px;
+}
+body[data-contact-page] .contact-direct dd {
+  min-width: 0;
+  margin: 0;
+}
+body[data-contact-page] .contact-direct a {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+body[data-contact-page] .contact-direct [data-contact-wechat] {
+  user-select: all;
+}
+@media (max-width: 809px) {
+  body[data-contact-page] .framer-xtdzzo { gap: 24px !important; }
+  body[data-contact-page] .contact-direct { font-size: 18px; }
+  body[data-contact-page] .contact-direct > div { gap: 12px; }
+}

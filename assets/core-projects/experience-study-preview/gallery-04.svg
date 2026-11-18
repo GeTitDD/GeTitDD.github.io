@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+<rect width="1200" height="1600" fill="#e5e8df"/>
+<g font-family="Inter Display, Inter, PingFang SC, Hiragino Sans GB, sans-serif" fill="#34433a">
+<text x="90.0" y="144.0" font-size="24" font-weight="600" letter-spacing="3">04 / 小模型 AGENT 能力优化研究</text>
+<text x="90.0" y="256.0" font-size="64.8" font-weight="700">结论边界</text>
+<rect x="90.0" y="336.0" width="1020.0" height="911.9999999999999" fill="#fff" fill-opacity=".55"/>
+<svg x="90.0" y="336.0" width="1020.0" height="911.9999999999999" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet">
+<title id="title">小模型经验研究的结论范围</title>
+<desc id="desc">区分有直接评估支持的上下文经验收益、单世界单种子探索结果，以及尚未获得证据的持续权重能力增长。</desc>
+<rect fill="#f2f2ec" height="900" width="1200"/>
+<g fill="#222923" font-family="Inter, PingFang SC, sans-serif">
+<text fill="#66746a" font-size="17" font-weight="700" letter-spacing="2.5" x="58" y="67">CONCLUSION SCOPE / EVIDENCE BOUNDARIES</text>
+<text font-size="40" font-weight="700" x="58" y="130">哪些结论成立，哪些仍待验证</text>
+<text fill="#586159" font-size="20" x="58" y="176">把观察结果与证据强度放在一起阅读。</text>
+<rect fill="#e4ece5" height="170" rx="8" stroke="#557c68" stroke-width="2" width="1096" x="52" y="228"/>
+<rect fill="#557c68" height="170" rx="5" width="10" x="52" y="228"/>
+<text fill="#557c68" font-size="17" font-weight="700" letter-spacing="1.6" x="88" y="276">SUPPORTED IN THE TESTED SETTING</text>
+<text font-size="28" font-weight="700" x="88" y="325">受控任务中，相关上下文经验与更高任务胜率相关</text>
+<text fill="#465149" font-size="17" x="88" y="365">结论范围：经验作为推理上下文输入；按 Test / OOD 及各自固定分母报告。</text>
+<rect fill="#f1e8df" height="170" rx="8" stroke="#bd7950" stroke-width="2" width="1096" x="52" y="421"/>
+<rect fill="#bd7950" height="170" rx="5" width="10" x="52" y="421"/>
+<text fill="#a56540" font-size="17" font-weight="700" letter-spacing="1.6" x="88" y="469">EXPLORATORY OBSERVATION</text>
+<text font-size="28" font-weight="700" x="88" y="518">游戏中的负经验纠错，观察到局部行为变化</text>
+<text fill="#5c4d43" font-size="17" x="88" y="558">结论范围：单一探索世界与单个优化种子；不是强化学习或通用游戏能力证明。</text>
+<rect fill="#e8e9ee" height="170" rx="8" stroke="#69728b" stroke-width="2" width="1096" x="52" y="614"/>
+<rect fill="#69728b" height="170" rx="5" width="10" x="52" y="614"/>
+<text fill="#58627b" font-size="17" font-weight="700" letter-spacing="1.6" x="88" y="662">NOT ESTABLISHED</text>
+<text font-size="28" font-weight="700" x="88" y="711">长期权重能力增长与可靠的训练特定经验利用</text>
+<text fill="#4d5362" font-size="17" x="88" y="751">当前对照未支持该结论；保留负结果，避免把上下文收益写成模型学会了经验。</text>
+<text fill="#707872" font-size="15" x="58" y="838">结果分别对应各自分支、预算、数据来源与评估条件，不跨分支合并解释。</text>
+</g>
+</svg>
+<text x="90.0" y="1408.0" font-size="42.00000000000001" font-weight="500">区分受支持结果、探索性观察与尚未成立的能力主张。</text>
+<text x="90.0" y="1520.0" font-size="19" font-weight="500" letter-spacing="2">PROJECT NOTES / HUANG</text>
+</g></svg>

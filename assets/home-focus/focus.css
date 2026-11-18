@@ -1,0 +1,67 @@
+/* Keep the original inset layout, numeral masks and scroll choreography. */
+[data-framer-name="In Numbers"] h4[data-home-focus-weight]::before {
+  content: attr(data-home-focus-weight) "% / FOCUS";
+  display: block;
+  margin-bottom: 24px;
+  color: #999;
+  font-family: "Inter Display", Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: .03em;
+}
+@media (max-width: 809px) {
+  [data-framer-name="In Numbers"] h4[data-home-focus-weight]::before {
+    margin-bottom: 20px;
+    font-size: 11px;
+  }
+}
+
+/* Native project headings retain their typography and animation layers. */
+#home-projects .home-project-heading-target { position: relative; }
+#home-projects .home-project-title-link {
+  pointer-events: auto !important;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+#home-projects .home-project-title-link:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 8px;
+}
+#home-projects .home-project-official {
+  display: flex;
+  align-items: baseline;
+  align-self: flex-start;
+  gap: 18px;
+  max-width: 100%;
+  color: #767676;
+  font: 500 12px/1.5 "Inter Display", Inter, "PingFang SC", sans-serif;
+  letter-spacing: .02em;
+}
+#home-projects .home-project-official a {
+  pointer-events: auto !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  max-width: 100%;
+  padding: 4px 0 6px;
+  border-bottom: 1px solid #cfcfcf;
+  color: #111;
+  font: 500 16px/1.4 "Inter Display", Inter, sans-serif;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: border-color 180ms ease;
+}
+#home-projects .home-project-official-arrow { display:inline-block; transition:transform 180ms ease; }
+#home-projects .home-project-official a:hover { border-color: #111; }
+#home-projects .home-project-official a:hover .home-project-official-arrow { transform:translate(2px,-2px); }
+#home-projects .home-project-official a:focus-visible { outline:2px solid #111; outline-offset:6px; }
+@media (prefers-reduced-motion: reduce) {
+  #home-projects .home-project-official a,
+  #home-projects .home-project-official-arrow { transition:none; }
+}

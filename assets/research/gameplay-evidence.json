@@ -1,0 +1,238 @@
+{
+  "sources": {
+    "2048": "https://github.com/GeTitDD/experience-dual-learning-research/blob/a1239dbd78cbe3ee57f067f5902aea5bf6f886c5/experiments/r2/gameplay-preview-summary.json",
+    "rpg": "https://github.com/GeTitDD/experience-dual-learning-research/blob/a1239dbd78cbe3ee57f067f5902aea5bf6f886c5/experiments/cultivation/experience-transfer/evidence/revision-study/audit.json"
+  },
+  "game_2048": {
+    "game": "2048",
+    "upstream_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc",
+    "source_commit": "67d4a99",
+    "policy": "episodic-731",
+    "adapter_sha256": "8cbeecc924eb0856a773a6f9cac0c764bd483456c08d03e24a937bc01333c584",
+    "seed": 20261108,
+    "decisions": 172,
+    "valid_actions": 172,
+    "score": 2040,
+    "max_tile": 256,
+    "won": false,
+    "stop_reason": "game-over",
+    "action_counts": {
+      "right": 22,
+      "up": 142,
+      "left": 5,
+      "down": 3
+    },
+    "mean_model_latency_ms": 318.3579241510394,
+    "median_model_latency_ms": 322.9002458974719,
+    "episode_sha256": "1e45547b4d99c9af9bc7cf6fc847a05f47729dbd6979c6927a84a2c9177ed50e",
+    "teacher_fallback": false,
+    "training_on_2048": false,
+    "interpretation": "single-game zero-shot integration preview, not causal transfer or R2 confirmation evidence"
+  },
+  "rpg": {
+    "rows": [
+      {
+        "condition": "原始 Qwen / 无记忆",
+        "name": "base-no-memory",
+        "purchases": 12,
+        "observed_money_decreases": 2184,
+        "end_money": 399,
+        "insight_pp": 16,
+        "end_portable_food_days": 170,
+        "game_minutes": 14400,
+        "world_seed": 45931,
+        "episode_sha256": "37c404d83126933ee6f437b38080a3f528aa6552716e225e5b2d77b888ab279b",
+        "steps": 129,
+        "actions": {
+          "trabajar": 53,
+          "comprar_racion": 12,
+          "contemplar": 64
+        },
+        "end_state": {
+          "alive": true,
+          "money": 399,
+          "realm": 0,
+          "stage": 1,
+          "meridians": 0,
+          "hunger": {
+            "estado": "Normal",
+            "necesitaComer": true,
+            "diasEnEstomago": 6.125,
+            "diasComidaDisponible": 170
+          },
+          "injuries": {
+            "abiertas": 0,
+            "permanentes": 0,
+            "algunaGrave": false
+          },
+          "household": {
+            "enCasa": true,
+            "despensaFamiliar": 30
+          }
+        }
+      },
+      {
+        "condition": "原始 Qwen / 结构化经验",
+        "name": "base-structured-memory",
+        "purchases": 12,
+        "observed_money_decreases": 2184,
+        "end_money": 883,
+        "insight_pp": 5,
+        "end_portable_food_days": 170,
+        "game_minutes": 14400,
+        "world_seed": 45931,
+        "episode_sha256": "0acdae8a35212291e4750e42c4ec812cf8831bae4e8ecde99c7b0ee5d779200b",
+        "steps": 130,
+        "actions": {
+          "trabajar": 97,
+          "comprar_racion": 12,
+          "contemplar": 19,
+          "esperar": 2
+        },
+        "end_state": {
+          "alive": true,
+          "money": 883,
+          "realm": 0,
+          "stage": 1,
+          "meridians": 0,
+          "hunger": {
+            "estado": "Normal",
+            "necesitaComer": true,
+            "diasEnEstomago": 7.125,
+            "diasComidaDisponible": 170
+          },
+          "injuries": {
+            "abiertas": 0,
+            "permanentes": 0,
+            "algunaGrave": false
+          },
+          "household": {
+            "enCasa": true,
+            "despensaFamiliar": 30
+          }
+        }
+      },
+      {
+        "condition": "同预算 CE 模仿 / 无记忆",
+        "name": "matched_ce-no-memory",
+        "purchases": 12,
+        "observed_money_decreases": 2184,
+        "end_money": 663,
+        "insight_pp": 10,
+        "end_portable_food_days": 170,
+        "game_minutes": 14400,
+        "world_seed": 45931,
+        "episode_sha256": "573d36eb1b034834a184052ea60a0042f8242080121a73a57ac34eb9a68952f2",
+        "steps": 130,
+        "actions": {
+          "comprar_racion": 12,
+          "trabajar": 77,
+          "contemplar": 39,
+          "esperar": 2
+        },
+        "end_state": {
+          "alive": true,
+          "money": 663,
+          "realm": 0,
+          "stage": 1,
+          "meridians": 0,
+          "hunger": {
+            "estado": "Normal",
+            "necesitaComer": true,
+            "diasEnEstomago": 7.125,
+            "diasComidaDisponible": 170
+          },
+          "injuries": {
+            "abiertas": 0,
+            "permanentes": 0,
+            "algunaGrave": false
+          },
+          "household": {
+            "enCasa": true,
+            "despensaFamiliar": 30
+          }
+        }
+      },
+      {
+        "condition": "负经验纠错 / 无记忆",
+        "name": "unlikelihood-no-memory",
+        "purchases": 4,
+        "observed_money_decreases": 728,
+        "end_money": 1668,
+        "insight_pp": 20,
+        "end_portable_food_days": 90,
+        "game_minutes": 14400,
+        "world_seed": 45931,
+        "episode_sha256": "b4d04652c5611eb1a699d34fca3cdbf7a080ad45faf2ba3c008fd029ae5aab1b",
+        "steps": 126,
+        "actions": {
+          "contemplar": 80,
+          "trabajar": 36,
+          "comprar_racion": 4,
+          "esperar": 6
+        },
+        "end_state": {
+          "alive": true,
+          "money": 1668,
+          "realm": 0,
+          "stage": 1,
+          "meridians": 0,
+          "hunger": {
+            "estado": "Normal",
+            "necesitaComer": true,
+            "diasEnEstomago": 3,
+            "diasComidaDisponible": 90
+          },
+          "injuries": {
+            "abiertas": 0,
+            "permanentes": 0,
+            "algunaGrave": false
+          },
+          "household": {
+            "enCasa": true,
+            "despensaFamiliar": 30
+          }
+        }
+      }
+    ],
+    "training": [
+      {
+        "arm": "unlikelihood",
+        "seed": 731,
+        "updates": 16,
+        "examples": 18,
+        "batch": 4,
+        "compute_tokens": 32832,
+        "objective": "conditional action unlikelihood",
+        "kl": 0.1,
+        "adapter_sha256": "e84a7bf4d2996226df70eda78fba4fbb1fdc1e6bebceb70580066ab97d8f3652"
+      },
+      {
+        "arm": "matched_ce",
+        "seed": 731,
+        "updates": 16,
+        "examples": 18,
+        "batch": 4,
+        "compute_tokens": 32832,
+        "objective": "conditional action CE",
+        "kl": 0.1,
+        "adapter_sha256": "a35c2b093dd6b205283499ad55f71676b48931b4468e642cf0ff2cf18d7f1e31"
+      }
+    ],
+    "notes": "One exploratory evaluation world and one optimizer seed. Conditional supervised correction, not RL. Native insight is not combat power. Initial negative result retained in report."
+  },
+  "frozen_science_commit": "a1239dbd78cbe3ee57f067f5902aea5bf6f886c5",
+  "display_revision": "case-a-2026-11-10-r2",
+  "behavior_evidence": {
+    "mode": "aggregate_only",
+    "step_trace_available": false,
+    "video_available": false,
+    "status": "原始逐步轨迹待接入",
+    "rpg_interface": "等待、参悟、工作、买粮四类高层动作；模型选择字母，执行器设置参数；不含完整人类视角UI工具链",
+    "current_2048_observatory": {
+      "policy": "teacher-731",
+      "adapter_sha256": "0214d8a13b9beea6c918c3a80c86815ebb604c75996cd0b20a7d199508e6bf44",
+      "not_the_historical_172_step_run": true
+    }
+  }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://getitdd.github.io/sitemap.xml

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">外部经验输入条件下的小模型任务胜率对照</title>
+<desc id="desc">相同冻结基座的无记忆条件与提供相关经验的条件：Test 分别 39/120 与 99/120，OOD 分别 15/48 与 43/48。结果描述上下文经验输入，不代表权重训练收益。</desc>
+<rect width="1200" height="900" fill="#f2f2ec"/>
+<g font-family="Inter, PingFang SC, sans-serif" fill="#222923">
+  <text x="58" y="67" font-size="17" font-weight="700" letter-spacing="2.5" fill="#66746a">CONTROLLED TASKS / CONTEXT EXPERIENCE</text>
+  <text x="58" y="130" font-size="39" font-weight="700">相关经验输入与无记忆条件</text>
+  <text x="58" y="176" font-size="20" fill="#586159">同一冻结基座 · 胜利回合 / 固定评估总回合</text>
+
+  <rect x="52" y="220" width="1096" height="250" rx="8" fill="#fff" stroke="#d3d8d1"/>
+  <text x="86" y="270" font-size="18" font-weight="700" letter-spacing="1.5" fill="#66746a">TEST / 120 回合</text>
+  <text x="86" y="333" font-size="21">无记忆</text>
+  <rect x="330" y="307" width="620" height="32" rx="4" fill="#e5e8e2"/>
+  <rect x="330" y="307" width="201.5" height="32" rx="4" fill="#727c74"/>
+  <text x="975" y="333" font-size="23" font-weight="700">39 / 120</text>
+  <text x="86" y="400" font-size="21">相关经验</text>
+  <rect x="330" y="374" width="620" height="32" rx="4" fill="#e5e8e2"/>
+  <rect x="330" y="374" width="511.5" height="32" rx="4" fill="#56836d"/>
+  <text x="975" y="400" font-size="23" font-weight="700">99 / 120</text>
+  <text x="330" y="441" font-size="15" fill="#6b746d">32.5%</text>
+  <text x="804" y="441" font-size="15" fill="#496e59">82.5%</text>
+
+  <rect x="52" y="496" width="1096" height="250" rx="8" fill="#fff" stroke="#d3d8d1"/>
+  <text x="86" y="546" font-size="18" font-weight="700" letter-spacing="1.5" fill="#66746a">OOD / 48 回合</text>
+  <text x="86" y="609" font-size="21">无记忆</text>
+  <rect x="330" y="583" width="620" height="32" rx="4" fill="#e5e8e2"/>
+  <rect x="330" y="583" width="193.8" height="32" rx="4" fill="#727c74"/>
+  <text x="975" y="609" font-size="23" font-weight="700">15 / 48</text>
+  <text x="86" y="676" font-size="21">相关经验</text>
+  <rect x="330" y="650" width="620" height="32" rx="4" fill="#e5e8e2"/>
+  <rect x="330" y="650" width="555.5" height="32" rx="4" fill="#56836d"/>
+  <text x="975" y="676" font-size="23" font-weight="700">43 / 48</text>
+  <text x="330" y="717" font-size="15" fill="#6b746d">31.3%</text>
+  <text x="848" y="717" font-size="15" fill="#496e59">89.6%</text>
+
+  <text x="58" y="793" font-size="16" fill="#4f5951">固定分母包含不可达案例；对照说明该评估中的上下文经验收益，不证明权重训练或长期能力增长。</text>
+  <text x="58" y="832" font-size="14" fill="#7a817b">来源：Case A 冻结证据集 · 各实验分支不混作单变量比较</text>
+</g>
+</svg>

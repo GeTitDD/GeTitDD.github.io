@@ -1,0 +1,373 @@
+{
+  "source": {
+    "type": "file",
+    "name": "experiments/r2/evidence/arms.csv",
+    "url": "https://github.com/GeTitDD/experience-dual-learning-research/blob/a1239dbd78cbe3ee57f067f5902aea5bf6f886c5/experiments/r2/evidence/arms.csv",
+    "tables": [
+      {
+        "name": "experiments/r2/evidence/arms.csv",
+        "href": "https://github.com/GeTitDD/experience-dual-learning-research/blob/a1239dbd78cbe3ee57f067f5902aea5bf6f886c5/experiments/r2/evidence/arms.csv"
+      }
+    ],
+    "notes": "胜率=胜利回合/全部评估回合；Test 120，OOD 48；同一采集快照。不同实验分支不混作单变量比较。"
+  },
+  "definition": "胜率=胜利回合/全部评估回合；Test 120，OOD 48；同一采集快照。不同实验分支不混作单变量比较。",
+  "rows": [
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "applicable_only",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "confidence_gate",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "invalid",
+      "episodes": "48",
+      "victories": "14",
+      "win_rate": "0.2916666666666667"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "irrelevant",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "learned_gate",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "neutral",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "none",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "raw_experience",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "relevant",
+      "episodes": "48",
+      "victories": "43",
+      "win_rate": "0.8958333333333334"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "rule_gate",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "base",
+      "mode": "structured",
+      "episodes": "48",
+      "victories": "37",
+      "win_rate": "0.7708333333333334"
+    },
+    {
+      "split": "ood",
+      "name": "episodic-731",
+      "mode": "confidence_gate",
+      "episodes": "48",
+      "victories": "38",
+      "win_rate": "0.7916666666666666"
+    },
+    {
+      "split": "ood",
+      "name": "episodic-731",
+      "mode": "none",
+      "episodes": "48",
+      "victories": "38",
+      "win_rate": "0.7916666666666666"
+    },
+    {
+      "split": "ood",
+      "name": "episodic-731",
+      "mode": "relevant",
+      "episodes": "48",
+      "victories": "43",
+      "win_rate": "0.8958333333333334"
+    },
+    {
+      "split": "ood",
+      "name": "rl-matched-sft",
+      "mode": "none",
+      "episodes": "48",
+      "victories": "3",
+      "win_rate": "0.0625"
+    },
+    {
+      "split": "ood",
+      "name": "self-1201",
+      "mode": "none",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "self-731",
+      "mode": "matched_neutral",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "self-731",
+      "mode": "none",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "ood",
+      "name": "self-947",
+      "mode": "none",
+      "episodes": "48",
+      "victories": "15",
+      "win_rate": "0.3125"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "applicable_only",
+      "episodes": "120",
+      "victories": "87",
+      "win_rate": "0.725"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "confidence_gate",
+      "episodes": "120",
+      "victories": "99",
+      "win_rate": "0.825"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "invalid",
+      "episodes": "120",
+      "victories": "38",
+      "win_rate": "0.31666666666666665"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "irrelevant",
+      "episodes": "120",
+      "victories": "39",
+      "win_rate": "0.325"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "learned_gate",
+      "episodes": "120",
+      "victories": "87",
+      "win_rate": "0.725"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "neutral",
+      "episodes": "120",
+      "victories": "39",
+      "win_rate": "0.325"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "none",
+      "episodes": "120",
+      "victories": "39",
+      "win_rate": "0.325"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "raw_experience",
+      "episodes": "120",
+      "victories": "31",
+      "win_rate": "0.25833333333333336"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "relevant",
+      "episodes": "120",
+      "victories": "99",
+      "win_rate": "0.825"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "rule_gate",
+      "episodes": "120",
+      "victories": "99",
+      "win_rate": "0.825"
+    },
+    {
+      "split": "test",
+      "name": "base",
+      "mode": "structured",
+      "episodes": "120",
+      "victories": "70",
+      "win_rate": "0.5833333333333334"
+    },
+    {
+      "split": "test",
+      "name": "episodic-731",
+      "mode": "confidence_gate",
+      "episodes": "120",
+      "victories": "95",
+      "win_rate": "0.7916666666666666"
+    },
+    {
+      "split": "test",
+      "name": "episodic-731",
+      "mode": "none",
+      "episodes": "120",
+      "victories": "98",
+      "win_rate": "0.8166666666666667"
+    },
+    {
+      "split": "test",
+      "name": "episodic-731",
+      "mode": "relevant",
+      "episodes": "120",
+      "victories": "99",
+      "win_rate": "0.825"
+    },
+    {
+      "split": "test",
+      "name": "rl-matched-sft",
+      "mode": "none",
+      "episodes": "120",
+      "victories": "44",
+      "win_rate": "0.36666666666666664"
+    },
+    {
+      "split": "test",
+      "name": "self-1201",
+      "mode": "none",
+      "episodes": "120",
+      "victories": "39",
+      "win_rate": "0.325"
+    },
+    {
+      "split": "test",
+      "name": "self-731",
+      "mode": "matched_neutral",
+      "episodes": "120",
+      "victories": "39",
+      "win_rate": "0.325"
+    },
+    {
+      "split": "test",
+      "name": "self-731",
+      "mode": "none",
+      "episodes": "120",
+      "victories": "39",
+      "win_rate": "0.325"
+    },
+    {
+      "split": "test",
+      "name": "self-947",
+      "mode": "none",
+      "episodes": "120",
+      "victories": "39",
+      "win_rate": "0.325"
+    },
+    {
+      "split": "test",
+      "name": "teacher-731",
+      "mode": "none",
+      "episodes": "120",
+      "victories": "37",
+      "win_rate": "0.30833333333333335"
+    },
+    {
+      "split": "ood",
+      "name": "teacher-731",
+      "mode": "none",
+      "episodes": "48",
+      "victories": "8",
+      "win_rate": "0.16666666666666666"
+    }
+  ],
+  "frozen_science_commit": "a1239dbd78cbe3ee57f067f5902aea5bf6f886c5",
+  "display_revision": "case-a-2026-11-10-r2",
+  "statistics": {
+    "memory_aware": {
+      "registered_mean_effect_pp": 5.833333333333333,
+      "seed_effects_pp": [
+        0,
+        0,
+        17.5
+      ],
+      "hierarchical_ci_pp": [
+        0,
+        17.22222222222222
+      ],
+      "memory_effect_DID_vs_NM_pp": -19.72222222222222,
+      "DID_hierarchical_ci_pp": [
+        -46.666666666666664,
+        2.7777777777777777
+      ],
+      "interpretation": "training-specific reliable utilization not supported"
+    },
+    "rl_vs_matched_test": {
+      "delta_pp": 45.0,
+      "family_ci95_pp": [
+        27.500000000000004,
+        63.33333333333333
+      ],
+      "training_seeds": 1,
+      "scope": "single-training-seed exploratory contrast"
+    },
+    "visible_aliases": {
+      "test_base_aliased_decisions": 195,
+      "test_base_total_decisions": 1264,
+      "not_proof_of_action_label_leakage": true
+    }
+  }
+}

@@ -1,0 +1,173 @@
+/* A second, quiet view of the existing practice section. */
+#awards[data-home-practice-ready] {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  padding-bottom: 120px;
+}
+#awards[data-home-practice-ready] > [data-framer-name="Headline"] {
+  grid-area: 1 / 1;
+  width: 100% !important;
+  min-width: 0;
+  align-self: stretch;
+}
+#awards [data-home-practice-heading-layout] {
+  justify-content: flex-start !important;
+  gap: 0 !important;
+  width: 100% !important;
+}
+#awards [data-home-practice-heading-stage] {
+  position: relative;
+  flex: none !important;
+  width: 100% !important;
+}
+#awards [data-home-practice-native-title],
+#awards .home-stack-title {
+  transition: transform 650ms cubic-bezier(.22, 1, .36, 1), opacity 320ms ease, visibility 0s linear 650ms;
+}
+#awards .home-stack-title {
+  position: absolute;
+  inset: 0 20px auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(60px);
+  pointer-events: none;
+}
+#awards .home-stack-title h2 { margin: 0; }
+#awards .home-practice-switch {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  align-self: flex-start;
+  gap: 22px;
+  max-width: calc(100% - 40px);
+  margin: 32px 20px 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: #aaa;
+  font: 700 40px/1.25 "Inter Display", Inter, "PingFang SC", sans-serif;
+  letter-spacing: -.045em;
+  text-align: left;
+  cursor: pointer;
+  transition: color 220ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+#awards .home-practice-switch:hover { color: #555; }
+#awards .home-practice-switch:focus-visible { outline: 2px solid #777; outline-offset: 10px; }
+#awards .home-practice-switch svg {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  transition: transform 400ms cubic-bezier(.22, 1, .36, 1);
+}
+#awards .home-practice-switch:hover svg { transform: translateY(-5px); }
+#awards [data-home-practice-intro-layout] { margin-top: auto; }
+#awards .home-stack-intro {
+  display: none;
+  margin: 0;
+  color: #757575;
+  font: 500 14px/1.7 "Inter Display", Inter, "PingFang SC", sans-serif;
+}
+#awards .home-practice-mobile-intro { display: none; }
+#awards [data-home-practice-panel],
+#awards .home-stack-panel {
+  grid-area: 1 / 2;
+  width: 100% !important;
+  min-width: 0;
+  align-self: start;
+  transition: transform 650ms cubic-bezier(.22, 1, .36, 1), opacity 320ms ease, visibility 0s linear 650ms;
+}
+#awards .home-stack-panel {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(64px);
+  pointer-events: none;
+}
+#awards .home-stack-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 24px;
+  margin: 0 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+  font: 500 16px/1.6 "Inter Display", Inter, "PingFang SC", sans-serif;
+}
+#awards .home-stack-row h3,
+#awards .home-stack-row p {
+  margin: 0;
+  min-width: 0;
+  font: inherit;
+  letter-spacing: 0;
+}
+#awards .home-stack-row h3 { color: #555; font-weight: 700; }
+#awards .home-stack-row p { color: #111; text-wrap: pretty; overflow-wrap: break-word; }
+#awards[data-home-practice-view="stack"] [data-home-practice-native-title],
+#awards[data-home-practice-view="stack"] [data-home-practice-panel] {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-60px);
+  pointer-events: none;
+}
+#awards[data-home-practice-view="stack"] .home-stack-title,
+#awards[data-home-practice-view="stack"] .home-stack-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+#awards[data-home-practice-view="stack"] [data-home-practice-native-intro] { display: none; }
+#awards[data-home-practice-view="stack"] .home-stack-intro { display: block; }
+#awards:not([data-home-practice-view="stack"]) [data-home-practice-native-title],
+#awards:not([data-home-practice-view="stack"]) [data-home-practice-panel] { transition-delay: 0s; }
+.home-practice-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (min-width: 810px) and (max-width: 1199px) {
+  #awards[data-home-practice-ready] { grid-template-columns: minmax(0, 1fr); row-gap: 48px; }
+  #awards[data-home-practice-ready] > [data-framer-name="Headline"] { grid-area: 1 / 1; }
+  #awards [data-home-practice-panel], #awards .home-stack-panel { grid-area: 2 / 1; }
+  #awards [data-home-practice-heading-layout] { flex-direction: column !important; }
+  #awards .home-stack-title { left: 15px; right: 15px; }
+  #awards .home-practice-switch { margin: 28px 15px 0; font-size: 36px; }
+  #awards .home-stack-row { margin-right: 15px; margin-left: 15px; }
+}
+@media (max-width: 809px) {
+  #awards[data-home-practice-ready] { grid-template-columns: minmax(0, 1fr); row-gap: 48px; padding-bottom: 80px; }
+  #awards[data-home-practice-ready] > [data-framer-name="Headline"] { grid-area: 1 / 1; }
+  #awards [data-home-practice-panel], #awards .home-stack-panel { grid-area: 2 / 1; }
+  #awards [data-home-practice-heading-layout] { flex-direction: column !important; }
+  #awards .home-stack-title { left: 10px; right: 10px; }
+  #awards .home-practice-switch { gap: 16px; margin: 24px 10px 0; max-width: calc(100% - 20px); font-size: 28px; }
+  #awards .home-practice-switch svg { width: 21px; height: 21px; }
+  #awards[data-home-practice-ready] > [data-framer-name="Headline"] [data-framer-name="Text & Button Container"] { display: none !important; }
+  #awards .home-practice-mobile-intro {
+    display: block;
+    max-width: calc(100% - 20px);
+    margin: 32px 10px 0;
+    color: #757575;
+    font: 500 14px/1.7 "Inter Display", Inter, "PingFang SC", sans-serif;
+    text-wrap: pretty;
+  }
+  #awards .home-stack-row { grid-template-columns: minmax(0, 1fr); gap: 10px; margin: 0 10px; padding: 30px 0; }
+  #awards .home-stack-row h3 { font-size: 26px; line-height: 1.2; letter-spacing: -.035em; }
+  #awards .home-stack-row p { color: #555; line-height: 1.65; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #awards [data-home-practice-native-title], #awards [data-home-practice-panel],
+  #awards .home-stack-title, #awards .home-stack-panel, #awards .home-practice-switch,
+  #awards .home-practice-switch svg { transition: none; }
+}
