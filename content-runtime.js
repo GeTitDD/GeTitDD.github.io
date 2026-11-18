@@ -9,6 +9,10 @@
     .framer-juKxq [data-framer-name="Mobile Menu"] :is(a[data-framer-name="Menu Item B"],a[data-framer-name="Menu Item C"]),
     .wr-header nav :is(a[href="/studio"],a[href="/feed"]),
     #wr-mobile-nav :is(a[href="/studio"],a[href="/feed"]) { display:none!important; }
+    [data-cms-semantic-word] { white-space:nowrap; }
+    @media(max-width:360px) {
+      [data-cms-semantic-word] { font-size:40px!important; }
+    }
     @media(min-width:810px) {
       nav.framer-cSZEg [data-framer-name="Desktop Menu"] { justify-content:flex-end!important; gap:64px!important; }
       .wr-header nav { justify-content:flex-end!important; gap:64px!important; }
@@ -102,7 +106,7 @@
     const size=parseFloat(style.fontSize)*Math.min(5/6,width/textWidth*.97);
     el.style.fontSize=size+'px';
   }
-  function updateText(el, original, value, restore, isCardLabel=false) {
+  function updateText(el, original, value, restore, isCardLabel=false, semanticSegments=null) {
     // Hydration can replace text/word nodes while retaining the parent element.
     // Rebind those slots before writing, rather than editing detached old nodes.
     const bound = original.motion || original.slots;
@@ -121,10 +125,10 @@
     }
     if (restore) {
       if (!original.changed) return;
-      if (original.motion) original.motion.forEach(item=>{setNodeText(item.node,item.text);item.node.style.display=item.display;});
+      if (original.motion) original.motion.forEach(item=>{setNodeText(item.node,item.text);item.node.style.display=item.display;item.node.removeAttribute('data-cms-semantic-word');});
       else if(original.slots?.length) original.slots.forEach(item=>{
         if(item.node.nodeValue!==item.text)item.node.nodeValue=item.text;
-        if(item.wrapper)item.wrapper.style.display=item.display;
+        if(item.wrapper){item.wrapper.style.display=item.display;item.wrapper.removeAttribute('data-cms-semantic-word');}
       });
       else el.replaceChildren(...original.nodes);
       original.changed=false;
@@ -152,13 +156,19 @@
       fitCardLabel(el,original,lines);
       return;
     }
-    if (el.textContent===value) return;
+    // Curated phrases keep names, technical terms and punctuation together.
+    // Ignore stale boundaries after a copy edit rather than restoring old text.
+    const semanticUnits=Array.isArray(semanticSegments)
+      && semanticSegments.length>0
+      && semanticSegments.every(part=>typeof part==='string' && part.trim())
+      && semanticSegments.join('')===value ? semanticSegments : null;
+    if (el.textContent===value && !semanticUnits) return;
     if (original.motion) {
       // Keep the elements owned by Framer Motion, including their scroll bindings.
       // Segment Chinese into words as well as handling space-separated languages.
-      const units=typeof Intl.Segmenter==='function'
+      const units=semanticUnits || (typeof Intl.Segmenter==='function'
         ? Array.from(new Intl.Segmenter('zh',{granularity:'word'}).segment(value),part=>part.segment)
-        : Array.from(value);
+        : Array.from(value));
       const count=Math.min(units.length,original.motion.length);
       original.motion.forEach((item,index)=>{
         const from=Math.floor(index*units.length/(count||1));
@@ -166,19 +176,23 @@
         const text=index<count?units.slice(from,to).join(''):'';
         if(item.node.textContent!==text)setNodeText(item.node,text);
         item.node.style.display=index<count?item.display:'none';
+        item.node.toggleAttribute('data-cms-semantic-word',Boolean(semanticUnits && index<count));
       });
     } else if (original.slots?.length) {
       const distribute=(slots,text)=>{
-        const units=typeof Intl.Segmenter==='function'
+        const units=(semanticUnits && text===value ? semanticUnits : null) || (typeof Intl.Segmenter==='function'
           ? Array.from(new Intl.Segmenter('zh',{granularity:'word'}).segment(text),part=>part.segment)
-          : Array.from(text);
+          : Array.from(text));
         const count=Math.min(units.length,slots.length);
         slots.forEach((item,index)=>{
           const from=Math.floor(index*units.length/(count||1));
           const to=Math.floor((index+1)*units.length/(count||1));
           const text=index<count?units.slice(from,to).join(''):'';
           if(item.node.nodeValue!==text)item.node.nodeValue=text;
-          if(item.wrapper)item.wrapper.style.display=index<count?item.display:'none';
+          if(item.wrapper){
+            item.wrapper.style.display=index<count?item.display:'none';
+            item.wrapper.toggleAttribute('data-cms-semantic-word',Boolean(semanticUnits && index<count));
+          }
         });
       };
       // Keep each homepage manifesto paragraph in its existing animation group.
@@ -489,7 +503,7 @@
       const e=page.texts[key] || page.texts[h+':1'];
       const label=cardLabel(el,page);
       if(!e && !label) return;
-      updateText(el,o,label || e.value,!label && e.value===e.orig,Boolean(label));
+      updateText(el,o,label || e.value,!label && e.value===e.orig,Boolean(label),!label && e?.segments);
       next.push({el,key,kind:'text',group:section(el)});
     });
     document.querySelectorAll('img,video,source').forEach(el=>{
