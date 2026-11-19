@@ -35,18 +35,20 @@
     return el.closest('section,header,footer,nav') || el.parentElement;
   }
   const previewMotion=new Map();
-  function portfolioScatterOffsetX(node, containerLeft, viewportWidth, offsetX, spread, index, progress) {
-    let desired = spread > 0 ? offsetX * Math.min(0.42, viewportWidth * 0.28 / spread) : 0;
+  function portfolioScatterOffset(node, containerLeft, viewportWidth, viewportHeight, sourceOffset, spread, index) {
+    if (spread <= 0) return { x: 0, y: 0 };
+    // All words share a travel radius; only their directions vary.
+    const radius = Math.min(spread * 0.42, viewportWidth * 0.30, viewportHeight * 0.62);
+    const directions = [-110, -18, 120, 45, -100, -130, 55, -70, 115, 55, -60];
+    const angle = index < directions.length ? directions[index] * Math.PI / 180 : Math.atan2(sourceOffset.y, sourceOffset.x);
     const width = node.offsetWidth;
     const left = containerLeft + node.offsetLeft;
-    // Balance the words visible first, then blend back to the original drift.
-    const anchor = index === 9 ? 0.14 : index === 6 ? 0.22 : index === 7 ? 0.76 : index === 4 ? 0.88 : null;
-    if (spread > 0 && anchor !== null) {
-      const strength = Math.pow(1 - Math.max(0, Math.min(1, progress)), 2);
-      desired += (viewportWidth * anchor - width / 2 - left - desired) * strength;
-    }
-    // Let the edge of a word peek outside while keeping most of it in view.
-    return Math.max(-width * 0.3 - left, Math.min(viewportWidth - width * 0.7 - left, desired));
+    const minimumX = Math.max(-radius, -width * 0.3 - left);
+    const maximumX = Math.min(radius, viewportWidth - width * 0.7 - left);
+    const x = Math.max(minimumX, Math.min(maximumX, Math.cos(angle) * radius));
+    // Edge adjustments change direction, not the distance a word travels.
+    const y = (Math.sin(angle) < 0 ? -1 : 1) * Math.sqrt(Math.max(0, radius * radius - x * x));
+    return { x, y };
   }
   const wordOffsets=[[-950,130],[116,98],[654,710],[407,434],[252,-164],[-191,186],[899,-353],[338,-564],[8,687],[-422,-744],[-793,113],[-568,432],[520,169],[96,-441]];
   function updatePreviewMotion() {
@@ -57,8 +59,8 @@
       const bounded=routeKey()==='/' && el.matches('h3') && el.closest('[data-framer-name="Scramble"]');
       items.forEach((item,index)=>{
         const offset=wordOffsets[index%wordOffsets.length];
-        const x=bounded?portfolioScatterOffsetX(item.node,rect.left,document.documentElement.clientWidth,offset[0],1000,index,progress):offset[0];
-        item.node.style.transform=`translate(${x*(1-progress)}px, ${offset[1]*(1-progress)}px)`;
+        const scatter=bounded?portfolioScatterOffset(item.node,rect.left,document.documentElement.clientWidth,innerHeight,{x:offset[0],y:offset[1]},1000,index):{x:offset[0],y:offset[1]};
+        item.node.style.transform=`translate(${scatter.x*(1-progress)}px, ${scatter.y*(1-progress)}px)`;
       });
     });
   }
