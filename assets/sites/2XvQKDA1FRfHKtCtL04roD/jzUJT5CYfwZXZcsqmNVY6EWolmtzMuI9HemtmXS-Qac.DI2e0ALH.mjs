@@ -1,14 +1,16 @@
 import{t as e}from"./rolldown-runtime.Dh6celcD.mjs";import{B as t,C as n,E as r,F as i,I as a,L as o,M as s,P as c,R as l,S as u,T as d,_ as f,a as p,b as m,c as h,d as g,f as _,i as v,j as y,k as b,l as x,m as S,o as C,p as w,s as T,u as E,w as ee,x as D,y as O,z as k}from"./react.Cqed_yyh.mjs";import{E as A,O as j,U as M,Z as N,_ as te,i as P,n as ne,nt as F,o as I,q as re,t as L,tt as ie}from"./motion.B7DF_CMB.mjs";import{A as R,At as z,C as B,Ct as ae,D as oe,Dt as se,E as ce,Et as le,Ft as ue,G as de,I as V,K as H,M as fe,Mt as pe,N as me,Nt as he,O as U,Ot as ge,Q as W,R as G,Rt as _e,S as ve,St as ye,T as be,Tt as xe,W as K,_t as Se,a as q,bt as Ce,ft as we,g as Te,gt as Ee,h as De,i as J,it as Oe,jt as ke,kt as Ae,n as Y,o as X,ot as je,p as Me,pt as Ne,q as Pe,r as Fe,st as Ie,v as Le,vt as Re,w as ze,yt as Be}from"./framer.a-ctv5-y.mjs";import{A as Ve,C as He,D as Ue,E as We,M as Ge,N as Ke,O as qe,P as Je,S as Ye,T as Z,_ as Xe,b as Ze,c as Qe,d as $e,f as et,g as tt,h as nt,i as rt,j as it,k as at,l as ot,m as st,p as ct,r as lt,s as ut,u as dt,v as ft,w as pt,x as mt,y as ht}from"./shared-lib.CbKaJb3Q.mjs";import{i as gt,n as _t,r as vt,t as yt}from"./OVQ4Db5pc.63oluGvq.mjs";import{n as bt,t as xt}from"./Lenis.DvMIc7tT.mjs";import{n as St,t as Ct}from"./InfiniteTicker.UwsirTup.mjs";import{a as wt,i as Tt,n as Et,o as Dt,r as Ot,t as kt}from"./s7mZ8C7tU.fAkse9VT.mjs";import{i as At,n as jt,r as Mt,t as Nt}from"./i5Wl1Nj1v.CH1Pu-Tq.mjs";import{i as Pt,n as Ft,r as It,t as Lt}from"./Ut5QGYVry.CO7Kl7nd.mjs";import{n as Rt,t as zt}from"./oIgKW6opR.D1HPAAAZ.mjs";import{i as Bt,n as Vt,r as Ht,t as Ut}from"./XL3JUDILf.4G7BXYNK.mjs";import{n as Wt,t as Gt}from"./p2KKNkdQo.zNFKKSdX.mjs";import{i as Kt,t as qt}from"./qzqpij1MB.2ZUOwJgC.mjs";import{n as Jt,t as Yt}from"./KXLrbWFD0.BIgDB0pE.mjs";import{i as Xt,n as Zt,r as Qt,t as $t}from"./NMaW224sT.By2ISh6X.mjs";import{n as en,t as tn}from"./XOF_jk7P8.CJyFwbjn.mjs";import nn,{t as rn}from"./KqgSCiZFI06SUdmNtYGA4utfMz5KhlAdvdS7o-V1LFI.hIk64D07.mjs";function portfolioScatterOffset(node, containerLeft, viewportWidth, viewportHeight, sourceOffset, spread, index) {
   if (spread <= 0) return { x: 0, y: 0 };
   // All words share a travel radius; only their directions vary.
-  const radius = Math.min(spread * 0.42, viewportWidth * 0.30, viewportHeight * 0.62);
+  const radius = Math.min(spread * 0.42, viewportWidth * 0.30, viewportHeight * 0.62) * 1.15;
   const directions = [-110, -18, 120, 45, -100, -130, 55, -70, 115, 55, -60];
   const angle = index < directions.length ? directions[index] * Math.PI / 180 : Math.atan2(sourceOffset.y, sourceOffset.x);
   const width = node.offsetWidth;
   const left = containerLeft + node.offsetLeft;
   const minimumX = Math.max(-radius, -width * 0.3 - left);
   const maximumX = Math.min(radius, viewportWidth - width * 0.7 - left);
-  const x = Math.max(minimumX, Math.min(maximumX, Math.cos(angle) * radius));
+  const verticalBias = 1.10;
+  const directionLength = Math.hypot(Math.cos(angle), Math.sin(angle) * verticalBias);
+  const x = Math.max(minimumX, Math.min(maximumX, Math.cos(angle) / directionLength * radius));
   // Edge adjustments change direction, not the distance a word travels.
   const y = (Math.sin(angle) < 0 ? -1 : 1) * Math.sqrt(Math.max(0, radius * radius - x * x));
   return { x, y };

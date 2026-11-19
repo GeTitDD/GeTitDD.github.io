@@ -38,14 +38,16 @@
   function portfolioScatterOffset(node, containerLeft, viewportWidth, viewportHeight, sourceOffset, spread, index) {
     if (spread <= 0) return { x: 0, y: 0 };
     // All words share a travel radius; only their directions vary.
-    const radius = Math.min(spread * 0.42, viewportWidth * 0.30, viewportHeight * 0.62);
+    const radius = Math.min(spread * 0.42, viewportWidth * 0.30, viewportHeight * 0.62) * 1.15;
     const directions = [-110, -18, 120, 45, -100, -130, 55, -70, 115, 55, -60];
     const angle = index < directions.length ? directions[index] * Math.PI / 180 : Math.atan2(sourceOffset.y, sourceOffset.x);
     const width = node.offsetWidth;
     const left = containerLeft + node.offsetLeft;
     const minimumX = Math.max(-radius, -width * 0.3 - left);
     const maximumX = Math.min(radius, viewportWidth - width * 0.7 - left);
-    const x = Math.max(minimumX, Math.min(maximumX, Math.cos(angle) * radius));
+    const verticalBias = 1.10;
+    const directionLength = Math.hypot(Math.cos(angle), Math.sin(angle) * verticalBias);
+    const x = Math.max(minimumX, Math.min(maximumX, Math.cos(angle) / directionLength * radius));
     // Edge adjustments change direction, not the distance a word travels.
     const y = (Math.sin(angle) < 0 ? -1 : 1) * Math.sqrt(Math.max(0, radius * radius - x * x));
     return { x, y };
