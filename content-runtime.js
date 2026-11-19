@@ -202,6 +202,15 @@
         const units=(semanticUnits && text===value ? semanticUnits : null) || (typeof Intl.Segmenter==='function'
           ? Array.from(new Intl.Segmenter('zh',{granularity:'word'}).segment(text),part=>part.segment)
           : Array.from(text));
+        // Intro words are separate flex items; keep closing punctuation
+        // attached to the preceding word so it cannot start a new line.
+        if(routeKey()==='/' && el.closest('[data-framer-name="Intro"]')) {
+          for(let i=units.length-1;i>0;i--) {
+            if(/^[，。！？、；：）】》」』”’]+$/.test(units[i])) {
+              units.splice(i-1,2,units[i-1]+units[i]);
+            }
+          }
+        }
         const count=Math.min(units.length,slots.length);
         slots.forEach((item,index)=>{
           const from=Math.floor(index*units.length/(count||1));
