@@ -35,10 +35,16 @@
     return el.closest('section,header,footer,nav') || el.parentElement;
   }
   const previewMotion=new Map();
-  function portfolioScatterOffsetX(node, containerLeft, viewportWidth, offsetX, spread) {
-    const desired = spread > 0 ? offsetX * Math.min(0.42, viewportWidth * 0.28 / spread) : 0;
+  function portfolioScatterOffsetX(node, containerLeft, viewportWidth, offsetX, spread, index, progress) {
+    let desired = spread > 0 ? offsetX * Math.min(0.42, viewportWidth * 0.28 / spread) : 0;
     const width = node.offsetWidth;
     const left = containerLeft + node.offsetLeft;
+    // Balance the words visible first, then blend back to the original drift.
+    const anchor = index === 9 ? 0.14 : index === 6 ? 0.22 : index === 7 ? 0.76 : index === 4 ? 0.88 : null;
+    if (spread > 0 && anchor !== null) {
+      const strength = Math.pow(1 - Math.max(0, Math.min(1, progress)), 2);
+      desired += (viewportWidth * anchor - width / 2 - left - desired) * strength;
+    }
     // Let the edge of a word peek outside while keeping most of it in view.
     return Math.max(-width * 0.3 - left, Math.min(viewportWidth - width * 0.7 - left, desired));
   }
@@ -51,7 +57,7 @@
       const bounded=routeKey()==='/' && el.matches('h3') && el.closest('[data-framer-name="Scramble"]');
       items.forEach((item,index)=>{
         const offset=wordOffsets[index%wordOffsets.length];
-        const x=bounded?portfolioScatterOffsetX(item.node,rect.left,document.documentElement.clientWidth,offset[0],1000):offset[0];
+        const x=bounded?portfolioScatterOffsetX(item.node,rect.left,document.documentElement.clientWidth,offset[0],1000,index,progress):offset[0];
         item.node.style.transform=`translate(${x*(1-progress)}px, ${offset[1]*(1-progress)}px)`;
       });
     });
