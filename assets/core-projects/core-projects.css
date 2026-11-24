@@ -14,9 +14,11 @@ body[data-core-project-page="overview"] footer [data-framer-name="Footer Links"]
   display: none !important;
 }
 
-/* Keep the four MIRRISM engineering labels within the original metric columns. */
+/* Short, measured outcomes keep the original metric-card hierarchy. */
 body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-w30ry8 h3 {
-  font-size: clamp(28px, 3vw, 46px) !important;
+  font-size: clamp(32px, 4.2vw, 64px) !important;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] a[href="/work/mirrism-aigc-platform-detail"],
@@ -142,3 +144,17 @@ body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platf
 }
 body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .portfolio-project-website:hover { opacity: .6; }
 body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .portfolio-project-website:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+
+/* Gallery context uses the existing inset text column. */
+body[data-core-project-page="overview"] p.portfolio-gallery-caption {
+  margin-top: 20px;
+  font: 400 14px/1.7 "Inter Display", Inter, "PingFang SC", sans-serif;
+  color: #666;
+  text-wrap: pretty;
+}
+
+@media (max-width: 809px) {
+  body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-w30ry8 h3 {
+    font-size: clamp(32px, 11vw, 46px) !important;
+  }
+}

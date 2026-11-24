@@ -663,3 +663,43 @@
   }
   if(document.body)start();else document.addEventListener('DOMContentLoaded',start,{once:true});
 })();
+
+/* Read each animated link once and keep its alternate frame inside its viewport. */
+(() => {
+  const style = document.createElement('style');
+  style.id = 'portfolio-readability';
+  style.textContent = '[data-portfolio-glyph-window]{height:1.15em!important;overflow:hidden!important;overflow:clip!important;clip-path:inset(0 -8px)!important}';
+  document.head.append(style);
+  let page;
+  try { page = JSON.parse(document.getElementById('cms-page-seed')?.textContent || '{}'); } catch { page = {}; }
+  const compact = value => value.replace(/\s+/g, '');
+  function syncReadability() {
+    document.querySelectorAll('nav.framer-cSZEg a[href],.framer-juKxq a[href],footer a[data-portfolio-credit]').forEach(link => {
+      const pairs = Array.from(link.querySelectorAll('div')).filter(element =>
+        element.children.length === 2 && Array.from(element.children).every(child => child.tagName === 'DIV' && child.children.length === 0));
+      // The link has one accessible name; its two animation frames are decorative.
+      if (pairs.length && !link.hasAttribute('aria-label')) link.setAttribute('aria-label', pairs.map(pair => pair.firstElementChild.textContent).join(''));
+      pairs.forEach(pair => {
+        if (!pair.hasAttribute('data-portfolio-glyph-window')) pair.setAttribute('data-portfolio-glyph-window', '');
+        if (pair.getAttribute('aria-hidden') !== 'true') pair.setAttribute('aria-hidden', 'true');
+      });
+    });
+    if (!page.galleryCaption) return;
+    const expected = compact(page.texts?.['eb055944:1']?.value || '');
+    document.querySelectorAll('p').forEach(anchor => {
+      if (anchor.dataset.cmsTextKey !== 'eb055944:1' && (!expected || compact(anchor.textContent) !== expected)) return;
+      let caption = anchor.nextElementSibling;
+      if (!caption?.classList.contains('portfolio-gallery-caption')) {
+        caption = document.createElement('p');
+        caption.className = 'portfolio-gallery-caption';
+        anchor.after(caption);
+      }
+      if (caption.textContent !== page.galleryCaption) caption.textContent = page.galleryCaption;
+    });
+  }
+  function start() {
+    syncReadability();
+    new MutationObserver(syncReadability).observe(document.body, {childList:true,subtree:true,characterData:true});
+  }
+  if (document.body) start(); else document.addEventListener('DOMContentLoaded', start, {once:true});
+})();
