@@ -527,7 +527,9 @@
         if(inner && (inner.innerText || inner.textContent || '').trim().length>=2) return;
         o=captureText(el,text); originals.set(el,o);
       }
-      const h=hash(o.text), key=h+':'+(counts[h]=(counts[h]||0)+1);
+      // Published HTML already contains the final copy. Its stable identity
+      // survives without sending the template's original wording to visitors.
+      const h=hash(o.text), key=el.dataset.cmsTextKey || h+':'+(counts[h]=(counts[h]||0)+1);
       const e=page.texts[key] || page.texts[h+':1'];
       const label=cardLabel(el,page);
       if(!e && !label) return;
@@ -635,4 +637,26 @@
   // module (and its imports) to finish before applying the already-inline copy.
   if(document.body && document.getElementById('main'))start();
   else if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
+
+/* Removed pages must stay absent when the template hydrates or changes layout. */
+(() => {
+  function cleanRemovedPages() {
+    const legalLink=link=>{const url=new URL(link.href,location.href);return url.origin===location.origin && /\/(?:legal\/|legal-(?:privacy|terms)(?:\.html)?$)/.test(url.pathname);};
+    document.querySelectorAll('footer p,footer h4').forEach(label=>{
+      if(label.textContent.trim().toLowerCase()!=='legal')return;
+      for(let group=label.parentElement;group && group.tagName!=='FOOTER';group=group.parentElement) {
+        const links=Array.from(group.querySelectorAll('a[href]'));
+        if(!links.some(legalLink))continue;
+        if(links.every(link=>legalLink(link)||/\/404(?:\.html)?$/.test(new URL(link.href,location.href).pathname)))group.remove();
+        break;
+      }
+    });
+    document.querySelectorAll('a[href]').forEach(link=>{if(legalLink(link))link.remove();});
+  }
+  function start() {
+    cleanRemovedPages();
+    new MutationObserver(cleanRemovedPages).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['href']});
+  }
+  if(document.body)start();else document.addEventListener('DOMContentLoaded',start,{once:true});
 })();

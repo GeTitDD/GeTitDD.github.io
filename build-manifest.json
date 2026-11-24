@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-19T01:43:38.107493+00:00",
+  "generatedAt": "2026-11-24T05:58:49.068717+00:00",
   "siteUrl": "https://getitdd.github.io/",
-  "publicPages": 19,
+  "publicPages": 17,
   "assets": 466,
   "routeMap": {
     "/": "/",
@@ -69,14 +69,6 @@
     "/work/multi-agent-collaboration.html": "/work/multi-agent-collaboration.html",
     "/work/multi-agent-collaboration/": "/work/multi-agent-collaboration.html",
     "/live/work/multi-agent-collaboration.html": "/work/multi-agent-collaboration.html",
-    "/legal/terms-of-service": "/legal/terms-of-service.html",
-    "/legal/terms-of-service.html": "/legal/terms-of-service.html",
-    "/legal/terms-of-service/": "/legal/terms-of-service.html",
-    "/live/legal/terms-of-service.html": "/legal/terms-of-service.html",
-    "/legal/privacy-policy": "/legal/privacy-policy.html",
-    "/legal/privacy-policy.html": "/legal/privacy-policy.html",
-    "/legal/privacy-policy/": "/legal/privacy-policy.html",
-    "/live/legal/privacy-policy.html": "/legal/privacy-policy.html",
     "/index.html": "/",
     "/home.html": "/",
     "/home.raw.html": "/",
@@ -89,10 +81,6 @@
     "/feed": "/work.html",
     "/feed.html": "/work.html",
     "/live/feed.html": "/work.html",
-    "/legal-terms.html": "/legal/terms-of-service.html",
-    "/live/legal-terms.html": "/legal/terms-of-service.html",
-    "/legal-privacy.html": "/legal/privacy-policy.html",
-    "/live/legal-privacy.html": "/legal/privacy-policy.html",
     "/work/soma-studio": "/work/mirrism-aigc-platform.html",
     "/work/soma-studio/": "/work/mirrism-aigc-platform.html",
     "/work/soma-studio.html": "/work/mirrism-aigc-platform.html",
@@ -117,26 +105,6 @@
     "/work/north-layer/": "/work/psychological-kernel-preview.html",
     "/work/north-layer.html": "/work/psychological-kernel-preview.html",
     "/live/work/north-layer.html": "/work/psychological-kernel-preview.html",
-    "/work/aurora-alpha-full": "/work/aurora-alpha-detail.html",
-    "/work/aurora-alpha-full/": "/work/aurora-alpha-detail.html",
-    "/work/aurora-alpha-full.html": "/work/aurora-alpha-detail.html",
-    "/live/work/aurora-alpha-full.html": "/work/aurora-alpha-detail.html",
-    "/work/mirrism-aigc-platform-full": "/work/mirrism-aigc-platform-detail.html",
-    "/work/mirrism-aigc-platform-full/": "/work/mirrism-aigc-platform-detail.html",
-    "/work/mirrism-aigc-platform-full.html": "/work/mirrism-aigc-platform-detail.html",
-    "/live/work/mirrism-aigc-platform-full.html": "/work/mirrism-aigc-platform-detail.html",
-    "/work/owner-agent-full": "/work/owner-agent-detail.html",
-    "/work/owner-agent-full/": "/work/owner-agent-detail.html",
-    "/work/owner-agent-full.html": "/work/owner-agent-detail.html",
-    "/live/work/owner-agent-full.html": "/work/owner-agent-detail.html",
-    "/work/experience-study-preview-full": "/work/experience-study-preview-detail.html",
-    "/work/experience-study-preview-full/": "/work/experience-study-preview-detail.html",
-    "/work/experience-study-preview-full.html": "/work/experience-study-preview-detail.html",
-    "/live/work/experience-study-preview-full.html": "/work/experience-study-preview-detail.html",
-    "/work/psychological-kernel-preview-full": "/work/psychological-kernel-preview-detail.html",
-    "/work/psychological-kernel-preview-full/": "/work/psychological-kernel-preview-detail.html",
-    "/work/psychological-kernel-preview-full.html": "/work/psychological-kernel-preview-detail.html",
-    "/live/work/psychological-kernel-preview-full.html": "/work/psychological-kernel-preview-detail.html",
     "/work/pulse": "/work.html",
     "/work/pulse/": "/work.html",
     "/work/pulse.html": "/work.html",
@@ -222,7 +190,98 @@
     "/work/design-as-order.html": "/work.html",
     "/live/work/design-as-order.html": "/work.html",
     "/404": "/404.html",
-    "/live/404.html": "/404.html"
+    "/live/404": "/404.html",
+    "/live/404.html": "/404.html",
+    "/work/aurora-alpha-full": "/work/aurora-alpha-detail.html",
+    "/work/aurora-alpha-full/": "/work/aurora-alpha-detail.html",
+    "/work/aurora-alpha-full.html": "/work/aurora-alpha-detail.html",
+    "/live/work/aurora-alpha-full.html": "/work/aurora-alpha-detail.html",
+    "/work/mirrism-aigc-platform-full": "/work/mirrism-aigc-platform-detail.html",
+    "/work/mirrism-aigc-platform-full/": "/work/mirrism-aigc-platform-detail.html",
+    "/work/mirrism-aigc-platform-full.html": "/work/mirrism-aigc-platform-detail.html",
+    "/live/work/mirrism-aigc-platform-full.html": "/work/mirrism-aigc-platform-detail.html",
+    "/work/owner-agent-full": "/work/owner-agent-detail.html",
+    "/work/owner-agent-full/": "/work/owner-agent-detail.html",
+    "/work/owner-agent-full.html": "/work/owner-agent-detail.html",
+    "/live/work/owner-agent-full.html": "/work/owner-agent-detail.html",
+    "/work/experience-study-preview-full": "/work/experience-study-preview-detail.html",
+    "/work/experience-study-preview-full/": "/work/experience-study-preview-detail.html",
+    "/work/experience-study-preview-full.html": "/work/experience-study-preview-detail.html",
+    "/live/work/experience-study-preview-full.html": "/work/experience-study-preview-detail.html",
+    "/work/psychological-kernel-preview-full": "/work/psychological-kernel-preview-detail.html",
+    "/work/psychological-kernel-preview-full/": "/work/psychological-kernel-preview-detail.html",
+    "/work/psychological-kernel-preview-full.html": "/work/psychological-kernel-preview-detail.html",
+    "/live/work/psychological-kernel-preview-full.html": "/work/psychological-kernel-preview-detail.html"
   },
-  "sourceContentHash": "9ae3e9e8fdb6cb6cb82589a75375b23e8d2f915bf92cc628c735d3b0a14a235c"
+  "materialized": {
+    "/": {
+      "texts": 662,
+      "media": 25
+    },
+    "/work": {
+      "texts": 39,
+      "media": 27
+    },
+    "/contacts": {
+      "texts": 198,
+      "media": 8
+    },
+    "/work/aurora-alpha": {
+      "texts": 95,
+      "media": 10
+    },
+    "/work/aurora-alpha-detail": {
+      "texts": 0,
+      "media": 0
+    },
+    "/work/mirrism-aigc-platform": {
+      "texts": 95,
+      "media": 10
+    },
+    "/work/mirrism-aigc-platform-detail": {
+      "texts": 0,
+      "media": 0
+    },
+    "/work/owner-agent": {
+      "texts": 95,
+      "media": 10
+    },
+    "/work/owner-agent-detail": {
+      "texts": 0,
+      "media": 0
+    },
+    "/work/experience-study-preview": {
+      "texts": 95,
+      "media": 10
+    },
+    "/work/experience-study-preview-detail": {
+      "texts": 0,
+      "media": 0
+    },
+    "/work/psychological-kernel-preview": {
+      "texts": 95,
+      "media": 10
+    },
+    "/work/psychological-kernel-preview-detail": {
+      "texts": 0,
+      "media": 0
+    },
+    "/work/transformer-and-llms": {
+      "texts": 96,
+      "media": 10
+    },
+    "/work/context-engineering": {
+      "texts": 96,
+      "media": 10
+    },
+    "/work/agentic-coding": {
+      "texts": 96,
+      "media": 10
+    },
+    "/work/multi-agent-collaboration": {
+      "texts": 96,
+      "media": 10
+    }
+  },
+  "sourceContentHash": "ed9ad24526e35c4a3588f33554df2f342b78688604717a13f4948c4a0407ffc6"
 }
