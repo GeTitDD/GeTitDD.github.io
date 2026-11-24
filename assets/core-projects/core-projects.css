@@ -14,10 +14,12 @@ body[data-core-project-page="overview"] footer [data-framer-name="Footer Links"]
   display: none !important;
 }
 
-/* Short, measured outcomes keep the original metric-card hierarchy. */
+/* Short engineering headlines retain the original inset card layout. */
 body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-w30ry8 h3 {
-  font-size: clamp(32px, 4.2vw, 64px) !important;
-  white-space: nowrap;
+  font-size: clamp(22px, 2.1vw, 32px) !important;
+  white-space: normal;
+  line-height: 1.2;
+  text-wrap: balance;
   font-variant-numeric: tabular-nums;
 }
 
@@ -153,8 +155,34 @@ body[data-core-project-page="overview"] p.portfolio-gallery-caption {
   text-wrap: pretty;
 }
 
-@media (max-width: 809px) {
+
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-w30ry8 h3 > span {
+  white-space: normal !important;
+}
+body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-w30ry8 [data-framer-component-type="RichTextContainer"] {
+  max-width: 100%;
+}
+
+/* Give longer engineering descriptions enough line length on smaller screens. */
+@media (max-width: 1199px) {
+  body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-7mzmi7 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px !important;
+  }
+  body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-7mzmi7 > div {
+    width: 100% !important;
+    min-width: 0;
+  }
   body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-w30ry8 h3 {
-    font-size: clamp(32px, 11vw, 46px) !important;
+    font-size: clamp(24px, 3vw, 32px) !important;
+  }
+}
+@media (max-width: 479px) {
+  body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-7mzmi7 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body[data-core-project-page="overview"][data-core-project-id="mirrism-aigc-platform"] .framer-w30ry8 h3 {
+    font-size: 28px !important;
   }
 }
