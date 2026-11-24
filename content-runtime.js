@@ -204,7 +204,7 @@
           : Array.from(text));
         // Intro words are separate flex items; keep closing punctuation
         // attached to the preceding word so it cannot start a new line.
-        if(routeKey()==='/' && el.closest('[data-framer-name="Intro"]')) {
+        if(routeKey()==='/' && el.closest('[data-framer-name="Intro"],[data-framer-name="Scramble"]')) {
           for(let i=units.length-1;i>0;i--) {
             if(/^[，。！？、；：）】》」』”’]+$/.test(units[i])) {
               units.splice(i-1,2,units[i-1]+units[i]);

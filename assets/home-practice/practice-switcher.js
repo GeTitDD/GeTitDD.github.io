@@ -11,6 +11,28 @@
     ['模型与实验', 'LoRA · SFT · 结构化评估'],
     ['部署与交付', 'Docker Compose · Nginx · Git'],
   ];
+  function syncRecords() {
+    let page;
+    try { page = JSON.parse(document.getElementById('cms-page-seed')?.textContent || '{}'); } catch { return; }
+    if (!page.homePracticeRecords) return;
+    document.querySelectorAll('#awards [data-framer-name="Item"]').forEach(row => {
+      const record = page.homePracticeRecords.find(item => row.matches(item.selector));
+      if (!record) {
+        if (!row.hidden) row.hidden = true;
+        return;
+      }
+      const cells = row.querySelectorAll('p,h5');
+      if (cells.length !== record.keys.length) return;
+      record.keys.forEach((key, index) => {
+        const cell = cells[index];
+        if (cell.dataset.cmsTextKey === key) return;
+        cell.dataset.cmsTextKey = key;
+        const value = page.texts[key]?.value;
+        const target = cell.querySelector('strong') || cell;
+        if (value && target.textContent !== value) target.textContent = value;
+      });
+    });
+  }
   let view = 'practice';
   let mounted;
   let pending = false;
@@ -30,13 +52,14 @@
     control.setAttribute('aria-expanded', String(isStack));
     control.setAttribute('aria-label', isStack ? '向上切换，返回我的实践记录' : '向上切换，查看我的技术栈');
     label.textContent = isStack ? '我的实践' : '我的技术栈';
-    mobileIntro.textContent = isStack ? '覆盖端侧图形渲染、全栈高可用架构、Agent 编排与轻量模型微调的端到端工具链。' : '核心工程项目、模型实验课题与当前演进状态。';
+    mobileIntro.textContent = isStack ? '覆盖端侧图形渲染、全栈高可用架构、Agent 编排与轻量模型微调的端到端工具链。' : '核心全栈系统、模型实验课题与当前演进状态。';
     intro?.setAttribute('aria-hidden', String(isStack));
     if (announce) status.textContent = isStack ? '已切换到我的技术栈，共八个方向。' : '已切换到我的实践记录。';
   }
 
   function mount() {
     pending = false;
+    syncRecords();
     const root = document.getElementById('awards');
     const headline = root?.querySelector(':scope > [data-framer-name="Headline"]');
     const layout = headline?.querySelector('[data-framer-name="Headline Container"]');
@@ -140,6 +163,7 @@
   mount();
   // Framer can replace responsive nodes during hydration or a breakpoint change.
   new MutationObserver(() => {
+    syncRecords();
     if (!mounted || !mounted.panel.isConnected || !mounted.control.isConnected
       || !mounted.stage.isConnected || !mounted.mobileIntro.isConnected || !mounted.lines.every(node => node.isConnected)
       || (mounted.introLayout && (!mounted.introLayout.isConnected

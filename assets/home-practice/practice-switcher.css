@@ -171,3 +171,9 @@
   #awards .home-stack-title, #awards .home-stack-panel, #awards .home-practice-switch,
   #awards .home-practice-switch svg { transition: none; }
 }
+
+/* Balance long record descriptions within their existing column. */
+#awards [data-framer-name="Item"] > [data-framer-name="Section"]:nth-child(2) p {text-wrap:balance;}
+
+/* Let the shortened practice list determine the section height. */
+#awards .home-stack-panel[aria-hidden="true"] {height:0;overflow:hidden;}
