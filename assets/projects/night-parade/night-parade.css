@@ -1,0 +1,53 @@
+/* Night Parade extends the existing inset Work and complete-article systems. */
+body[data-core-project-id="night-parade"] #main h1 {font-size:clamp(32px,3vw,43px)!important;line-height:1.12!important;white-space:pre-line!important;}
+body[data-core-project-id="night-parade"] .owner-overview-eyebrow {margin:0 0 22px;color:#777;font:500 11px/1.7 "Inter Display",Inter,"PingFang SC",sans-serif;letter-spacing:.05em;}
+body[data-core-project-page="overview"][data-core-project-id="night-parade"] .framer-w30ry8 h3 {font-size:clamp(34px,3.6vw,56px)!important;line-height:1.25!important;white-space:nowrap;font-variant-numeric:tabular-nums;}
+.night-parade-case .np-tabs {display:flex;flex-wrap:wrap;gap:10px 28px;border-bottom:1px solid #ddd;margin:48px 0 32px;}
+.night-parade-case .np-tabs button {font:inherit;font-size:14px;color:#888;background:none;border:0;border-bottom:1px solid transparent;padding:15px 0;text-align:left;cursor:pointer;}
+.night-parade-case .np-tabs button[aria-selected="true"] {color:#111;border-color:#111;}
+.night-parade-case .np-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 40px;margin:48px 0;}
+.night-parade-case .np-card {min-width:0;padding-top:24px;border-top:1px solid #ddd;}
+.night-parade-case .np-key {display:block;color:#999;font-size:12px;line-height:1.7;overflow-wrap:anywhere;margin-bottom:24px;}
+.night-parade-case .np-card h3 {font-size:25px;line-height:1.4;margin:0 0 24px;}
+.night-parade-case .np-card p {margin:20px 0 0;}
+.night-parade-case .np-note {color:#888;font-size:14px;line-height:1.85;}
+.night-parade-case .np-subheading {margin:64px 0 28px;font-size:27px;line-height:1.4;}
+.night-parade-case .np-boundary {border-block:1px solid #ddd;margin:48px 0;padding:28px 0;}
+.night-parade-case .np-figure {margin:40px 0 56px;}
+.night-parade-case .np-open {display:block;width:100%;padding:0;position:relative;border:0;background:#101a22;cursor:zoom-in;}
+.night-parade-case .np-open img {display:block;width:100%;height:auto;}
+.night-parade-case .np-open>span {position:absolute;right:12px;bottom:12px;background:#000b;color:#fff;padding:7px 10px;font-size:12px;}
+.night-parade-case .np-figure figcaption {display:flex;justify-content:space-between;gap:24px;margin-top:14px;color:#888;font-size:12px;line-height:1.8;}
+.night-parade-case .np-figure figcaption strong {font-weight:500;color:#444;}
+.night-parade-case .np-table {overflow-x:auto;margin:30px 0;}
+.night-parade-case table {border-collapse:collapse;width:100%;font-size:15px;line-height:1.8;text-align:left;}
+.night-parade-case th,.night-parade-case td {padding:16px 14px;border-bottom:1px solid #ddd;vertical-align:top;}
+.night-parade-case th {color:#333;font-weight:500;}
+.night-parade-case thead {background:#f5f5f3;}
+.night-parade-case tbody th {width:29%;overflow-wrap:anywhere;}
+.night-parade-case li {margin:12px 0;line-height:1.85;}
+.night-parade-case .np-value {display:inline-block;font-size:56px;font-weight:700;line-height:1.15;margin-right:12px;letter-spacing:-.05em;}
+.night-parade-case .np-card h3 small {font-size:17px;font-weight:500;}
+.night-parade-case code {overflow-wrap:anywhere;font-size:.87em;}
+body.core-detail-page[data-core-detail="night-parade"] .core-article-header h1 {font-size:clamp(40px,4.5vw,68px);}
+body.core-detail-page[data-core-detail="night-parade"] .core-footer-brand {flex-wrap:wrap;gap:28px;}
+.np-viewer {inset:0;width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:0;border:0;background:#101a22;color:#eee;overflow:hidden;}
+.np-viewer[open] {display:grid;grid-template-rows:auto minmax(0,1fr) auto;}
+.np-viewer::backdrop {background:#000d;}
+.np-viewer header {display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 24px;border-bottom:1px solid #46515b;}
+.np-viewer header strong {font-size:14px;font-weight:500;line-height:1.6;}
+.np-viewer header>div {display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+.np-viewer button {color:inherit;background:none;border:1px solid #6b747b;font:inherit;font-size:13px;padding:9px 12px;cursor:pointer;}
+.np-viewer button:focus-visible,.np-tabs button:focus-visible,.np-open:focus-visible {outline:2px solid #9bbbc9;outline-offset:4px;}
+.np-viewer-body {overflow:auto;touch-action:none;cursor:grab;overscroll-behavior:contain;}
+.np-viewer-surface {display:flex;align-items:center;justify-content:center;min-width:100%;min-height:100%;padding:16px;box-sizing:border-box;}
+.np-viewer img {display:block;max-width:none;max-height:none;user-select:none;pointer-events:none;flex:none;}
+.np-viewer footer {padding:14px 24px;color:#a9b8c0;font-size:12px;line-height:1.6;border-top:1px solid #46515b;}
+.np-viewer output {min-width:48px;text-align:center;font-size:12px;}
+@media(max-width:1199px){body[data-core-project-id="night-parade"] .framer-7mzmi7 {display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px!important;}body[data-core-project-id="night-parade"] .framer-7mzmi7>div {width:100%!important;min-width:0;}}
+@media(max-width:809px){body[data-core-project-id="night-parade"] #main h1 {font-size:clamp(32px,8vw,46px)!important;}body.core-detail-page[data-core-detail="night-parade"] .core-article-header h1 {font-size:clamp(30px,8.5vw,44px);}.night-parade-case .np-grid {grid-template-columns:minmax(0,1fr);gap:36px;}.night-parade-case .np-tabs {display:flex;flex-direction:column;gap:0;}.night-parade-case .np-tabs button {padding:14px 0;}.night-parade-case .np-figure figcaption {display:block;}.night-parade-case .np-figure figcaption span {display:block;margin-top:8px;}.night-parade-case th,.night-parade-case td {padding:13px 10px;}.np-viewer header {display:block;padding:16px;}.np-viewer header>div {margin-top:12px;}.np-viewer footer {padding:12px 16px;}}
+@media(max-width:479px){body[data-core-project-id="night-parade"] .framer-7mzmi7 {grid-template-columns:minmax(0,1fr);}body[data-core-project-page="overview"][data-core-project-id="night-parade"] .framer-w30ry8 h3 {font-size:48px!important;}}
+
+body.core-detail-page[data-core-detail="night-parade"] .core-title-part {text-wrap:balance;}
+
+@media(max-width:359px){body[data-core-project-id="night-parade"] #main h1{font-size:28px!important;}}

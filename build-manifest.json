@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-24T11:23:15.473503+00:00",
+  "generatedAt": "2026-11-24T12:57:06.502751+00:00",
   "siteUrl": "https://getitdd.github.io/",
-  "publicPages": 17,
-  "assets": 472,
+  "publicPages": 19,
+  "assets": 488,
   "routeMap": {
     "/": "/",
     "/work": "/work.html",
@@ -37,6 +37,14 @@
     "/work/owner-agent-detail.html": "/work/owner-agent-detail.html",
     "/work/owner-agent-detail/": "/work/owner-agent-detail.html",
     "/live/work/owner-agent-detail.html": "/work/owner-agent-detail.html",
+    "/work/night-parade": "/work/night-parade.html",
+    "/work/night-parade.html": "/work/night-parade.html",
+    "/work/night-parade/": "/work/night-parade.html",
+    "/live/work/night-parade.html": "/work/night-parade.html",
+    "/work/night-parade-detail": "/work/night-parade-detail.html",
+    "/work/night-parade-detail.html": "/work/night-parade-detail.html",
+    "/work/night-parade-detail/": "/work/night-parade-detail.html",
+    "/live/work/night-parade-detail.html": "/work/night-parade-detail.html",
     "/work/experience-study-preview": "/work/experience-study-preview.html",
     "/work/experience-study-preview.html": "/work/experience-study-preview.html",
     "/work/experience-study-preview/": "/work/experience-study-preview.html",
@@ -105,14 +113,14 @@
     "/work/north-layer/": "/work/psychological-kernel-preview.html",
     "/work/north-layer.html": "/work/psychological-kernel-preview.html",
     "/live/work/north-layer.html": "/work/psychological-kernel-preview.html",
+    "/work/after-light": "/work/night-parade.html",
+    "/work/after-light/": "/work/night-parade.html",
+    "/work/after-light.html": "/work/night-parade.html",
+    "/live/work/after-light.html": "/work/night-parade.html",
     "/work/pulse": "/work.html",
     "/work/pulse/": "/work.html",
     "/work/pulse.html": "/work.html",
     "/live/work/pulse.html": "/work.html",
-    "/work/after-light": "/work.html",
-    "/work/after-light/": "/work.html",
-    "/work/after-light.html": "/work.html",
-    "/live/work/after-light.html": "/work.html",
     "/work/forma-nine": "/work.html",
     "/work/forma-nine/": "/work.html",
     "/work/forma-nine.html": "/work.html",
@@ -204,6 +212,10 @@
     "/work/owner-agent-full/": "/work/owner-agent-detail.html",
     "/work/owner-agent-full.html": "/work/owner-agent-detail.html",
     "/live/work/owner-agent-full.html": "/work/owner-agent-detail.html",
+    "/work/night-parade-full": "/work/night-parade-detail.html",
+    "/work/night-parade-full/": "/work/night-parade-detail.html",
+    "/work/night-parade-full.html": "/work/night-parade-detail.html",
+    "/live/work/night-parade-full.html": "/work/night-parade-detail.html",
     "/work/experience-study-preview-full": "/work/experience-study-preview-detail.html",
     "/work/experience-study-preview-full/": "/work/experience-study-preview-detail.html",
     "/work/experience-study-preview-full.html": "/work/experience-study-preview-detail.html",
@@ -220,7 +232,7 @@
     },
     "/work": {
       "texts": 39,
-      "media": 27
+      "media": 30
     },
     "/contacts": {
       "texts": 198,
@@ -247,6 +259,14 @@
       "media": 10
     },
     "/work/owner-agent-detail": {
+      "texts": 0,
+      "media": 0
+    },
+    "/work/night-parade": {
+      "texts": 95,
+      "media": 10
+    },
+    "/work/night-parade-detail": {
       "texts": 0,
       "media": 0
     },
@@ -283,5 +303,5 @@
       "media": 10
     }
   },
-  "sourceContentHash": "cc68b3b0420d9a4bd41b43abea58b881e81942ee11e418c8f3750300cb659183"
+  "sourceContentHash": "32843042352b9f62ac594269844f52514f01f3fe7db44f0e7ef1c88ef54ffc6d"
 }
