@@ -386,7 +386,7 @@
       link.querySelectorAll('img').forEach(img=>img.alt=description);
     });
     if(page.copyLinks)entries.forEach(entry=>{
-      const href=page.copyLinks[originals.get(entry.el)?.text];
+      const href=page.copyLinkKeys?.[entry.key] || page.copyLinks[originals.get(entry.el)?.text];
       const link=entry.el.closest('a')||entry.el.querySelector('a');
       if(href&&link)link.href=href;
     });
@@ -418,7 +418,7 @@
     }
     if(page.projectAction)entries.forEach(entry=>{
       const original=originals.get(entry.el);
-      if(original?.text!=='Live Project')return;
+      if(original?.text!=='Live Project' && entry.key!=='e4e7aac:1')return;
       const link=entry.el.closest('a') || entry.el.querySelector('a');
       if(link)link.href=page.projectAction.href;
     });
@@ -517,6 +517,7 @@
   function apply() {
     const page=data?.pages[routeKey()]; if(!page) return;
     const counts={}, next=[];
+    const displayKeys=new Map(Object.entries(page.texts).filter(([,entry])=>entry.value).map(([key,entry])=>[entry.value.replace(/\s+/g,''),key]));
     document.querySelectorAll(SEL).forEach(el=>{
       if(el.closest('script,style,noscript') || !visible(el)) return;
       let o=originals.get(el);
@@ -529,7 +530,9 @@
       }
       // Published HTML already contains the final copy. Its stable identity
       // survives without sending the template's original wording to visitors.
-      const h=hash(o.text), key=el.dataset.cmsTextKey || h+':'+(counts[h]=(counts[h]||0)+1);
+      const h=hash(o.text);
+      let key=el.dataset.cmsTextKey || h+':'+(counts[h]=(counts[h]||0)+1);
+      if(!page.texts[key] && !page.texts[h+':1'])key=displayKeys.get(o.text.replace(/\s+/g,'')) || key;
       const e=page.texts[key] || page.texts[h+':1'];
       const label=cardLabel(el,page);
       if(!e && !label) return;
