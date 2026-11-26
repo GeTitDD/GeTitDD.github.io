@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-26T11:51:51.586574+00:00",
+  "generatedAt": "2026-11-26T12:09:49.844080+00:00",
   "siteUrl": "https://getitdd.github.io/",
   "publicPages": 19,
-  "assets": 490,
+  "assets": 492,
   "routeMap": {
     "/": "/",
     "/work": "/work.html",
@@ -303,5 +303,5 @@
       "media": 10
     }
   },
-  "sourceContentHash": "20930b501d86da26e42f4613816f852a2419f1e34bab3b31e942ccaf1ae38bb6"
+  "sourceContentHash": "3d202b0cd2762dc1ee55db5e9a95c5007bc79231982c024cb0b747009180acd1"
 }

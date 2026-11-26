@@ -1,0 +1,47 @@
+/* Research figures retain their full canvas inside the native inset gallery. */
+body[data-core-project-id="psychological-kernel-preview"] strong[data-cms-emphasis] {
+  font-weight: 700 !important;
+}
+
+body[data-core-project-id="psychological-kernel-preview"] section[data-framer-name="Image"]:has(img[src*="research-framework.svg"]),
+body[data-core-project-id="psychological-kernel-preview"] section[data-framer-name="Image"]:has(img[src*="validation-summary.svg"]) {
+  aspect-ratio: 4 / 3 !important;
+  height: auto !important;
+}
+
+body[data-core-project-id="psychological-kernel-preview"] section[data-framer-name="Image"]:has(img[src*="b-response-curves.png"]) {
+  aspect-ratio: 30 / 13 !important;
+  height: auto !important;
+}
+
+body[data-core-project-id="psychological-kernel-preview"] section[data-framer-name="Image"]:has(img[src*="b-archive.webp"]) {
+  aspect-ratio: 3 / 2 !important;
+  height: auto !important;
+}
+
+body[data-core-project-id="psychological-kernel-preview"] section[data-framer-name="Image"] img {
+  object-fit: contain !important;
+}
+
+body[data-core-project-id="psychological-kernel-preview"] section[data-framer-name="Image"]:focus-visible {
+  outline: 2px solid #3b3444;
+  outline-offset: 6px;
+}
+
+body[data-core-project-id="psychological-kernel-preview"] .pk-original-image {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: #0008;
+  color: #fff;
+  font: 500 13px/1.5 "Inter Display", Inter, "PingFang SC", sans-serif;
+  text-decoration: none;
+}
+
+body[data-core-project-id="psychological-kernel-preview"] .pk-original-image:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
