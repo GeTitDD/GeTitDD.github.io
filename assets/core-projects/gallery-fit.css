@@ -1,0 +1,42 @@
+/* Preserve each figure's full canvas within the original inset composition. */
+body[data-core-project-page="overview"] section[data-project-gallery-figure] {
+  aspect-ratio: var(--project-image-ratio) !important;
+  height: auto !important;
+}
+
+body[data-core-project-page="overview"] section[data-project-gallery-figure] img {
+  object-fit: contain !important;
+}
+
+body[data-core-project-page="overview"] section[data-project-gallery-figure]:focus-visible {
+  outline: 2px solid #243a38;
+  outline-offset: 6px;
+}
+
+body[data-core-project-id="aurora-alpha"] strong[data-cms-emphasis] {
+  font-weight: 700 !important;
+}
+
+body[data-core-project-page="overview"] .project-original-image {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: #0008;
+  color: #fff;
+  font: 500 13px/1.5 "Inter Display", Inter, "PingFang SC", sans-serif;
+  text-decoration: none;
+}
+
+body[data-core-project-page="overview"] .project-original-image:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+/* This cover contains a complete typographic statement, not a crop-safe photo. */
+body[data-core-detail="night-parade"] .core-article-cover img {
+  object-fit: contain;
+  background: #17232c;
+}
