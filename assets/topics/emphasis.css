@@ -1,5 +1,6 @@
 /* Emphasis changes weight only; native type sizes, grids and motion stay intact. */
 body[data-topic-page="transformer-and-llms"] strong[data-cms-emphasis],
-body[data-topic-page="context-engineering"] strong[data-cms-emphasis] {
+body[data-topic-page="context-engineering"] strong[data-cms-emphasis],
+body[data-topic-page="agentic-coding"] strong[data-cms-emphasis] {
   font-weight: 700 !important;
 }
