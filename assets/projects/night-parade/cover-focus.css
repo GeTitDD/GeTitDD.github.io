@@ -1,0 +1,4 @@
+/* Keep the character's face and hair visible inside the native hero frame. */
+body[data-core-project-id="night-parade"] img[src*="/night-parade/character-cover.webp"] {
+  object-position: 44% 0% !important;
+}

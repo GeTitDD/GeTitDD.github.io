@@ -307,7 +307,7 @@
       if(anchor.getAttribute('href')!==action.website.href)anchor.setAttribute('href',action.website.href);
       if(anchor.target!=='_blank')anchor.target='_blank';
       if(anchor.rel!=='noopener noreferrer')anchor.rel='noopener noreferrer';
-      const description='访问 MIRRISM 官网（新标签页打开）';
+      const description=action.website.label || '访问 '+action.website.domain+' 官网（新标签页打开）';
       if(anchor.getAttribute('aria-label')!==description)anchor.setAttribute('aria-label',description);
       const domain=anchor.querySelector('[data-home-project-domain]');
       if(domain.textContent!==action.website.domain)domain.textContent=action.website.domain;
