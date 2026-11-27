@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+<title id="title">规范 Owner、CAS 提交与零模型恢复</title><desc id="desc">六类规范 Owner 提供事实与条件证据。读取基线、完整准备、Owner 校验、CAS 比对和 SQLite 原子提交顺序执行。完整检查点支持零额外模型调用恢复，冲突拒绝覆盖。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#8babb5" stroke-width="1.4"/></marker></defs>
+<style>text{font-family:Inter Display,Inter,Arial,PingFang SC,Hiragino Sans GB,sans-serif}</style>
+<rect width="1600" height="1100" fill="#101a22"/>
+<text x="60" y="64" font-size="19" fill="#b6c8cd" font-weight="500" text-anchor="start">NIGHT PARADE / ENGINEERING ATLAS · 02</text>
+<text x="60" y="126" font-size="40" fill="#f3f0e8" font-weight="700" text-anchor="start">规范 Owner、CAS 提交与零模型恢复</text>
+<text x="60" y="174" font-size="23" fill="#b6c8cd" font-weight="400" text-anchor="start">先明确事实归属，再校验读取基线；提交与恢复遵守同一组一致性条件。</text>
+<path d="M60 200H1540" stroke="#405562"/>
+<g data-node="Clock"><rect x="60" y="222" width="480" height="94" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="84" y="265" font-size="25" fill="#f3f0e8" font-weight="600" text-anchor="start">Clock</text>
+<text x="84" y="304" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">剧情日期与时间</text>
+</g>
+<g data-node="World Pulse"><rect x="560" y="222" width="480" height="94" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="584" y="265" font-size="25" fill="#f3f0e8" font-weight="600" text-anchor="start">World Pulse</text>
+<text x="584" y="304" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">焦点 / 分辨率 / 加载领域</text>
+</g>
+<g data-node="Runtime Ledger"><rect x="1060" y="222" width="480" height="94" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="1084" y="265" font-size="25" fill="#f3f0e8" font-weight="600" text-anchor="start">Runtime Ledger</text>
+<text x="1084" y="304" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">队列 / 信号 / 因果回执</text>
+</g>
+<g data-node="Current Scene"><rect x="60" y="329" width="480" height="94" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="84" y="372" font-size="25" fill="#f3f0e8" font-weight="600" text-anchor="start">Current Scene</text>
+<text x="84" y="411" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">当前段落与已接受回合</text>
+</g>
+<g data-node="Campaign Ledger"><rect x="560" y="329" width="480" height="94" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="584" y="372" font-size="25" fill="#f3f0e8" font-weight="600" text-anchor="start">Campaign Ledger</text>
+<text x="584" y="411" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">Scene / Chronicle / 标签索引</text>
+</g>
+<g data-node="Scene / Chronicle"><rect x="1060" y="329" width="480" height="94" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="1084" y="372" font-size="25" fill="#f3f0e8" font-weight="600" text-anchor="start">Scene / Chronicle</text>
+<text x="1084" y="411" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">客观历史记忆与精确引用</text>
+</g>
+<text x="60" y="465" font-size="21" fill="#8babb5" font-weight="400" text-anchor="start">规范事实归属与条件证据</text>
+<g data-node="01 · 读取基线"><rect x="60" y="500" width="260" height="150" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="84" y="543" font-size="24" fill="#f3f0e8" font-weight="600" text-anchor="start">01 · 读取基线</text>
+<text x="84" y="582" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">当前状态 / 版本</text>
+</g>
+<path data-connector="" d="M320 573H360" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-node="02 · 完整准备"><rect x="365" y="500" width="260" height="150" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="389" y="543" font-size="24" fill="#f3f0e8" font-weight="600" text-anchor="start">02 · 完整准备</text>
+<text x="389" y="582" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">完整回复 + 检查点</text>
+<text x="389" y="614" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">取消或不完整则不提交</text>
+</g>
+<path data-connector="" d="M625 573H665" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-node="03 · Owner 校验"><rect x="670" y="500" width="260" height="150" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="694" y="543" font-size="24" fill="#f3f0e8" font-weight="600" text-anchor="start">03 · Owner 校验</text>
+<text x="694" y="582" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">事实归属 / 条件证据</text>
+</g>
+<path data-connector="" d="M930 573H970" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-node="04 · CAS 比对"><rect x="975" y="500" width="260" height="150" rx="4" fill="#18242d" stroke="#8babb5" stroke-width="2"/>
+<text x="999" y="543" font-size="24" fill="#f3f0e8" font-weight="600" text-anchor="start">04 · CAS 比对</text>
+<text x="999" y="582" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">读取基线必须仍一致</text>
+</g>
+<path data-connector="" d="M1235 573H1275" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-node="05 · 原子提交"><rect x="1280" y="500" width="260" height="150" rx="4" fill="#18242d" stroke="#8babb5" stroke-width="2"/>
+<text x="1304" y="543" font-size="24" fill="#f3f0e8" font-weight="600" text-anchor="start">05 · 原子提交</text>
+<text x="1304" y="582" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">状态与私有回执</text>
+<text x="1304" y="614" font-size="20" fill="#b6c8cd" font-weight="400" text-anchor="start">在同一 SQLite 事务保存</text>
+</g>
+<text x="60" y="714" font-size="21" fill="#8babb5" font-weight="400" text-anchor="start">叙述已保存，机械提交中断</text>
+<text x="1130" y="714" font-size="21" fill="#8babb5" font-weight="400" text-anchor="start">基线变化 / 结果待确认</text>
+<path data-connector="" d="M495 650V758" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 6"/>
+<path data-connector="" d="M1105 650V758" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 6"/>
+<g data-node="完整 Prepared Checkpoint · 幂等恢复"><rect x="60" y="765" width="880" height="200" rx="4" fill="#18242d" stroke="#8babb5" stroke-width="2"/>
+<text x="84" y="808" font-size="27" fill="#f3f0e8" font-weight="600" text-anchor="start">完整 Prepared Checkpoint · 幂等恢复</text>
+<text x="84" y="847" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">复用已校验准备结果，不追加模型请求</text>
+<text x="84" y="879" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">重新执行 03 → 04 → 05：规范校验、CAS 与原子提交</text>
+<text x="84" y="911" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">不完整检查点不开放恢复提交</text>
+</g>
+<g data-node="先读现状，再裁定"><rect x="1000" y="765" width="540" height="200" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="1024" y="808" font-size="27" fill="#f3f0e8" font-weight="600" text-anchor="start">先读现状，再裁定</text>
+<text x="1024" y="847" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">CAS 冲突：拒绝盲目覆盖</text>
+<text x="1024" y="879" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">结果待确认：核验已提交状态</text>
+<text x="1024" y="911" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">不直接重放不确定请求</text>
+</g>
+<path d="M60 1022H1540" stroke="#405562"/>
+<text x="60" y="1060" font-size="21" fill="#b6c8cd" font-weight="400" text-anchor="start">叙述已显示 ≠ 机械状态已提交；冲突时拒绝覆盖，恢复不重复调用模型。</text>
+</svg>

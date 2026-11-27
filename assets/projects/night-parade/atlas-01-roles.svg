@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+<title id="title">三角色协作，写入权限分别收口</title><desc id="desc">浏览器经 Next.js 路由进入主 GM、Pi 维护或 Luna 工具助手。GM 提案与 Pi 准备检查点经过规范校验、CAS 和事务提交，Luna 经授权工具入口访问限定数据。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#8babb5" stroke-width="1.4"/></marker></defs>
+<style>text{font-family:Inter Display,Inter,Arial,PingFang SC,Hiragino Sans GB,sans-serif}</style>
+<rect width="1600" height="1100" fill="#101a22"/>
+<text x="60" y="64" font-size="19" fill="#b6c8cd" font-weight="500" text-anchor="start">NIGHT PARADE / ENGINEERING ATLAS · 01</text>
+<text x="60" y="126" font-size="40" fill="#f3f0e8" font-weight="700" text-anchor="start">三角色协作，写入权限分别收口</text>
+<text x="60" y="174" font-size="23" fill="#b6c8cd" font-weight="400" text-anchor="start">统一 Next.js 应用内的职责与权限面；模型输出须经服务端规则校验。</text>
+<path d="M60 200H1540" stroke="#405562"/>
+<g data-node="Browser · Discover / Studio / Game UI"><rect x="60" y="230" width="1480" height="92" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="84" y="273" font-size="28" fill="#f3f0e8" font-weight="600" text-anchor="start">Browser · Discover / Studio / Game UI</text>
+<text x="84" y="312" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">Next.js 16 Routes · 明确当前作者、玩家与公开读取权限</text>
+</g>
+<path data-connector="" d="M800 322V350H285V395" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-connector="" d="M800 350V395" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-connector="" d="M800 350H1315V395" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-node="主 GM · 叙述与状态提案"><rect x="60" y="400" width="450" height="215" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="84" y="443" font-size="26" fill="#f3f0e8" font-weight="600" text-anchor="start">主 GM · 叙述与状态提案</text>
+<text x="84" y="482" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">上下文装配 · 流式叙述</text>
+<text x="84" y="514" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">提出结构化状态变化</text>
+<text x="84" y="546" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">不直接写业务库</text>
+</g>
+<g data-node="Pi · 后台维护与准备"><rect x="575" y="400" width="450" height="215" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="599" y="443" font-size="26" fill="#f3f0e8" font-weight="600" text-anchor="start">Pi · 后台维护与准备</text>
+<text x="599" y="482" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">步骤 / 工具预算内维护</text>
+<text x="599" y="514" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">准备世界演化与客观归档</text>
+<text x="599" y="546" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">仅返回 Prepared Checkpoint</text>
+</g>
+<g data-node="Luna · 受限工具助手"><rect x="1090" y="400" width="450" height="215" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="1114" y="443" font-size="26" fill="#f3f0e8" font-weight="600" text-anchor="start">Luna · 受限工具助手</text>
+<text x="1114" y="482" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">9 Skills · 作者 20 / 对局 19 工具</text>
+<text x="1114" y="514" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">限定草稿或当前对局范围</text>
+<text x="1114" y="546" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">Dry-run · 写入 · 回读</text>
+</g>
+<text x="120" y="676" font-size="21" fill="#8babb5" font-weight="400" text-anchor="start">状态提案</text>
+<text x="640" y="676" font-size="21" fill="#8babb5" font-weight="400" text-anchor="start">准备检查点</text>
+<text x="1150" y="676" font-size="21" fill="#8babb5" font-weight="400" text-anchor="start">受限工具请求</text>
+<path data-connector="" d="M285 615V714" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-connector="" d="M800 615V714" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-connector="" d="M1315 615V714" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-node="规范 Owner 校验 → CAS → SQLite 原子提交"><rect x="60" y="720" width="965" height="140" rx="4" fill="#18242d" stroke="#8babb5" stroke-width="2"/>
+<text x="84" y="763" font-size="26" fill="#f3f0e8" font-weight="600" text-anchor="start">规范 Owner 校验 → CAS → SQLite 原子提交</text>
+<text x="84" y="802" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">完整回复 · 未取消 · 读取基线一致</text>
+<text x="84" y="834" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">检查点恢复复用准备结果，不重新调用模型</text>
+</g>
+<g data-node="授权工具入口"><rect x="1090" y="720" width="450" height="140" rx="4" fill="#18242d" stroke="#8babb5" stroke-width="2"/>
+<text x="1114" y="763" font-size="26" fill="#f3f0e8" font-weight="600" text-anchor="start">授权工具入口</text>
+<text x="1114" y="802" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">校验范围与权限，写入后回读</text>
+<text x="1114" y="834" font-size="22" fill="#b6c8cd" font-weight="400" text-anchor="start">批量 run 必须先 Dry-run</text>
+</g>
+<path data-connector="" d="M542 860V920" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-connector="" d="M1315 860V920" fill="none" stroke="#8babb5" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-node="SQLite · 业务状态与版本资产"><rect x="60" y="925" width="1480" height="90" rx="4" fill="#18242d" stroke="#49606d" stroke-width="1.3"/>
+<text x="84" y="968" font-size="27" fill="#f3f0e8" font-weight="600" text-anchor="start">SQLite · 业务状态与版本资产</text>
+<text x="84" y="1007" font-size="21" fill="#b6c8cd" font-weight="400" text-anchor="start">作者草稿 · 发布快照 · 冻结对局 · 机械状态 · 私有回执</text>
+</g>
+<path d="M60 1022H1540" stroke="#405562"/>
+<text x="60" y="1060" font-size="21" fill="#b6c8cd" font-weight="400" text-anchor="start">模型调用经传输适配器出站；只有服务端工具与事务入口持有写入权限。</text>
+</svg>
