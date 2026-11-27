@@ -1,4 +1,11 @@
-/* Keep the character's face and hair visible inside the native hero frame. */
-body[data-core-project-id="night-parade"] img[src*="/night-parade/character-cover.webp"] {
+/* Keep the character's face and hair visible inside the native project frames. */
+img[src*="/night-parade/character-cover.webp"] {
   object-position: 44% 0% !important;
+}
+
+/* Keep the canvas hover label readable over the dark character artwork. */
+a[href*="/work/night-parade"] [data-framer-name="Name"],
+a[href*="/work/night-parade"] [data-framer-name="Name"] * {
+  color: #fff !important;
+  --framer-text-color: #fff !important;
 }
